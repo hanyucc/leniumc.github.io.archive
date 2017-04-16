@@ -3,6 +3,122 @@
   
     
     <entry>
+      <title><![CDATA[Number Cards]]></title>
+      <url>/2016/08/13/numberCards/</url>
+      <content type="html"><![CDATA[<p>Problem from <a href="http://bnds.tech/problem/8" target="_blank" rel="external">BNDSOJ</a>.</p>
+<h2 id="数字卡之沙耶香的音符"><a href="#数字卡之沙耶香的音符" class="headerlink" title="数字卡之沙耶香的音符"></a>数字卡之沙耶香的音符</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>最近沉迷于魔法少女小圆的MisakaMikoto喜欢上了蓝毛沙耶香，于是他正在收集各式各样的音符卡片，但是我们都知道只有经过合理组合的音符才能够发出让人心旷神怡你的音乐，于是MisakaMikoto找到了小提琴专家AD1024帮助他找到了一个适合的音符卡片组合。可是MisakaMikoto家的猫趁他不在家的时候把他收集的音符卡片弄乱了，而穿越时空而来的沙耶香发现了这件事后又重新将这些音符卡片进行了排列，这让MisakaMikoto非常的头大，于是他找到了已经做完了teacherone交付的任务正闲着的你，希望你能够帮他找到在这个排列中找到AD1024所写的音符卡组合。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><p>第一行两个正整数NN, MM, 分别表示沙耶香重新排列的所有音符卡的长度以及AD1024所找到的音符卡组合的长度</p>
+<p>第二行<em>N</em>个正整数<em>Ni</em>, 表示每一个音符</p>
+<p>第三行<em>M</em>个正整数<em>Mi</em>, 表示每一个音符</p>
+<p>注：输入保证<em>M&lt;N</em></p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><p>第一行若干个正整数，表示AD1024的音符卡片排列在沙耶香重新组合的音符卡片排列中的哪些位置出现了</p>
+<p>第二行两个正整数，分别表示第一次出现的最开头和最后一次出现的最末尾</p>
+<p>如果没有出现过，输出”Orz yulemao”.</p>
+<h3 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h3><p>输入样例1<br>9 3<br>1 2 3 1 2 3 1 2 3<br>1 2 3  </p>
+<p>输出样例1<br>1 4 7<br>1 9  </p>
+<p>输入样例2<br>9 4<br>1 2 3 1 2 3 1 2 3<br>1 2 3 4  </p>
+<p>输出样例2<br>Orz yulemao</p>
+<h3 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h3><p>对于20%的数据 1≤<em>N</em>≤10,1≤<em>M</em>≤3<br>对于40%的数据 1≤<em>N</em>≤100,1≤<em>M</em>≤10<br>对于70%的数据 1≤<em>N</em>≤10,000,1≤<em>M</em>≤150<br>对于100%的数据 1≤<em>N</em>≤1,000,000,1≤<em>M</em>≤1,000,1&lt;<em>Ni</em>,<em>Mi</em>&lt;10,000,000,000</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>In this problem, you are required to find a specific subsequence of numbers in given sequence. You have to find the place of the first number where the subsequence is found the first time and the place of the last number where the subsequence is found the last time.</p>
+<p>It is a pretty straightforward KMP problem. Although KMP is mainly used for finding substrings, it could also be used in this problem to find subsequences of numbers.</p>
+<p>The code is as follows.</p>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token keyword">int</span> maxn <span class="token operator">=</span> <span class="token number">1010</span><span class="token punctuation">;</span>
+<span class="token keyword">long</span> <span class="token keyword">long</span> a<span class="token punctuation">[</span>maxn <span class="token operator">*</span> maxn<span class="token punctuation">]</span><span class="token punctuation">,</span> sub<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">,</span> Next<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">,</span> n<span class="token punctuation">,</span> m<span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">getNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">,</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    Next<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> Next<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> m<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>j <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">and</span> sub<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> sub<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            j <span class="token operator">=</span> Next<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>sub<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> sub<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            j<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        Next<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> j<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">,</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> first <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> last<span class="token punctuation">;</span>
+
+    cin <span class="token operator">>></span> n <span class="token operator">>></span> m<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        cin <span class="token operator">>></span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> m<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        cin <span class="token operator">>></span> sub<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">getNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>j <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">and</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> sub<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            j <span class="token operator">=</span> Next<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> sub<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            j<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>j <span class="token operator">==</span> m<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            cout <span class="token operator">&lt;&lt;</span> i <span class="token operator">-</span> j <span class="token operator">+</span> <span class="token number">2</span> <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>first <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                first <span class="token operator">=</span> i <span class="token operator">-</span> j <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            last <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            j <span class="token operator">=</span> Next<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>first <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Orz yulemao"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> endl <span class="token operator">&lt;&lt;</span> first <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span> <span class="token operator">&lt;&lt;</span> last <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> Algorithm </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> KMP </tag>
+            
+            <tag> String </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Subset Sums]]></title>
       <url>/2016/08/07/subsetSums/</url>
       <content type="html"><![CDATA[<p>Problem from <a href="http://train.usaco.org/usacogate" target="_blank" rel="external">USACO</a>.  </p>
@@ -75,6 +191,8 @@
 <h2 id="P1135-奇怪的电梯"><a href="#P1135-奇怪的电梯" class="headerlink" title="P1135 奇怪的电梯"></a>P1135 奇怪的电梯</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>呵呵，有一天我做了一个梦，梦见了一种很奇怪的电梯。大楼的每一层楼都可以停电梯，而且第i层楼(1&lt;=i&lt;=N)上有一个数字Ki(0&lt;=Ki&lt;=N)。电梯只有四个按钮：开，关，上，下。上下的层数等于当前楼层上的那个数字。当然，如果不能满足要求，相应的按钮就会失灵。例如：3 3 1 2 5代表了Ki(K1=3,K2=3,……)，从一楼开始。在一楼，按“上”可以到4楼，按“下”是不起作用的，因为没有-2楼。那么，从A楼到B楼至少要按几次按钮呢？</p>
 <h3 id="输入输出格式"><a href="#输入输出格式" class="headerlink" title="输入输出格式"></a>输入输出格式</h3><p>输入格式：<br>输入文件共有二行，第一行为三个用空格隔开的正整数，表示N,A,B(1≤N≤200, 1≤A,B≤N)，第二行为N个用空格隔开的正整数，表示Ki。</p>
 <p>输出格式：<br>输出文件仅一行，即最少按键次数,若无法到达，则输出-1。</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>In the problem, you are in a strange elevator. There are in <em>N</em> floors in total, each with a number <em>k</em> on it. You can either press up or down on each floor and it will go up or down <em>k</em> floors (only if floor number is valid). You are currently on floor <em>A</em> and you want to go to floor <em>B</em>. How many steps will it take? Or print -1 if the destination cannot be reached.</p>
+<p>The simplest way to do this is to use BFS. Start off at floor <em>A</em> and try to reach floor <em>B</em>. The <em>v</em> array is used mark whether a floor has already been visited. <em>ans</em> is initially set as -1, and if the floor cannot be reached, <em>ans</em> will not change its value.</p>
 <p>The code is as follows.</p>
 <pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;queue></span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
@@ -165,7 +283,7 @@
 <p>现在，要求你计算出和为素数共有多少种。<br>例如上例，只有一种的和为素数：3＋7＋19＝29。</p>
 <h3 id="输入输出格式"><a href="#输入输出格式" class="headerlink" title="输入输出格式"></a>输入输出格式</h3><p>输入格式：<br>n , k （1&lt;=n&lt;=20，k＜n）<br>x1,x2，…,xn （1&lt;=xi&lt;=5000000）</p>
 <p>输出格式：<br>一个整数（满足条件的种数）。</p>
-<p>In this problem, you have to select <em>k</em> from <em>n</em> numbers so that the sum of those numbers is a prime number.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>In this problem, you have to select <em>k</em> from <em>n</em> numbers so that the sum of those numbers is a prime number.</p>
 <p>It can be easily solved using a DFS, depth-first search, algorithm. Simply list the ways that the numbers can be selected and check if the sum is prime. In order to prevent counting the same sequence, in different orders, for several times, we can select numbers in an acsending or desending order.</p>
 <p>The code is as follows.</p>
 <pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
@@ -229,9 +347,9 @@
         
         <tags>
             
-            <tag> DFS </tag>
-            
             <tag> C++ </tag>
+            
+            <tag> DFS </tag>
             
         </tags>
         

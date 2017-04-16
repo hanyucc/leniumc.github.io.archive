@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#6EBE46">
     <meta name="author" content="leniumC">
     <meta name="description" content="Just a personal blog.">
-    <meta name="keywords" content="null,DFS,C++">
+    <meta name="keywords" content="null,C++,DFS">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -50,7 +50,7 @@
     <meta property="og:type" content="blog">
     <meta property="og:title" content="Select Numbers | leniumC&#39;s Blog">
     <meta property="og:description" content="Just a personal blog.">
-    <meta property="og:article:tag" content="DFS"> <meta property="og:article:tag" content="C++"> 
+    <meta property="og:article:tag" content="C++"> <meta property="og:article:tag" content="DFS"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -235,7 +235,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#P1036-选数"><span class="post-toc-number">1.</span> <span class="post-toc-text">P1036 选数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#题目描述"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">题目描述</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#输入输出格式"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">输入输出格式</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#P1036-选数"><span class="post-toc-number">1.</span> <span class="post-toc-text">P1036 选数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#题目描述"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">题目描述</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#输入输出格式"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">输入输出格式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Solution"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Solution</span></a></li></ol></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -393,7 +393,7 @@
 <p>现在，要求你计算出和为素数共有多少种。<br>例如上例，只有一种的和为素数：3＋7＋19＝29。</p>
 <h3 id="输入输出格式"><a href="#输入输出格式" class="headerlink" title="输入输出格式"></a>输入输出格式</h3><p>输入格式：<br>n , k （1&lt;=n&lt;=20，k＜n）<br>x1,x2，…,xn （1&lt;=xi&lt;=5000000）</p>
 <p>输出格式：<br>一个整数（满足条件的种数）。</p>
-<p>In this problem, you have to select <em>k</em> from <em>n</em> numbers so that the sum of those numbers is a prime number.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>In this problem, you have to select <em>k</em> from <em>n</em> numbers so that the sum of those numbers is a prime number.</p>
 <p>It can be easily solved using a DFS, depth-first search, algorithm. Simply list the ways that the numbers can be selected and check if the sum is prime. In order to prevent counting the same sequence, in different orders, for several times, we can select numbers in an acsending or desending order.</p>
 <p>The code is as follows.</p>
 <pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
@@ -578,7 +578,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">June 2016<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">June 2016<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -596,7 +596,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Algorithm/">Algorithm<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/Other/">Other<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/Algorithm/">Algorithm<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/Other/">Other<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
