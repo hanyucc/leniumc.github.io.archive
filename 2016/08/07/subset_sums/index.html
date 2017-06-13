@@ -10,7 +10,7 @@
     
     <title>
         
-            Select Numbers | 
+            Subset Sums | 
         
         leniumC&#39;s Blog
     </title>
@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#6EBE46">
     <meta name="author" content="leniumC">
     <meta name="description" content="Just a personal blog.">
-    <meta name="keywords" content="null,C++,DFS">
+    <meta name="keywords" content="null,C++,DP">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -48,9 +48,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Select Numbers | leniumC&#39;s Blog">
+    <meta property="og:title" content="Subset Sums | leniumC&#39;s Blog">
     <meta property="og:description" content="Just a personal blog.">
-    <meta property="og:article:tag" content="C++"> <meta property="og:article:tag" content="DFS"> 
+    <meta property="og:article:tag" content="C++"> <meta property="og:article:tag" content="DP"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -135,12 +135,7 @@
 
     <style>
       body{
-        background-color: #F5F5F5;
-      }
-
-      /* blog_info bottom background */
-      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
-        background-color: #fff;
+        background-image: url(/img/bg.jpg);
       }
     </style>
 
@@ -235,7 +230,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#P1036-选数"><span class="post-toc-number">1.</span> <span class="post-toc-text">P1036 选数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#题目描述"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">题目描述</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#输入输出格式"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">输入输出格式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Solution"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Solution</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Subset-Sums"><span class="post-toc-number">1.</span> <span class="post-toc-text">Subset Sums</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Problem"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Problem</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Input-Format"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Input Format</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Output-Format"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Output Format</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Sample-Input"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Sample-Output"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Solution"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">Solution</span></a></li></ol></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -271,7 +266,7 @@
         
     
             <p class="article-headline-p">
-                Select Numbers
+                Subset Sums
             </p>
         </div>
 
@@ -290,7 +285,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>leniumC</strong>
-        <span>Aug 02, 2016</span>
+        <span>Aug 07, 2016</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -314,7 +309,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/C/">C++</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/DFS/">DFS</a>
+        <a class="post_tag-link" href="/tags/C/">C++</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/DP/">DP</a>
     </ul>
     
 
@@ -330,7 +325,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Select Numbers&url=http://yoursite.com//2016/08/02/selectNumbers/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Subset Sums&url=http://yoursite.com//2016/08/07/subset_sums/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 Share to Weibo
             </li>
@@ -339,7 +334,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Select Numbers&url=http://yoursite.com//2016/08/02/selectNumbers/index.html&via=leniumC" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Subset Sums&url=http://yoursite.com//2016/08/07/subset_sums/index.html&via=leniumC" target="_blank">
             <li class="mdl-menu__item">
                 Share to Twitter
             </li>
@@ -348,7 +343,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com//2016/08/02/selectNumbers/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com//2016/08/07/subset_sums/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to Facebook
             </li>
@@ -357,7 +352,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2016/08/02/selectNumbers/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2016/08/07/subset_sums/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to Google+
             </li>
@@ -369,7 +364,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=leniumC&#39;s Blog&title=Select Numbers&summary=Just a personal blog.&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2016/08/02/selectNumbers/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=leniumC&#39;s Blog&title=Subset Sums&summary=Just a personal blog.&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2016/08/07/subset_sums/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to QQ
             </li>
@@ -387,62 +382,47 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>Problem from <a href="https://www.luogu.org/problem/show?pid=1036" target="_blank" rel="external">Luogu</a>.  </p>
-<h2 id="P1036-选数"><a href="#P1036-选数" class="headerlink" title="P1036 选数"></a>P1036 选数</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>已知 n 个整数 x1,x2,…,xn，以及一个整数 k（k＜n）。从 n 个整数中任选 k 个整数相加，可分别得到一系列的和。例如当 n=4，k＝3，4 个整数分别为 3，7，12，19 时，可得全部的组合与它们的和为：</p>
-<p>3＋7＋12=22<br>3＋7＋19＝29<br>7＋12＋19＝38<br>3＋12＋19＝34。</p>
-<p>现在，要求你计算出和为素数共有多少种。<br>例如上例，只有一种的和为素数：3＋7＋19＝29。</p>
-<h3 id="输入输出格式"><a href="#输入输出格式" class="headerlink" title="输入输出格式"></a>输入输出格式</h3><p>输入格式：<br>n , k （1&lt;=n&lt;=20，k＜n）<br>x1,x2，…,xn （1&lt;=xi&lt;=5000000）</p>
-<p>输出格式：<br>一个整数（满足条件的种数）。</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>In this problem, you have to select <em>k</em> from <em>n</em> numbers so that the sum of those numbers is a prime number.</p>
-<p>It can be easily solved using a DFS, depth-first search, algorithm. Simply list the ways that the numbers can be selected and check if the sum is prime. In order to prevent counting the same sequence, in different orders, for several times, we can select numbers in an acsending or desending order.</p>
+        <p>Problem from <a href="http://train.usaco.org/usacogate" target="_blank" rel="external">USACO</a>.  </p>
+<h2 id="Subset-Sums"><a href="#Subset-Sums" class="headerlink" title="Subset Sums"></a>Subset Sums</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>For many sets of consecutive integers from 1 through <em>N</em> (1 &lt;= <em>N</em> &lt;= 39), one can partition the set into two sets whose sums are identical.</p>
+<p>For example, if <em>N</em>=3, one can partition the set {1, 2, 3} in one way so that the sums of both subsets are identical:</p>
+<p>{3} and {1,2}<br>This counts as a single partitioning (i.e., reversing the order counts as the same partitioning and thus does not increase the count of partitions).</p>
+<p>If <em>N</em>=7, there are four ways to partition the set {1, 2, 3, … 7} so that each partition has the same sum:</p>
+<p>{1,6,7} and {2,3,4,5}<br>{2,5,7} and {1,3,4,6}<br>{3,4,7} and {1,2,5,6}<br>{1,2,4,7} and {3,5,6}<br>Given N, your program should print the number of ways a set containing the integers from 1 through <em>N</em> can be partitioned into two sets whose sums are identical. Print 0 if there are no such ways.</p>
+<p>Your program must calculate the answer, not look it up from a table.</p>
+<h3 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h3><p>The input file contains a single line with a single integer representing <em>N</em>, as above.</p>
+<h3 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h3><p>The output file contains a single line with a single integer that tells how many same-sum partitions can be made from the set {1, 2, …, <em>N</em>}. The output file should contain 0 if there are no ways to make a same-sum partition.</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h3><p>7</p>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h3><p>4</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>First of all, if the sum is odd, then there is no solution. Dynamic programming could be used to solve this problem. Specifically, <em>dp[i]</em> stands for the ways to make a set of a sum <em>i</em> and we can update <em>dp[i]</em> using the values of <em>dp[j]</em> where <em>j</em> &lt; <em>i</em>, which has been calculated already.</p>
+<p>It is worth noticing that the inner loop decreases <em>j</em> from <em>m</em> to <em>i</em> instead of the other way around.</p>
 <p>The code is as follows.</p>
 <pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstdlib></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstdio></span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-<span class="token keyword">int</span> n<span class="token punctuation">,</span>k<span class="token punctuation">,</span>x<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">,</span>ans<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token keyword">bool</span> <span class="token function">check</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">int</span> y<span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span>y<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>y<span class="token operator">*</span>y<span class="token operator">&lt;</span>x<span class="token punctuation">;</span>y<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>x<span class="token operator">%</span>y<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">void</span> <span class="token function">select</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token punctuation">,</span><span class="token keyword">int</span> count<span class="token punctuation">,</span><span class="token keyword">int</span> amount<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    count<span class="token operator">++</span><span class="token punctuation">;</span>
-    amount<span class="token operator">+</span><span class="token operator">=</span>x<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>count<span class="token operator">==</span>k<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">check</span><span class="token punctuation">(</span>amount<span class="token punctuation">)</span><span class="token operator">==</span><span class="token boolean">true</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            ans<span class="token operator">++</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>count<span class="token operator">&lt;</span>k<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> m<span class="token operator">=</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>m<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>m<span class="token operator">++</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token function">select</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span>count<span class="token punctuation">,</span>amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> maxn <span class="token operator">=</span> <span class="token number">40</span><span class="token punctuation">;</span>
+<span class="token keyword">long</span> <span class="token keyword">long</span> n<span class="token punctuation">,</span> dp<span class="token punctuation">[</span>maxn <span class="token operator">*</span> maxn<span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
-    cin<span class="token operator">>></span>n<span class="token operator">>></span>k<span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">// freopen("subset.in", "r", stdin);</span>
+    <span class="token comment" spellcheck="true">// freopen("subset.out", "w", stdout);</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">,</span> j<span class="token punctuation">,</span> m<span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> n<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>n <span class="token operator">*</span> <span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token number">1</span><span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
-        cin<span class="token operator">>></span>x<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token number">0</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+    m <span class="token operator">=</span> n <span class="token operator">*</span> <span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
-        <span class="token function">select</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>j <span class="token operator">=</span> m<span class="token punctuation">;</span> j <span class="token operator">>=</span> i<span class="token punctuation">;</span> j<span class="token operator">--</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            dp<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+</span><span class="token operator">=</span> dp<span class="token punctuation">[</span>j <span class="token operator">-</span> i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
-    cout<span class="token operator">&lt;&lt;</span>ans<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> dp<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">/</span> <span class="token number">2</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
@@ -472,7 +452,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2016/08/04/strangeElevator/" id="post_nav-newer" class="prev-content">
+        <a href="/2016/08/13/number_cards/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -486,7 +466,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2016/07/28/introduction/" id="post_nav-older" class="next-content">
+        <a href="/2016/08/04/strange_elevator/" id="post_nav-older" class="next-content">
             Older
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -578,7 +558,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">June 2016<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2016/09/">September 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">August 2016<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">July 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">June 2016<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -596,7 +576,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Algorithm/">Algorithm<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/Other/">Other<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/Algorithm/">Algorithm<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/Other/">Other<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
