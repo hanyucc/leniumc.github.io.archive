@@ -3,6 +3,94 @@
   
     
     <entry>
+      <title><![CDATA[Matrix Chain Multiplication]]></title>
+      <url>/2016/09/15/matrix_chain_multiplication/</url>
+      <content type="html"><![CDATA[<p>Problem from <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=383" target="_blank" rel="external">UVA Online Judge</a>.</p>
+<h2 id="Matrix-Chain-Multiplication"><a href="#Matrix-Chain-Multiplication" class="headerlink" title="Matrix Chain Multiplication"></a>Matrix Chain Multiplication</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Suppose you have to evaluate an expression like A*B*C*D*E where A,B,C,D and E are matrices. Since matrix multiplication is associative, the order in which multiplications are performed is arbitrary. However, the number of elementary multiplications needed strongly depends on the evaluation order you choose.</p>
+<p>For example, let A be a 50*10 matrix, B a 10*20 matrix and C a 20*5 matrix. There are two different strategies to compute A*B*C, namely (A*B)*C and A*(B*C). The first one takes 15000 elementary multiplications, but the second one only 3500.</p>
+<p>Your job is to write a program that determines the number of elementary multiplications needed for a given evaluation strategy.</p>
+<h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><p>Input consists of two parts: a list of matrices and a list of expressions.</p>
+<p>The first line of the input file contains one integer <em>n</em> (1 ≤ <em>n</em> ≤ 26), representing the number of<br>matrices in the first part. The next <em>n</em> lines each contain one capital letter, specifying the name of the<br>matrix, and two integers, specifying the number of rows and columns of the matrix.</p>
+<p>The second part of the input file strictly adheres to the following syntax (given in EBNF):<br>SecondPart = Line { Line } <eof><br>Line = Expression <cr><br>Expression = Matrix | “(“ Expression Expression “)”<br>Matrix = “A” | “B” | “C” | … | “X” | “Y” | “Z”</cr></eof></p>
+<h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>For each expression found in the second part of the input file, print one line containing the word ‘error’<br>if evaluation of the expression leads to an error due to non-matching matrices. Otherwise print one<br>line containing the number of elementary multiplications needed to evaluate the expression in the way<br>specified by the parentheses.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>We can simply simulate the calculations by using a stack. Each time a matrix is inputted, we push it into the stack. Each time we come across a right bracket, we take out two matrices on top and calculate the dimensions of the product, add the number of calculations to the integer <em>sum</em>, and push the product into the stack. If the two matrices cannot be multiplied, we simply print “error”; otherwise, the integer <em>sum</em> is printed.</p>
+<p>The code is as follows.</p>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;stack></span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">struct</span> matrix
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> r<span class="token punctuation">,</span>c<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> a<span class="token punctuation">[</span><span class="token number">500</span><span class="token punctuation">]</span><span class="token punctuation">,</span>p1<span class="token punctuation">,</span>p2<span class="token punctuation">;</span>
+<span class="token keyword">char</span> t1<span class="token punctuation">,</span>t<span class="token punctuation">[</span><span class="token number">10010</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> n<span class="token punctuation">,</span>t2<span class="token punctuation">,</span>sum<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> ok<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>i<span class="token punctuation">;</span>
+    cin<span class="token operator">>></span>n<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        cin<span class="token operator">>></span>t1<span class="token punctuation">;</span>
+        t2<span class="token operator">=</span><span class="token keyword">int</span><span class="token punctuation">(</span>t1<span class="token operator">-</span><span class="token string">'A'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        cin<span class="token operator">>></span>a<span class="token punctuation">[</span>t2<span class="token punctuation">]</span><span class="token punctuation">.</span>r<span class="token operator">>></span>a<span class="token punctuation">[</span>t2<span class="token punctuation">]</span><span class="token punctuation">.</span>c<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>cin<span class="token operator">>></span>t<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        stack<span class="token operator">&lt;</span>matrix<span class="token operator">></span> s<span class="token punctuation">;</span>
+        sum<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+        ok<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>t<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'\0'</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>t<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">'('</span><span class="token operator">&amp;&amp;</span>t<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">!=</span><span class="token string">')'</span><span class="token punctuation">)</span>
+                s<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>t<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span><span class="token string">'A'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>t<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">')'</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                p1<span class="token operator">=</span>s<span class="token punctuation">.</span><span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                s<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                p2<span class="token operator">=</span>s<span class="token punctuation">.</span><span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                s<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>p1<span class="token punctuation">.</span>r<span class="token operator">!=</span>p2<span class="token punctuation">.</span>c<span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    ok<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+                    <span class="token keyword">break</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                sum<span class="token operator">+</span><span class="token operator">=</span>p1<span class="token punctuation">.</span>r<span class="token operator">*</span>p1<span class="token punctuation">.</span>c<span class="token operator">*</span>p2<span class="token punctuation">.</span>r<span class="token punctuation">;</span>
+                p1<span class="token punctuation">.</span>r<span class="token operator">=</span>p2<span class="token punctuation">.</span>r<span class="token punctuation">;</span>
+                s<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>p1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>ok<span class="token punctuation">)</span>
+            cout<span class="token operator">&lt;&lt;</span><span class="token string">"error"</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+        <span class="token keyword">else</span>
+            cout<span class="token operator">&lt;&lt;</span>sum<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> Algorithms </category>
+            
+            <category> Stack </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Data Structure </tag>
+            
+            <tag> Stack </tag>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Polycarp at the Radio]]></title>
       <url>/2016/09/02/polycarp_at_the_radio/</url>
       <content type="html"><![CDATA[<p>Problem from <a href="http://codeforces.com/problemset/problem/723/C" target="_blank" rel="external">Codeforces</a>.</p>
@@ -76,6 +164,8 @@
         <categories>
             
             <category> Algorithm </category>
+            
+            <category> Greedy </category>
             
         </categories>
         
@@ -189,7 +279,9 @@
       
         <categories>
             
-            <category> Algorithm </category>
+            <category> Algorithms </category>
+            
+            <category> KMP </category>
             
         </categories>
         
@@ -257,7 +349,9 @@
       
         <categories>
             
-            <category> Algorithm </category>
+            <category> Algorithms </category>
+            
+            <category> DP </category>
             
         </categories>
         
@@ -347,7 +441,9 @@
       
         <categories>
             
-            <category> Algorithm </category>
+            <category> Algorithms </category>
+            
+            <category> BFS </category>
             
         </categories>
         
@@ -355,6 +451,8 @@
         <tags>
             
             <tag> C++ </tag>
+            
+            <tag> Search </tag>
             
             <tag> BFS </tag>
             
@@ -430,12 +528,16 @@
             
             <category> Algorithm </category>
             
+            <category> DFS </category>
+            
         </categories>
         
         
         <tags>
             
             <tag> C++ </tag>
+            
+            <tag> Search </tag>
             
             <tag> DFS </tag>
             
@@ -454,7 +556,7 @@
       
         <categories>
             
-            <category> Other </category>
+            <category> Others </category>
             
         </categories>
         
