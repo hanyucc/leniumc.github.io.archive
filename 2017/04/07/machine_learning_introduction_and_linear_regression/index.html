@@ -390,7 +390,7 @@
 <h3 id="Classification-and-Regression"><a href="#Classification-and-Regression" class="headerlink" title="Classification and Regression"></a>Classification and Regression</h3><p>Supervised learning can also be divided into two categories, classification and regression. In classification problems, we try to predict the categories of the given inputs. In regression problems, we try to predict the outputs within a continuous output; in other words, we try to find a continuous function which predicts an output value for each input value.</p>
 <h3 id="Linear-Regression"><a href="#Linear-Regression" class="headerlink" title="Linear Regression"></a>Linear Regression</h3><p>Generally speaking, linear regression is simply the process of finding linear function that fits the dataset well. The function is called the hypothesis. In the process, we do iterations to minimize a cost function <span>$J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x_{i}) - y_{i} \right)^2$</span><!-- Has MathJax -->, which represents the sum of squared error between the hypothesis function and the given outputs of the dataset.</p>
 <p>To do this, we implement something called gradient descent. During gradient descent, we calculate the partial derivative of the cost function with respect to each parameter and change the parameter in a way that decreases the cost function by the largest amount. <span>$\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta)$</span><!-- Has MathJax --></p>
-<p><img src="https://raw.githubusercontent.com/leniumC/blog_resources/master/gradient_descent.png" width="500"></p>
+<p><img src="https://raw.githubusercontent.com/leniumC/blog_resources/master/gradient_descent.png" width="600"></p>
 
     
 
