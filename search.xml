@@ -3,6 +3,40 @@
   
     
     <entry>
+      <title><![CDATA[Week 2: Machine Learning Gradient Descent and Vectorization]]></title>
+      <url>/2017/04/15/machine_learning_gradient_descent_and_vectorization/</url>
+      <content type="html"><![CDATA[<p>Resources from <a href="https://www.coursera.org/learn/machine-learning/" target="_blank" rel="external">Coursera</a>.</p>
+<h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>The second week of the machine learning course. Basically focused on the same topic as the first week, regression problems (including linear and polynomial regression) and gradient descent. However, more details of gradient descent were talked about, and the idea of using vectorization to increase the efficiency of gradient descent was introduced.</p>
+<h3 id="Polynomial-Regression"><a href="#Polynomial-Regression" class="headerlink" title="Polynomial Regression"></a>Polynomial Regression</h3><p>The process of polynomial regression is based on the process of linear regression, except for the fact that it creates new features out of the original features of the dataset. In other words, suppose if you have two features <em>a</em> and <em>b</em>, we can create three more features <em>a<sup>2</sup></em>, <em>ab</em>, and <em>b<sup>2</sup></em>. This way, we can fit non-linear data using a method very similar to linear regression.</p>
+<p>It is also worth noticing in this example of the relationship between house prices and house sizes that, although both hypotheses fit the dataset well, it is uncommon for house prices to drop when the size reaches a certain amount, so the second hypothesis would be a better choice.</p>
+<p><img src="https://raw.githubusercontent.com/leniumC/blog_resources/master/polynomial_regression.png" width="400"></p>
+<h3 id="Vectorization"><a href="#Vectorization" class="headerlink" title="Vectorization"></a>Vectorization</h3><p>Vectorization is a way increase the efficiency of calculations by doing matrix and vector multiplications instead of using looping over the elements one by one. It works because most programming languages have linear algebra libraries that are optimized for computations like this.</p>
+<p>This is an example of vectorization. The superscript <em>T</em> means taking the transpose of the matrix or vector.</p>
+<p><img src="https://raw.githubusercontent.com/leniumC/blog_resources/master/vectorization.png" width="800"></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Machine Learning </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Machine Learning </tag>
+            
+            <tag> Supervised Learning </tag>
+            
+            <tag> Regression </tag>
+            
+            <tag> Vectorization </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Week 1: Machine Learning Introduction and Linear Regression]]></title>
       <url>/2017/04/07/machine_learning_introduction_and_linear_regression/</url>
       <content type="html"><![CDATA[<p>Resources from <a href="https://www.coursera.org/learn/machine-learning/" target="_blank" rel="external">Coursera</a>.</p>
@@ -28,6 +62,8 @@
             <tag> Machine Learning </tag>
             
             <tag> Supervised Learning </tag>
+            
+            <tag> Regression </tag>
             
             <tag> Unsupervised Learning </tag>
             
@@ -113,11 +149,11 @@
         
         <tags>
             
+            <tag> C++ </tag>
+            
             <tag> Data Structure </tag>
             
             <tag> Stack </tag>
-            
-            <tag> C++ </tag>
             
         </tags>
         
