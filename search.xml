@@ -3,16 +3,381 @@
   
     
     <entry>
+      <title><![CDATA[AP Computer Science: Relational / Logical Operators]]></title>
+      <url>/2017/09/14/ap_comp_sci6/</url>
+      <content type="html"><![CDATA[<h3 id="Relational-Operators"><a href="#Relational-Operators" class="headerlink" title="Relational Operators"></a>Relational Operators</h3><p>A relational operator tests the relationship between two values.<br>Java has six relational operators:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>==</td>
+<td>equal to</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>not equal to</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>less than</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>greater than or equal to</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>less than or equal to</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Equality-Operator"><a href="#Equality-Operator" class="headerlink" title="Equality Operator"></a>Equality Operator</h3><p>Denotes equality testing.</p>
+<p>The equality operator, ==, is very confusing to most Java beginners, because it is easy to mix up with the assignment operator, =.<br>Can be used to test primitive types, but not objects such as Strings.</p>
+<h3 id="Logical-Operators"><a href="#Logical-Operators" class="headerlink" title="Logical Operators"></a>Logical Operators</h3><p>There are three logical operators in Java:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>!</td>
+<td>equal to</td>
+<td>!a</td>
+<td>true if a is false, false if a is true</td>
+</tr>
+<tr>
+<td>&amp;&amp;</td>
+<td>not equal to</td>
+<td>a &amp;&amp; b</td>
+<td>true if a and b are both true, and false otherwise</td>
+</tr>
+<tr>
+<td>&#124;&#124;</td>
+<td>greater than</td>
+<td>a &#124;&#124; b</td>
+<td>true if either a or b is true, and false otherwise</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Operator-Precedence"><a href="#Operator-Precedence" class="headerlink" title="Operator Precedence"></a>Operator Precedence</h3><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Not (!)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>And (&amp;&amp;)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Or (&#124;&#124;)</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[AP Computer Science: Conditional Statement]]></title>
+      <url>/2017/09/13/ap_comp_sci5/</url>
+      <content type="html"><![CDATA[<h3 id="Conditional-Statement"><a href="#Conditional-Statement" class="headerlink" title="Conditional Statement"></a>Conditional Statement</h3><p>The <code>if</code> structure in Java consists of 2 parts: a condition and a body.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">if</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  body<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Java if-else structure is used when you want to do one thing if a condition is true, and another thing if that condition is false.</p>
+<p>And if-else structure will execute either the if section or the else section, but never both.</p>
+<p>The body of an <code>else if</code> statement will be executed if the <code>if</code> statements and <code>else if</code> above it are not executed and the condition is satisfied.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">if</span> <span class="token punctuation">(</span>condition1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  body1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>condition2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  body2<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>condition3<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  body3<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  body4<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[AP Computer Science: Data Conversion / Other Operators]]></title>
+      <url>/2017/09/12/ap_comp_sci4/</url>
+      <content type="html"><![CDATA[<h3 id="Data-Conversion"><a href="#Data-Conversion" class="headerlink" title="Data Conversion"></a>Data Conversion</h3><p>This is a conversion from one primitive type to another.</p>
+<p>There are 2 categories.</p>
+<h5 id="Widening-conversion"><a href="#Widening-conversion" class="headerlink" title="Widening conversion"></a>Widening conversion</h5><p>Safest, because information is not lost. (int-&gt;double)</p>
+<h5 id="Narrowing-conversion"><a href="#Narrowing-conversion" class="headerlink" title="Narrowing conversion"></a>Narrowing conversion</h5><p>This should be avoided because information is lost. (double-&gt;int)</p>
+<h3 id="Type-Casting"><a href="#Type-Casting" class="headerlink" title="Type Casting"></a>Type Casting</h3><p>A type cast is used to convert a variable from one type to another.</p>
+<p>Place the type name in parentheses in front of the variable to be converted.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> int_a<span class="token punctuation">,</span> int_b<span class="token punctuation">;</span>
+<span class="token keyword">double</span> double_a<span class="token punctuation">,</span> double_b<span class="token punctuation">;</span>
+
+int_a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+double_a <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">double</span><span class="token punctuation">)</span> int_a<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// double_a is now 1.0</span>
+
+double_b <span class="token operator">=</span> <span class="token number">1.1</span><span class="token punctuation">;</span>
+int_b <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> double_b<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// int_b is now 1</span>
+</code></pre>
+<h3 id="Increment-Decrement-Operator-–"><a href="#Increment-Decrement-Operator-–" class="headerlink" title="Increment/Decrement Operator (++/–)"></a>Increment/Decrement Operator (++/–)</h3><p>Increases/Decreases the value of a variable by 1.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> cnt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+cnt<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// cnt is now 1</span>
+
+cnt<span class="token operator">--</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// cnt is now 0 again</span>
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[AP Computer Science: Other Operators]]></title>
+      <url>/2017/09/11/ap_comp_sci3/</url>
+      <content type="html"><![CDATA[<h3 id="Modulus-Remainder-Operator"><a href="#Modulus-Remainder-Operator" class="headerlink" title="Modulus (Remainder) Operator (%)"></a>Modulus (Remainder) Operator (%)</h3><p>Returns the remainder after dividing the second operand into the first.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">;</span>
+
+a <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">;</span>
+b <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+
+c <span class="token operator">=</span> a <span class="token operator">%</span> b<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// c is now 7 % 3 = 1</span>
+</code></pre>
+<h3 id="Division-Operator"><a href="#Division-Operator" class="headerlink" title="Division Operator (/)"></a>Division Operator (/)</h3><p>If the first and second operands are both integers, then / performs integer division, where the fractional component of the result is discarded.</p>
+<p>If either or both of the operands are doubles, the floating-point (decimal) division is performed.</p>
+<p>Multiplying by 1.0 will give you a decimal result without changing the result.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> int_a <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">,</span> int_b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> int_res<span class="token punctuation">;</span>
+<span class="token keyword">double</span> double_a <span class="token operator">=</span> <span class="token number">7.0</span><span class="token punctuation">,</span> double_b <span class="token operator">=</span> <span class="token number">2.0</span><span class="token punctuation">,</span> double_res<span class="token punctuation">;</span>
+
+int_res <span class="token operator">=</span> int_a <span class="token operator">/</span> int_b<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// int_res is now 7 / 2 = 3</span>
+
+double_res <span class="token operator">=</span> double_a <span class="token operator">/</span> double_b<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// double_res is now 7.0 / 2.0 = 3.5</span>
+
+double_res <span class="token operator">=</span> <span class="token number">1.0</span> <span class="token operator">*</span> int_a <span class="token operator">/</span> int_b<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// double_res is now 1.0 * 7 / 2 = 3.5</span>
+</code></pre>
+<h3 id="Operator-Precedence"><a href="#Operator-Precedence" class="headerlink" title="Operator Precedence"></a>Operator Precedence</h3><table>
+<thead>
+<tr>
+<th>Precedence</th>
+<th>Operator</th>
+<th>Association</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>()</td>
+<td>none</td>
+</tr>
+<tr>
+<td>2</td>
+<td>(double)</td>
+<td>right to left</td>
+</tr>
+<tr>
+<td>3</td>
+<td>* / %</td>
+<td>left to right</td>
+</tr>
+<tr>
+<td>4</td>
+<td>+ -</td>
+<td>left to right</td>
+</tr>
+<tr>
+<td>5</td>
+<td>=</td>
+<td>right to left</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[AP Computer Science: Basic Operators]]></title>
+      <url>/2017/09/09/ap_comp_sci2/</url>
+      <content type="html"><![CDATA[<h3 id="The-Assignment-Operator"><a href="#The-Assignment-Operator" class="headerlink" title="The Assignment Operator (=)"></a>The Assignment Operator (=)</h3><p>This is used to assign a value to a variable.</p>
+<p>Be careful not to confuse it with the mathematical equals sign.</p>
+<p>The assignment occurs from right to left.</p>
+<p>The value on the right is copied into the variable on the left.</p>
+<pre class=" language-java"><code class="language-java">integer <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+decimal <span class="token operator">=</span> <span class="token number">0.12</span><span class="token punctuation">;</span>
+
+bool <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="Initializing-Replacing-Variables"><a href="#Initializing-Replacing-Variables" class="headerlink" title="Initializing/Replacing Variables"></a>Initializing/Replacing Variables</h3><p>You can declare and assign a value to a variable at the same time.</p>
+<p>The assignment operator can be used to replace the contents of a variable with a new one.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> integer <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// integer is now 20;</span>
+
+integer <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// integer is now 30;</span>
+</code></pre>
+<h3 id="The-Concatenation-Operator"><a href="#The-Concatenation-Operator" class="headerlink" title="The Concatenation Operator (+)"></a>The Concatenation Operator (+)</h3><p>When the plus sign is used in a <code>System.out.println()</code> statement with a String, it concatenates the two pieces of data together.</p>
+<pre class=" language-java"><code class="language-java">String string <span class="token operator">=</span> <span class="token string">"Hello "</span><span class="token punctuation">;</span>
+
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>string <span class="token operator">+</span> <span class="token string">"World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// prints "Hello World!"</span>
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[AP Computer Science: Variables]]></title>
+      <url>/2017/09/08/ap_comp_sci1/</url>
+      <content type="html"><![CDATA[<h3 id="Variable-Declaration"><a href="#Variable-Declaration" class="headerlink" title="Variable Declaration"></a>Variable Declaration</h3><p>A variable is a named piece of memory that you can use to store information in a Java program.</p>
+<p>A variable declaration consists of two parts: a data type and an identifier name.</p>
+<h3 id="Primitive-Data-Types"><a href="#Primitive-Data-Types" class="headerlink" title="Primitive Data Types"></a>Primitive Data Types</h3><p>Integer data type (int)</p>
+<p>Double data type (double)</p>
+<p>Boolean data type (boolean)</p>
+<h3 id="Variable-Naming-Rules"><a href="#Variable-Naming-Rules" class="headerlink" title="Variable Naming Rules"></a>Variable Naming Rules</h3><p>A variable name must begin with a letter.</p>
+<p>It must be a sequence of letters and digits.</p>
+<p>Symbols cannot be used in variable names.</p>
+<p>The length of a variable name is unlimited.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> integer<span class="token punctuation">;</span>
+
+<span class="token keyword">double</span> decimal<span class="token punctuation">;</span>
+
+<span class="token keyword">boolean</span> bool<span class="token punctuation">;</span>
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Week 2: Machine Learning Gradient Descent and Vectorization]]></title>
       <url>/2017/04/15/machine_learning_gradient_descent_and_vectorization/</url>
       <content type="html"><![CDATA[<p>Resources from <a href="https://www.coursera.org/learn/machine-learning/" target="_blank" rel="external">Coursera</a>.</p>
 <h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>The second week of the machine learning course. Basically focused on the same topic as the first week, regression problems (including linear and polynomial regression) and gradient descent. However, more details of gradient descent were talked about, and the idea of using vectorization to increase the efficiency of gradient descent was introduced.</p>
 <h3 id="Polynomial-Regression"><a href="#Polynomial-Regression" class="headerlink" title="Polynomial Regression"></a>Polynomial Regression</h3><p>The process of polynomial regression is based on the process of linear regression, except for the fact that it creates new features out of the original features of the dataset. In other words, suppose if you have two features <em>a</em> and <em>b</em>, we can create three more features <em>a<sup>2</sup></em>, <em>ab</em>, and <em>b<sup>2</sup></em>. This way, we can fit non-linear data using a method very similar to linear regression.</p>
 <p>It is also worth noticing in this example of the relationship between house prices and house sizes that, although both hypotheses fit the dataset well, it is uncommon for house prices to drop when the size reaches a certain amount, so the second hypothesis would be a better choice.</p>
-<p><img src="https://raw.githubusercontent.com/leniumC/blog_resources/master/polynomial_regression.png" width="400"></p>
+<p><img src="https://raw.githubusercontent.com/leniumC/blog_resources/master/polynomial_regression.png" width="500"></p>
 <h3 id="Vectorization"><a href="#Vectorization" class="headerlink" title="Vectorization"></a>Vectorization</h3><p>Vectorization is a way increase the efficiency of calculations by doing matrix and vector multiplications instead of using looping over the elements one by one. It works because most programming languages have linear algebra libraries that are optimized for computations like this.</p>
 <p>This is an example of vectorization. The superscript <em>T</em> means taking the transpose of the matrix or vector.</p>
-<p><img src="https://raw.githubusercontent.com/leniumC/blog_resources/master/vectorization.png" width="800"></p>
+<p><img src="https://raw.githubusercontent.com/leniumC/blog_resources/master/vectorization.png" width="700"></p>
 ]]></content>
       
         <categories>
