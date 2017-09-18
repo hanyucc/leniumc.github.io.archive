@@ -507,18 +507,16 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <category> Algorithms </category>
             
-            <category> Stack </category>
-            
         </categories>
         
         
         <tags>
             
-            <tag> C++ </tag>
-            
             <tag> Data Structure </tag>
             
             <tag> Stack </tag>
+            
+            <tag> C++ </tag>
             
         </tags>
         
@@ -598,8 +596,6 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         <categories>
             
             <category> Algorithms </category>
-            
-            <category> Greedy </category>
             
         </categories>
         
@@ -715,8 +711,6 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <category> Algorithms </category>
             
-            <category> KMP </category>
-            
         </categories>
         
         
@@ -784,8 +778,6 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         <categories>
             
             <category> Algorithms </category>
-            
-            <category> DP </category>
             
         </categories>
         
@@ -877,8 +869,6 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <category> Algorithms </category>
             
-            <category> BFS </category>
-            
         </categories>
         
         
@@ -961,8 +951,6 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         <categories>
             
             <category> Algorithms </category>
-            
-            <category> DFS </category>
             
         </categories>
         
