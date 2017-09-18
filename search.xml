@@ -3,6 +3,52 @@
   
     
     <entry>
+      <title><![CDATA[AP Computer Science: Iteration]]></title>
+      <url>/2017/09/18/ap_comp_sci7/</url>
+      <content type="html"><![CDATA[<h3 id="The-While-Loop"><a href="#The-While-Loop" class="headerlink" title="The While Loop"></a>The While Loop</h3><p>A condition is a statement that evaluates to either true or false.</p>
+<p>A while loop repeats as long as its condition is true.</p>
+<p>Java’s while loop has the following structure:</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">while</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  body<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="Counter-Controlled-Loop"><a href="#Counter-Controlled-Loop" class="headerlink" title="Counter-Controlled Loop"></a>Counter-Controlled Loop</h3><p>A counter-controlled loop is one that repeats a predetermined number of times.</p>
+<p>The condition in this loop is controlled by a counter variable.</p>
+<p>The counter variable keeps track of the number of times that a loop is executed.</p>
+<pre class=" language-java"><code class="language-java">i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// the numbers 0 through 10 are printed</span>
+</code></pre>
+<h3 id="Infinite-Loop"><a href="#Infinite-Loop" class="headerlink" title="Infinite Loop"></a>Infinite Loop</h3><p>A common mistake is when a programmer forgets to increment the counter variable within the body of the while loop.<br>The counter will never reach the condition that ends the loop.</p>
+<pre class=" language-java"><code class="language-java">i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// a lot of 0s are printed</span>
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[AP Computer Science: Relational / Logical Operators]]></title>
       <url>/2017/09/14/ap_comp_sci6/</url>
       <content type="html"><![CDATA[<h3 id="Relational-Operators"><a href="#Relational-Operators" class="headerlink" title="Relational Operators"></a>Relational Operators</h3><p>A relational operator tests the relationship between two values.<br>Java has six relational operators:</p>
@@ -95,6 +141,8 @@
 </tr>
 </tbody>
 </table>
+<h3 id="Short-Circuit-Evaluation"><a href="#Short-Circuit-Evaluation" class="headerlink" title="Short-Circuit Evaluation"></a>Short-Circuit Evaluation</h3><p>The “and” and “or” operators are “short-circuited”.</p>
+<p>If the left operand is enough to decide the boolean result of the entire logical operation, then the right operand is not evaluated.</p>
 ]]></content>
       
         <categories>
@@ -155,7 +203,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[AP Computer Science: Data Conversion / Other Operators]]></title>
+      <title><![CDATA[AP Computer Science: Data Conversion]]></title>
       <url>/2017/09/12/ap_comp_sci4/</url>
       <content type="html"><![CDATA[<h3 id="Data-Conversion"><a href="#Data-Conversion" class="headerlink" title="Data Conversion"></a>Data Conversion</h3><p>This is a conversion from one primitive type to another.</p>
 <p>There are 2 categories.</p>
@@ -173,15 +221,6 @@ double_a <span class="token operator">=</span> <span class="token punctuation">(
 double_b <span class="token operator">=</span> <span class="token number">1.1</span><span class="token punctuation">;</span>
 int_b <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> double_b<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// int_b is now 1</span>
-</code></pre>
-<h3 id="Increment-Decrement-Operator-–"><a href="#Increment-Decrement-Operator-–" class="headerlink" title="Increment/Decrement Operator (++/–)"></a>Increment/Decrement Operator (++/–)</h3><p>Increases/Decreases the value of a variable by 1.</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> cnt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-
-cnt<span class="token operator">++</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// cnt is now 1</span>
-
-cnt<span class="token operator">--</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// cnt is now 0 again</span>
 </code></pre>
 ]]></content>
       
@@ -265,6 +304,15 @@ double_res <span class="token operator">=</span> <span class="token number">1.0<
 </tr>
 </tbody>
 </table>
+<h3 id="Increment-Decrement-Operator-–"><a href="#Increment-Decrement-Operator-–" class="headerlink" title="Increment/Decrement Operator (++/–)"></a>Increment/Decrement Operator (++/–)</h3><p>Increases/Decreases the value of a variable by 1.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> cnt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+cnt<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// cnt is now 1</span>
+
+cnt<span class="token operator">--</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// cnt is now 0 again</span>
+</code></pre>
 ]]></content>
       
         <categories>
