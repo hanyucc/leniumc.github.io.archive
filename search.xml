@@ -3,7 +3,58 @@
   
     
     <entry>
-      <title><![CDATA[AP Computer Science: Iteration]]></title>
+      <title><![CDATA[AP Computer Science: Iteration For]]></title>
+      <url>/2017/09/19/ap_comp_sci8/</url>
+      <content type="html"><![CDATA[<h3 id="The-For-Statement"><a href="#The-For-Statement" class="headerlink" title="The For Statement"></a>The For Statement</h3><p>Counter-controlled loops are so frequently used that programming languages have developed a special structure for them.</p>
+<p>The for statement combines counter initialization, condition test, and counter update into a single expression.</p>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// The two pieces of code do basically the same thing.</span>
+
+<span class="token comment" spellcheck="true">/*
+For Loop:
+for (initialize counter; test counter; update counter) {
+  body;
+}
+*/</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/*
+While Loop:
+initialize counter;
+while (test counter) {
+  body;
+  update counter;
+}
+*/</span>
+<span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  i<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h3><p>In the while loop, the counter is declared outside the while code block, so this means it can be used elsewhere in your program.</p>
+<p>In the for loop, the counter is declared within the scope of the for loop’s code block. This means it can only be used inside that block.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[AP Computer Science: Iteration While]]></title>
       <url>/2017/09/18/ap_comp_sci7/</url>
       <content type="html"><![CDATA[<h3 id="The-While-Loop"><a href="#The-While-Loop" class="headerlink" title="The While Loop"></a>The While Loop</h3><p>A condition is a statement that evaluates to either true or false.</p>
 <p>A while loop repeats as long as its condition is true.</p>
@@ -560,11 +611,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
+            <tag> C++ </tag>
+            
             <tag> Data Structure </tag>
             
             <tag> Stack </tag>
-            
-            <tag> C++ </tag>
             
         </tags>
         
