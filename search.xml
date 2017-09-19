@@ -16,7 +16,7 @@ for (initialize counter; test counter; update counter) {
 }
 */</span>
 <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token comment" spellcheck="true">/*
 While Loop:
@@ -28,8 +28,8 @@ while (test counter) {
 */</span>
 <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  i<span class="token operator">++</span><span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    i<span class="token operator">++</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <h3 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h3><p>In the while loop, the counter is declared outside the while code block, so this means it can be used elsewhere in your program.</p>
@@ -60,7 +60,7 @@ while (test counter) {
 <p>A while loop repeats as long as its condition is true.</p>
 <p>Java’s while loop has the following structure:</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">while</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  body<span class="token punctuation">;</span>
+    body<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <h3 id="Counter-Controlled-Loop"><a href="#Counter-Controlled-Loop" class="headerlink" title="Counter-Controlled Loop"></a>Counter-Controlled Loop</h3><p>A counter-controlled loop is one that repeats a predetermined number of times.</p>
@@ -68,15 +68,15 @@ while (test counter) {
 <p>The counter variable keeps track of the number of times that a loop is executed.</p>
 <pre class=" language-java"><code class="language-java">i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token comment" spellcheck="true">// the numbers 0 through 10 are printed</span>
 </code></pre>
 <h3 id="Infinite-Loop"><a href="#Infinite-Loop" class="headerlink" title="Infinite Loop"></a>Infinite Loop</h3><p>A common mistake is when a programmer forgets to increment the counter variable within the body of the while loop.<br>The counter will never reach the condition that ends the loop.</p>
 <pre class=" language-java"><code class="language-java">i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token comment" spellcheck="true">// a lot of 0s are printed</span>
 </code></pre>
@@ -218,20 +218,20 @@ while (test counter) {
       <url>/2017/09/13/ap_comp_sci5/</url>
       <content type="html"><![CDATA[<h3 id="Conditional-Statement"><a href="#Conditional-Statement" class="headerlink" title="Conditional Statement"></a>Conditional Statement</h3><p>The <code>if</code> structure in Java consists of 2 parts: a condition and a body.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">if</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  body<span class="token punctuation">;</span>
+    body<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <p>Java if-else structure is used when you want to do one thing if a condition is true, and another thing if that condition is false.</p>
 <p>And if-else structure will execute either the if section or the else section, but never both.</p>
 <p>The body of an <code>else if</code> statement will be executed if the <code>if</code> statements and <code>else if</code> above it are not executed and the condition is satisfied.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">if</span> <span class="token punctuation">(</span>condition1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  body1<span class="token punctuation">;</span>
+    body1<span class="token punctuation">;</span>
 <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>condition2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  body2<span class="token punctuation">;</span>
+    body2<span class="token punctuation">;</span>
 <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>condition3<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  body3<span class="token punctuation">;</span>
+    body3<span class="token punctuation">;</span>
 <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-  body4<span class="token punctuation">;</span>
+    body4<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
 ]]></content>
@@ -611,11 +611,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> C++ </tag>
-            
             <tag> Data Structure </tag>
             
             <tag> Stack </tag>
+            
+            <tag> C++ </tag>
             
         </tags>
         
