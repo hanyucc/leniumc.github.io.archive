@@ -95,7 +95,7 @@ return a;
     <entry>
       <title><![CDATA[AP Computer Science: Strings]]></title>
       <url>/2017/10/13/ap_comp_sci9/</url>
-      <content type="html"><![CDATA[<p>Java does not have a built-in primitive data type for strings.<br>Instead, the standard Java library has a predefined class called String.</p>
+      <content type="html"><![CDATA[<h3 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h3><p>Java does not have a built-in primitive data type for strings.<br>Instead, the standard Java library has a predefined class called String.</p>
 <h3 id="Instantiating-Creating-a-String-object"><a href="#Instantiating-Creating-a-String-object" class="headerlink" title="Instantiating (Creating) a String object"></a>Instantiating (Creating) a String object</h3><pre class=" language-Java"><code class="language-Java">String str = “”;
 </code></pre>
 <h3 id="Concatenation"><a href="#Concatenation" class="headerlink" title="Concatenation"></a>Concatenation</h3><p>Java allows you to use the + sign to join two strings together.</p>
@@ -665,9 +665,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <tag> Supervised Learning </tag>
             
-            <tag> Unsupervised Learning </tag>
-            
             <tag> Regression </tag>
+            
+            <tag> Unsupervised Learning </tag>
             
         </tags>
         
