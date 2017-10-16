@@ -3,6 +3,144 @@
   
     
     <entry>
+      <title><![CDATA[AP Computer Science: Methods 2]]></title>
+      <url>/2017/10/17/ap_comp_sci11/</url>
+      <content type="html"><![CDATA[<h3 id="Non-Void-Method-Return"><a href="#Non-Void-Method-Return" class="headerlink" title="Non-Void Method Return"></a>Non-Void Method Return</h3><p>A non-void method’s return value can be just about anything, as long as the return keyword matches the return type.</p>
+<p>A method can return a literal value.</p>
+<pre class=" language-Java"><code class="language-Java">return "hello world";
+// "hello world"
+</code></pre>
+<p>A method can return the contents of a variable.</p>
+<pre class=" language-Java"><code class="language-Java">int a = 100;
+return a;
+// 100
+</code></pre>
+<p>A method can return the result of a mathematical expression.</p>
+<pre class=" language-Java"><code class="language-Java">return 1 + 2;
+// 3
+</code></pre>
+<p>A method can return the result of a boolean expression.</p>
+<pre class=" language-Java"><code class="language-Java">return 1 < 2;
+// true
+</code></pre>
+<h3 id="Calling-Non-Void-Methods"><a href="#Calling-Non-Void-Methods" class="headerlink" title="Calling Non-Void Methods"></a>Calling Non-Void Methods</h3><p>Non-void methods always returns a value, then this value has to be stored in a variable, printed, or passed to a Java control structure.</p>
+<p>A method call can be in an assignment statement.</p>
+<pre class=" language-Java"><code class="language-Java">int a = getInt();
+</code></pre>
+<p>A method call can be in a <code>println</code> statement.</p>
+<pre class=" language-Java"><code class="language-Java">System.out.println(getString());
+</code></pre>
+<p>A method call can be inside a Java control structure such as an if statement or a looping structure.</p>
+<pre class=" language-Java"><code class="language-Java">while (isValid()) {
+  // do something
+}
+</code></pre>
+<p>A method call can be inside the return statement of another method.</p>
+<pre class=" language-Java"><code class="language-Java">return getDouble() / 1.1;
+</code></pre>
+<h3 id="Arguments"><a href="#Arguments" class="headerlink" title="Arguments"></a>Arguments</h3><p>An argument is a value that is passed to a method so that the method can use that value in its processing.</p>
+<p>An argument is located inside the parentheses that follow a method name.</p>
+<p>A method can have 0, 1, or more arguments. Multiple arguments are separated by commas.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[AP Computer Science: Methods 1]]></title>
+      <url>/2017/10/16/ap_comp_sci10/</url>
+      <content type="html"><![CDATA[<h3 id="Method-Types"><a href="#Method-Types" class="headerlink" title="Method Types"></a>Method Types</h3><p>A method is simply a block of code that is given a name.</p>
+<p>In Java, there are two types of methods that you can write. These methods are identified by the task they perform.</p>
+<p><strong>Void methods</strong>: These are methods that do not give you anything back. They have no return statement.</p>
+<p><strong>Non-void methods</strong>: These are methods that give you something back. They must have a return statement.</p>
+<h3 id="Void-Methods"><a href="#Void-Methods" class="headerlink" title="Void Methods"></a>Void Methods</h3><p>To execute or call a void method, you write the method name, along with open and closed parentheses.</p>
+<p>Note that a void method is called as a single statement on a line by itself.</p>
+<h3 id="Non-Void-Methods"><a href="#Non-Void-Methods" class="headerlink" title="Non-Void Methods"></a>Non-Void Methods</h3><p>Non-void methods differ from void methods in that they give something back.</p>
+<p>What they give back is dependent upon the return type.</p>
+<p>The return type declares what the method is going to give back, or return.</p>
+<p>The keyword return is required in all non-void methods.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[AP Computer Science: Strings]]></title>
+      <url>/2017/10/13/ap_comp_sci9/</url>
+      <content type="html"><![CDATA[<p>Java does not have a built-in primitive data type for strings.<br>Instead, the standard Java library has a predefined class called String.</p>
+<h3 id="Instantiating-Creating-a-String-object"><a href="#Instantiating-Creating-a-String-object" class="headerlink" title="Instantiating (Creating) a String object"></a>Instantiating (Creating) a String object</h3><pre class=" language-Java"><code class="language-Java">String str = “”;
+</code></pre>
+<h3 id="Concatenation"><a href="#Concatenation" class="headerlink" title="Concatenation"></a>Concatenation</h3><p>Java allows you to use the + sign to join two strings together.</p>
+<p>You can also concatenate a String with a numerical value.</p>
+<h3 id="Substrings"><a href="#Substrings" class="headerlink" title="Substrings"></a>Substrings</h3><p>A substring is defined as a string that is part of a longer string.</p>
+<p>In Java, you can extract a substring from a larger string with the substring method.</p>
+<pre class=" language-Java"><code class="language-Java">int l = 10, r = 16;
+String str = “this is a string”;
+String substr = str.substring(l, r);
+// gives you the characters in str from index l through r – 1
+// which is the word “string”
+</code></pre>
+<h3 id="Length"><a href="#Length" class="headerlink" title="Length"></a>Length</h3><p>The <code>length()</code> method indicates how many characters are in a String.</p>
+<p>Strings are immutable. They can’t be directly changed or altered.</p>
+<p>You can make new Strings, but you can’t alter existing ones.</p>
+<h3 id="Searching-through-a-String"><a href="#Searching-through-a-String" class="headerlink" title="Searching through a String"></a>Searching through a String</h3><p>The String class provides a method called <code>indexOf()</code> that will allow you to search for an individual character or substring within a String.</p>
+<p>If the search is successful, then the index of the substring is returned.</p>
+<p>If the substring is not found within the String, the method returns a value of -1.</p>
+<h3 id="Equality-of-String-objects"><a href="#Equality-of-String-objects" class="headerlink" title="Equality of String objects"></a>Equality of String objects</h3><p>Use the <code>equals()</code> method to check 2 Strings or equality in the following manner:</p>
+<pre class=" language-Java"><code class="language-Java">String a = “string”;
+String b = “string”;
+Boolean result = a.equals(b);
+</code></pre>
+<p>You cannot use <code>==</code> to compare Strings, because Strings are not primitive types.</p>
+<p>Use the <code>compareTo()</code> method to compare each String’s relative position in the ASCII chart.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[AP Computer Science: Iteration For]]></title>
       <url>/2017/09/19/ap_comp_sci8/</url>
       <content type="html"><![CDATA[<h3 id="The-For-Statement"><a href="#The-For-Statement" class="headerlink" title="The For Statement"></a>The For Statement</h3><p>Counter-controlled loops are so frequently used that programming languages have developed a special structure for them.</p>
@@ -611,11 +749,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
+            <tag> C++ </tag>
+            
             <tag> Data Structure </tag>
             
             <tag> Stack </tag>
-            
-            <tag> C++ </tag>
             
         </tags>
         
@@ -973,9 +1111,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> C++ </tag>
-            
             <tag> Search </tag>
+            
+            <tag> C++ </tag>
             
             <tag> BFS </tag>
             
@@ -1056,11 +1194,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> C++ </tag>
-            
             <tag> Search </tag>
             
             <tag> DFS </tag>
+            
+            <tag> C++ </tag>
             
         </tags>
         
