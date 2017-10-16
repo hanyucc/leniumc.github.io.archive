@@ -749,11 +749,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> C++ </tag>
-            
             <tag> Data Structure </tag>
             
             <tag> Stack </tag>
+            
+            <tag> C++ </tag>
             
         </tags>
         
@@ -1111,9 +1111,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> Search </tag>
-            
             <tag> C++ </tag>
+            
+            <tag> Search </tag>
             
             <tag> BFS </tag>
             
@@ -1194,11 +1194,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
+            <tag> C++ </tag>
+            
             <tag> Search </tag>
             
             <tag> DFS </tag>
-            
-            <tag> C++ </tag>
             
         </tags>
         
