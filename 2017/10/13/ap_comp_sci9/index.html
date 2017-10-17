@@ -383,17 +383,17 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <h3 id="Java-Strings"><a href="#Java-Strings" class="headerlink" title="Java Strings"></a>Java Strings</h3><p>Java does not have a built-in primitive data type for strings.<br>Instead, the standard Java library has a predefined class called String.</p>
-<h3 id="Instantiating-Creating-a-String-object"><a href="#Instantiating-Creating-a-String-object" class="headerlink" title="Instantiating (Creating) a String object"></a>Instantiating (Creating) a String object</h3><pre class=" language-Java"><code class="language-Java">String str = “”;
+<h3 id="Instantiating-Creating-a-String-object"><a href="#Instantiating-Creating-a-String-object" class="headerlink" title="Instantiating (Creating) a String object"></a>Instantiating (Creating) a String object</h3><pre class=" language-java"><code class="language-java">String str <span class="token operator">=</span> “”<span class="token punctuation">;</span>
 </code></pre>
 <h3 id="Concatenation"><a href="#Concatenation" class="headerlink" title="Concatenation"></a>Concatenation</h3><p>Java allows you to use the + sign to join two strings together.</p>
 <p>You can also concatenate a String with a numerical value.</p>
 <h3 id="Substrings"><a href="#Substrings" class="headerlink" title="Substrings"></a>Substrings</h3><p>A substring is defined as a string that is part of a longer string.</p>
 <p>In Java, you can extract a substring from a larger string with the substring method.</p>
-<pre class=" language-Java"><code class="language-Java">int l = 10, r = 16;
-String str = “this is a string”;
-String substr = str.substring(l, r);
-// gives you the characters in str from index l through r – 1
-// which is the word “string”
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> l <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">,</span> r <span class="token operator">=</span> <span class="token number">16</span><span class="token punctuation">;</span>
+String str <span class="token operator">=</span> “<span class="token keyword">this</span> is a string”<span class="token punctuation">;</span>
+String substr <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>l<span class="token punctuation">,</span> r<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// gives you the characters in str from index l through r – 1</span>
+<span class="token comment" spellcheck="true">// which is the word “string”</span>
 </code></pre>
 <h3 id="Length"><a href="#Length" class="headerlink" title="Length"></a>Length</h3><p>The <code>length()</code> method indicates how many characters are in a String.</p>
 <p>Strings are immutable. They can’t be directly changed or altered.</p>
@@ -402,9 +402,9 @@ String substr = str.substring(l, r);
 <p>If the search is successful, then the index of the substring is returned.</p>
 <p>If the substring is not found within the String, the method returns a value of -1.</p>
 <h3 id="Equality-of-String-objects"><a href="#Equality-of-String-objects" class="headerlink" title="Equality of String objects"></a>Equality of String objects</h3><p>Use the <code>equals()</code> method to check 2 Strings or equality in the following manner:</p>
-<pre class=" language-Java"><code class="language-Java">String a = “string”;
-String b = “string”;
-Boolean result = a.equals(b);
+<pre class=" language-java"><code class="language-java">String a <span class="token operator">=</span> “string”<span class="token punctuation">;</span>
+String b <span class="token operator">=</span> “string”<span class="token punctuation">;</span>
+Boolean result <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>You cannot use <code>==</code> to compare Strings, because Strings are not primitive types.</p>
 <p>Use the <code>compareTo()</code> method to compare each String’s relative position in the ASCII chart.</p>

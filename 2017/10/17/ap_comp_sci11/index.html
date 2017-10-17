@@ -384,36 +384,36 @@
     
         <h3 id="Non-Void-Method-Return"><a href="#Non-Void-Method-Return" class="headerlink" title="Non-Void Method Return"></a>Non-Void Method Return</h3><p>A non-void method’s return value can be just about anything, as long as the return keyword matches the return type.</p>
 <p>A method can return a literal value.</p>
-<pre class=" language-Java"><code class="language-Java">return "hello world";
-// "hello world"
+<pre class=" language-java"><code class="language-java"><span class="token keyword">return</span> <span class="token string">"hello world"</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// "hello world"</span>
 </code></pre>
 <p>A method can return the contents of a variable.</p>
-<pre class=" language-Java"><code class="language-Java">int a = 100;
-return a;
-// 100
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+<span class="token keyword">return</span> a<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 100</span>
 </code></pre>
 <p>A method can return the result of a mathematical expression.</p>
-<pre class=" language-Java"><code class="language-Java">return 1 + 2;
-// 3
+<pre class=" language-java"><code class="language-java"><span class="token keyword">return</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 3</span>
 </code></pre>
 <p>A method can return the result of a boolean expression.</p>
-<pre class=" language-Java"><code class="language-Java">return 1 < 2;
-// true
+<pre class=" language-java"><code class="language-java"><span class="token keyword">return</span> <span class="token number">1</span> <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// true</span>
 </code></pre>
 <h3 id="Calling-Non-Void-Methods"><a href="#Calling-Non-Void-Methods" class="headerlink" title="Calling Non-Void Methods"></a>Calling Non-Void Methods</h3><p>Non-void methods always returns a value, then this value has to be stored in a variable, printed, or passed to a Java control structure.</p>
 <p>A method call can be in an assignment statement.</p>
-<pre class=" language-Java"><code class="language-Java">int a = getInt();
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token function">getInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>A method call can be in a <code>println</code> statement.</p>
-<pre class=" language-Java"><code class="language-Java">System.out.println(getString());
+<pre class=" language-java"><code class="language-java">System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>A method call can be inside a Java control structure such as an if statement or a looping structure.</p>
-<pre class=" language-Java"><code class="language-Java">while (isValid()) {
-  // do something
-}
+<pre class=" language-java"><code class="language-java"><span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">isValid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// do something</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>A method call can be inside the return statement of another method.</p>
-<pre class=" language-Java"><code class="language-Java">return getDouble() / 1.1;
+<pre class=" language-java"><code class="language-java"><span class="token keyword">return</span> <span class="token function">getDouble</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">1.1</span><span class="token punctuation">;</span>
 </code></pre>
 <h3 id="Arguments"><a href="#Arguments" class="headerlink" title="Arguments"></a>Arguments</h3><p>An argument is a value that is passed to a method so that the method can use that value in its processing.</p>
 <p>An argument is located inside the parentheses that follow a method name.</p>
