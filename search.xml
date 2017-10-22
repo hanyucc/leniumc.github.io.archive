@@ -3,6 +3,200 @@
   
     
     <entry>
+      <title><![CDATA[AP Computer Science: Random Numbers]]></title>
+      <url>/2017/10/23/ap_comp_sci15/</url>
+      <content type="html"><![CDATA[<h3 id="Data-Structures"><a href="#Data-Structures" class="headerlink" title="Data Structures"></a>Data Structures</h3><p>A data structure is a group of data elements combined together under one name.</p>
+<p>Data structures are used for storing and organizing data so that it can be used efficiently.</p>
+<h3 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h3><p>An array is a data structure that stores a collection of individual values that are of the same data type.</p>
+<h3 id="Declaring-an-Array"><a href="#Declaring-an-Array" class="headerlink" title="Declaring an Array"></a>Declaring an Array</h3><p>To declare an array variable, you must include square brackets [] between the data type and the variable name.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> numbers<span class="token punctuation">;</span>
+</code></pre>
+<h3 id="Defining-an-Array"><a href="#Defining-an-Array" class="headerlink" title="Defining an Array"></a>Defining an Array</h3><p>To create the array itself, we must specify its data type and how many elements it is to contain (its size).</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> size <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+numbers <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span>size<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="Accessing-Array-Elements"><a href="#Accessing-Array-Elements" class="headerlink" title="Accessing Array Elements"></a>Accessing Array Elements</h3><p>To access the individual elements of an array, you must use the array variable’s name, followed by the number of the element enclosed in square brackets. This number is referred to as an index.</p>
+<p>Note that the index starts from 0 instead of 1.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> numbers <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+numbers<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// right</span>
+
+numbers<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// wrong</span>
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[AP Computer Science: Random Numbers]]></title>
+      <url>/2017/10/20/ap_comp_sci14/</url>
+      <content type="html"><![CDATA[<h3 id="The-Math-random-Method"><a href="#The-Math-random-Method" class="headerlink" title="The Math.random() Method"></a>The <code>Math.random()</code> Method</h3><p>Java’s random number generator returns numbers chosen at random for a particular set interval.</p>
+<p>The <code>Math.random()</code> method creates a random double value which is greater than or equal to 0.0, and less than 1.0.</p>
+<p>This range can be modified through type casting, multiplication and addition.</p>
+<p>If you multiply Math.random() by an integer x, the range of the random number will change to 0.0 &lt;= n &lt; x.</p>
+<p>If you add an integer to Math.random(), the range of the random number will be shifted by that amount.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">double</span> a <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 0.0 &lt;= a &lt; 10.0</span>
+<span class="token keyword">double</span> b <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 10.0 &lt;= b &lt; 11.0</span>
+</code></pre>
+<h3 id="Creating-random-integers"><a href="#Creating-random-integers" class="headerlink" title="Creating random integers"></a>Creating random integers</h3><p>This statement produces a random integer in the range p &lt;= n &lt;= p + k – 1.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> k<span class="token punctuation">)</span> <span class="token operator">+</span> p<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// p &lt;= n &lt;= p + k – 1.</span>
+</code></pre>
+<p>Thus, if the desired range is a &lt;= n &lt;= b, use this equation.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>b – a <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> a<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// a &lt;= n &lt;= b</span>
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[AP Computer Science: Math]]></title>
+      <url>/2017/10/19/ap_comp_sci13/</url>
+      <content type="html"><![CDATA[<h3 id="The-Math-Class"><a href="#The-Math-Class" class="headerlink" title="The Math Class"></a>The Math Class</h3><p>This is a Java standard class which provides a range of common mathematical methods.</p>
+<table>
+<thead>
+<tr>
+<th>method</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int abs(int x)</td>
+<td>returns the absolute value</td>
+</tr>
+<tr>
+<td>double abs(double x)</td>
+<td>returns the absolute value</td>
+</tr>
+<tr>
+<td>int max(int a, int b)</td>
+<td>returns the greater of a and b</td>
+</tr>
+<tr>
+<td>int max(int a, int b)</td>
+<td>returns the lesser of a and b</td>
+</tr>
+<tr>
+<td>double pow(double base, double exponent)</td>
+<td>returns the base raised to the power of the exponent</td>
+</tr>
+<tr>
+<td>double random()</td>
+<td>returns a double numerical value, with a positive sign, greater or equal to 0.0, and less than 1.0</td>
+</tr>
+<tr>
+<td>double sqrt(double x)</td>
+<td>returns the square root of x</td>
+</tr>
+</tbody>
+</table>
+<p>The data type in front of the method name indicates the type of data that is returned by the calculation.</p>
+<p>All these methods are declared as static, so you must use the name of the class when evoking them: <code>Math</code>.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">;</span>
+a <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// a is 10</span>
+
+<span class="token comment" spellcheck="true">// a = abs(b)</span>
+<span class="token comment" spellcheck="true">// this won't work</span>
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[AP Computer Science: Parameter]]></title>
+      <url>/2017/10/18/ap_comp_sci12/</url>
+      <content type="html"><![CDATA[<h3 id="Writing-a-Method-with-Parameters"><a href="#Writing-a-Method-with-Parameters" class="headerlink" title="Writing a Method with Parameters"></a>Writing a Method with Parameters</h3><p>To add parameters to your method definitions, you simply declare one or more variables in the parentheses that follow the method name.</p>
+<p>These variable declarations need to include a data type and an identifier name.</p>
+<p>A parameter is a special kind of variable that can only be used within your declared method.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">function</span><span class="token punctuation">(</span>String param<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>param<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// prints param</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="Parameter-Scope"><a href="#Parameter-Scope" class="headerlink" title="Parameter Scope"></a>Parameter Scope</h3><p>In other words, the parameter can’t be used outside its body.</p>
+<p>The scope of a parameter is limited to the method that it is declared in.</p>
+<p>In other words, we can’t use parameters outside their declared method.</p>
+<h3 id="Parameters-and-Arguments"><a href="#Parameters-and-Arguments" class="headerlink" title="Parameters and Arguments"></a>Parameters and Arguments</h3><p>Note that parameters are the variables that you declare when you define a method while arguments are the data you pass into the method when calling it.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">function</span><span class="token punctuation">(</span>String param<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// parameter</span>
+  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>param<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">anotherFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  String arg <span class="token operator">=</span> <span class="token string">"hello world"</span><span class="token punctuation">;</span>
+  <span class="token function">function</span><span class="token punctuation">(</span>arg<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// argument</span>
+<span class="token punctuation">}</span>
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[AP Computer Science: Methods 2]]></title>
       <url>/2017/10/17/ap_comp_sci11/</url>
       <content type="html"><![CDATA[<h3 id="Non-Void-Method-Return"><a href="#Non-Void-Method-Return" class="headerlink" title="Non-Void Method Return"></a>Non-Void Method Return</h3><p>A non-void method’s return value can be just about anything, as long as the return keyword matches the return type.</p>
@@ -749,11 +943,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> C++ </tag>
-            
             <tag> Data Structure </tag>
             
             <tag> Stack </tag>
+            
+            <tag> C++ </tag>
             
         </tags>
         
