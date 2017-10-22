@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title><![CDATA[AP Computer Science: Random Numbers]]></title>
+      <title><![CDATA[AP Computer Science: Arrays]]></title>
       <url>/2017/10/23/ap_comp_sci15/</url>
       <content type="html"><![CDATA[<h3 id="Data-Structures"><a href="#Data-Structures" class="headerlink" title="Data Structures"></a>Data Structures</h3><p>A data structure is a group of data elements combined together under one name.</p>
 <p>Data structures are used for storing and organizing data so that it can be used efficiently.</p>
@@ -859,9 +859,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <tag> Supervised Learning </tag>
             
-            <tag> Regression </tag>
-            
             <tag> Unsupervised Learning </tag>
+            
+            <tag> Regression </tag>
             
         </tags>
         
