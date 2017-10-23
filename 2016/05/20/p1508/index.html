@@ -10,7 +10,7 @@
     
     <title>
         
-            Subset Sums | 
+            P1508 Likecloud-吃、吃、吃 | 
         
         leniumC&#39;s Blog
     </title>
@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#4caf50">
     <meta name="author" content="leniumC">
     <meta name="description" content="Just a personal blog.">
-    <meta name="keywords" content="null,C++,DP">
+    <meta name="keywords" content="null,C++,DFS,DP">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -48,9 +48,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Subset Sums | leniumC&#39;s Blog">
+    <meta property="og:title" content="P1508 Likecloud-吃、吃、吃 | leniumC&#39;s Blog">
     <meta property="og:description" content="Just a personal blog.">
-    <meta property="og:article:tag" content="C++"> <meta property="og:article:tag" content="DP"> 
+    <meta property="og:article:tag" content="C++"> <meta property="og:article:tag" content="DFS"> <meta property="og:article:tag" content="DP"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -230,7 +230,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Subset-Sums"><span class="post-toc-number">1.</span> <span class="post-toc-text">Subset Sums</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Problem"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Problem</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Input-Format"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Input Format</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Output-Format"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Output Format</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Sample-Input"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Sample-Output"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Solution"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">Solution</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#P1508-Likecloud-吃、吃、吃"><span class="post-toc-number">1.</span> <span class="post-toc-text">P1508 Likecloud-吃、吃、吃</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#题目描述"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">题目描述</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#输入格式"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">输入格式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#输出格式"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">输出格式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#输入输出样例"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">输入输出样例</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#题解"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">题解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#代码"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">代码</span></a></li></ol></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -266,7 +266,7 @@
         
     
             <p class="article-headline-p">
-                Subset Sums
+                P1508 Likecloud-吃、吃、吃
             </p>
         </div>
 
@@ -285,7 +285,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>leniumC</strong>
-        <span>Aug 07, 2016</span>
+        <span>May 20, 2016</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -309,7 +309,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/C/">C++</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/DP/">DP</a>
+        <a class="post_tag-link" href="/tags/C/">C++</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/DFS/">DFS</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/DP/">DP</a>
     </ul>
     
 
@@ -325,7 +325,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Subset Sums&url=http://yoursite.com//2016/08/07/subset_sums/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=P1508 Likecloud-吃、吃、吃&url=http://yoursite.com//2016/05/20/p1508/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 Share to Weibo
             </li>
@@ -334,7 +334,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Subset Sums&url=http://yoursite.com//2016/08/07/subset_sums/index.html&via=leniumC" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=P1508 Likecloud-吃、吃、吃&url=http://yoursite.com//2016/05/20/p1508/index.html&via=leniumC" target="_blank">
             <li class="mdl-menu__item">
                 Share to Twitter
             </li>
@@ -343,7 +343,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com//2016/08/07/subset_sums/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com//2016/05/20/p1508/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to Facebook
             </li>
@@ -352,7 +352,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2016/08/07/subset_sums/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2016/05/20/p1508/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to Google+
             </li>
@@ -364,7 +364,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=leniumC&#39;s Blog&title=Subset Sums&summary=Just a personal blog.&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2016/08/07/subset_sums/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=leniumC&#39;s Blog&title=P1508 Likecloud-吃、吃、吃&summary=Just a personal blog.&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2016/05/20/p1508/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to QQ
             </li>
@@ -382,47 +382,64 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>Problem from <a href="http://train.usaco.org/usacogate" target="_blank" rel="external">USACO</a>.  </p>
-<h2 id="Subset-Sums"><a href="#Subset-Sums" class="headerlink" title="Subset Sums"></a>Subset Sums</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>For many sets of consecutive integers from 1 through <em>N</em> (1 &lt;= <em>N</em> &lt;= 39), one can partition the set into two sets whose sums are identical.</p>
-<p>For example, if <em>N</em>=3, one can partition the set {1, 2, 3} in one way so that the sums of both subsets are identical:</p>
-<p>{3} and {1,2}<br>This counts as a single partitioning (i.e., reversing the order counts as the same partitioning and thus does not increase the count of partitions).</p>
-<p>If <em>N</em>=7, there are four ways to partition the set {1, 2, 3, … 7} so that each partition has the same sum:</p>
-<p>{1,6,7} and {2,3,4,5}<br>{2,5,7} and {1,3,4,6}<br>{3,4,7} and {1,2,5,6}<br>{1,2,4,7} and {3,5,6}<br>Given N, your program should print the number of ways a set containing the integers from 1 through <em>N</em> can be partitioned into two sets whose sums are identical. Print 0 if there are no such ways.</p>
-<p>Your program must calculate the answer, not look it up from a table.</p>
-<h3 id="Input-Format"><a href="#Input-Format" class="headerlink" title="Input Format"></a>Input Format</h3><p>The input file contains a single line with a single integer representing <em>N</em>, as above.</p>
-<h3 id="Output-Format"><a href="#Output-Format" class="headerlink" title="Output Format"></a>Output Format</h3><p>The output file contains a single line with a single integer that tells how many same-sum partitions can be made from the set {1, 2, …, <em>N</em>}. The output file should contain 0 if there are no ways to make a same-sum partition.</p>
-<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h3><p>7</p>
-<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h3><p>4</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>First of all, if the sum is odd, then there is no solution. Dynamic programming could be used to solve this problem. Specifically, <em>dp[i]</em> stands for the ways to make a set of a sum <em>i</em> and we can update <em>dp[i]</em> using the values of <em>dp[j]</em> where <em>j</em> &lt; <em>i</em>, which has been calculated already.</p>
-<p>It is worth noticing that the inner loop decreases <em>j</em> from <em>m</em> to <em>i</em> instead of the other way around.</p>
-<p>The code is as follows.</p>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstdlib></span></span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;cstdio></span></span>
+        <p>Problem from <a href="https://www.luogu.org/problemnew/show/1508" target="_blank" rel="external">Luogu</a>.  </p>
+<h2 id="P1508-Likecloud-吃、吃、吃"><a href="#P1508-Likecloud-吃、吃、吃" class="headerlink" title="P1508 Likecloud-吃、吃、吃"></a>P1508 Likecloud-吃、吃、吃</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>正处在某一特定时期之中的李大水牛由于消化系统比较发达，最近一直处在饥饿的状态中。某日上课，正当他饿得头昏眼花之时，眼前突然闪现出了一个<em>n</em>*<em>m</em>(<em>n</em> and <em>m</em>&lt;=200)的矩型的巨型大餐桌，而自己正处在这个大餐桌的一侧的中点下边。餐桌被划分为了<em>n</em>*<em>m</em>个小方格，每一个方格中都有一个圆形的巨型大餐盘，上面盛满了令李大水牛朝思暮想的食物。李大水牛已将餐桌上所有的食物按其所能提供的能量打了分（有些是负的，因为吃了要拉肚子），他决定从自己所处的位置吃到餐桌的另一侧，但他吃东西有一个习惯——只吃自己前方或左前方或右前方的盘中的食物。</p>
+<p>由于李大水牛已饿得不想动脑了，而他又想获得最大的能量，因此，他将这个问题交给了你。</p>
+<p>每组数据的出发点都是最后一行的中间位置的下方！</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><p>第一行为<em>m</em> <em>n</em>.(<em>n</em>为奇数)，李大水牛一开始在最后一行的中间的下方</p>
+<p>接下来为<em>m</em>*<em>n</em>的数字距阵.</p>
+<p>共有<em>m</em>行,每行<em>n</em>个数字.数字间用空格隔开.代表该格子上的盘中的食物所能提供的能量.</p>
+<p>数字全是整数.</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><p>一个数,为你所找出的最大能量值.</p>
+<h3 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><p>输入样例#1:<br>6 7<br>16 4 3 12 6 0 3<br>4 -5 6 7 0 0 2<br>6 0 -1 -2 3 6 8<br>5 3 4 0 0 -2 7<br>-1 7 4 0 7 -5 6<br>0 -1 3 4 12 4 2</p>
+<p>输出样例#1：<br>41</p>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>直接用一个记忆化深搜就能ac的，数组是从0开的，所以从（m, n/2）这个位置开始，</p>
+<p>向上深搜，每次尝试左上、右上、正上三个位置。</p>
+<p><strong>注意几个地方：</strong></p>
+<ol>
+<li><p>从最后一行的下面开始，不是最后一行。</p>
+</li>
+<li><p>去过的地方存一下，不然可能会TLE。</p>
+</li>
+<li><p>边界是到了第一行，即x==0。</p>
+</li>
+<li><p>分类处理一下最后一列和第一列的情况。</p>
+</li>
+</ol>
+<p>似乎不需要优化就能ac的。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token keyword">int</span> maxn <span class="token operator">=</span> <span class="token number">40</span><span class="token punctuation">;</span>
-<span class="token keyword">long</span> <span class="token keyword">long</span> n<span class="token punctuation">,</span> dp<span class="token punctuation">[</span>maxn <span class="token operator">*</span> maxn<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> maxn<span class="token operator">=</span><span class="token number">210</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> n<span class="token punctuation">,</span>m<span class="token punctuation">;</span>
+<span class="token keyword">int</span> map<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">,</span>dp<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">dp1</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span><span class="token keyword">int</span> y<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>x<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> map<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>dp<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token operator">!=</span><span class="token operator">-</span><span class="token number">2147483647</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> dp<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>y<span class="token operator">==</span>n<span class="token number">-1</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> dp<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token function">dp1</span><span class="token punctuation">(</span>x<span class="token number">-1</span><span class="token punctuation">,</span>y<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">dp1</span><span class="token punctuation">(</span>x<span class="token number">-1</span><span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">+</span>map<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>y<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> dp<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token function">dp1</span><span class="token punctuation">(</span>x<span class="token number">-1</span><span class="token punctuation">,</span>y<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">dp1</span><span class="token punctuation">(</span>x<span class="token number">-1</span><span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">+</span>map<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">else</span>
+            <span class="token keyword">return</span> dp<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token function">dp1</span><span class="token punctuation">(</span>x<span class="token number">-1</span><span class="token punctuation">,</span>y<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">dp1</span><span class="token punctuation">(</span>x<span class="token number">-1</span><span class="token punctuation">,</span>y<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">dp1</span><span class="token punctuation">(</span>x<span class="token number">-1</span><span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">+</span>map<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// freopen("subset.in", "r", stdin);</span>
-    <span class="token comment" spellcheck="true">// freopen("subset.out", "w", stdout);</span>
-    <span class="token keyword">int</span> i<span class="token punctuation">,</span> j<span class="token punctuation">,</span> m<span class="token punctuation">;</span>
-    cin <span class="token operator">>></span> n<span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>n <span class="token operator">*</span> <span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token number">1</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        cout <span class="token operator">&lt;&lt;</span> <span class="token number">0</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    m <span class="token operator">=</span> n <span class="token operator">*</span> <span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">4</span><span class="token punctuation">;</span>
-    dp<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span>j <span class="token operator">=</span> m<span class="token punctuation">;</span> j <span class="token operator">>=</span> i<span class="token punctuation">;</span> j<span class="token operator">--</span><span class="token punctuation">)</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">,</span>j<span class="token punctuation">;</span>
+    cin<span class="token operator">>></span>m<span class="token operator">>></span>n<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>m<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span>
         <span class="token punctuation">{</span>
-            dp<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+</span><span class="token operator">=</span> dp<span class="token punctuation">[</span>j <span class="token operator">-</span> i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            cin<span class="token operator">>></span>map<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            dp<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span><span class="token operator">-</span><span class="token number">2147483647</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    cout <span class="token operator">&lt;&lt;</span> dp<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">/</span> <span class="token number">2</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    dp<span class="token punctuation">[</span>m<span class="token punctuation">]</span><span class="token punctuation">[</span>n<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token operator">-</span><span class="token number">2147483647</span><span class="token punctuation">;</span>
+    cout<span class="token operator">&lt;&lt;</span><span class="token function">dp1</span><span class="token punctuation">(</span>m<span class="token punctuation">,</span>n<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
@@ -452,7 +469,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2016/08/13/number_cards/" id="post_nav-newer" class="prev-content">
+        <a href="/2016/06/30/hello_world/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -466,7 +483,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2016/08/04/strange_elevator/" id="post_nav-older" class="next-content">
+        <a href="/2016/04/12/introduction/" id="post_nav-older" class="next-content">
             Older
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
