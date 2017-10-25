@@ -35,7 +35,7 @@ nums<span class="token punctuation">[</span><span class="token number">19</span>
 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arraySize<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// prints 20</span>
 </code></pre>
-<p>Note that there are no parentheses after <code>length</code> because <code>length</code> is an attribute of <code>nums</code> instead of a method.</p>
+<p>Note that there are no parentheses after <code>length</code> because <code>length</code> is an member variable of <code>nums</code> instead of a method.</p>
 ]]></content>
       
         <categories>
@@ -912,9 +912,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <tag> Supervised Learning </tag>
             
-            <tag> Regression </tag>
-            
             <tag> Unsupervised Learning </tag>
+            
+            <tag> Regression </tag>
             
         </tags>
         
@@ -996,11 +996,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
+            <tag> C++ </tag>
+            
             <tag> Data Structure </tag>
             
             <tag> Stack </tag>
-            
-            <tag> C++ </tag>
             
         </tags>
         
@@ -1268,9 +1268,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> C++ </tag>
-            
             <tag> DP </tag>
+            
+            <tag> C++ </tag>
             
         </tags>
         
@@ -1441,9 +1441,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> C++ </tag>
-            
             <tag> DFS </tag>
+            
+            <tag> C++ </tag>
             
             <tag> Search </tag>
             
@@ -1547,11 +1547,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> C++ </tag>
-            
             <tag> DFS </tag>
             
             <tag> DP </tag>
+            
+            <tag> C++ </tag>
             
         </tags>
         
