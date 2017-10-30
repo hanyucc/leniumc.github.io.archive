@@ -3,6 +3,81 @@
   
     
     <entry>
+      <title><![CDATA[AP Computer Science: 2-D Arrays]]></title>
+      <url>/2017/10/30/ap_comp_sci17/</url>
+      <content type="html"><![CDATA[<h3 id="Two-Dimensional-Arrays"><a href="#Two-Dimensional-Arrays" class="headerlink" title="Two-Dimensional Arrays"></a>Two-Dimensional Arrays</h3><p>Suppose I declare an array, and instead of filling the cells with integers or strings, I place an array in each cell.</p>
+<p>Essentially, I have created an array of arrays, also known as a two-dimensional array.</p>
+<p>In Java, two-dimensional arrays can be defined using the following notation:</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> table <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span>rows<span class="token punctuation">]</span><span class="token punctuation">[</span>columns<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Specifically, it is easier to think of a two-dimensional array as a table or grid with rows or columns.</p>
+<table>
+<thead>
+<tr>
+<th>\</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>.</td>
+<td>.</td>
+<td>.</td>
+<td>.</td>
+<td>.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>.</td>
+<td>.</td>
+<td>.</td>
+<td>x</td>
+<td>.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>.</td>
+<td>.</td>
+<td>.</td>
+<td>.</td>
+<td>.</td>
+</tr>
+</tbody>
+</table>
+<p>The first index declares the number of rows. The second index declares the number of columns.<br>For example, location [1][3] would be 2 rows down and 4 columns across.</p>
+<p><strong>Remember</strong>: all the elements of a two-dimensional array must be of the same data type.</p>
+<h3 id="Size-of-2-D-Arrays"><a href="#Size-of-2-D-Arrays" class="headerlink" title="Size of 2-D Arrays"></a>Size of 2-D Arrays</h3><p>You can get the number of rows that a 2-D array contains by using the variable <code>table.length</code>.<br>You can get the number of columns that a 2-D array contains by using the variable <code>table[0].length</code>.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> table <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+rows <span class="token operator">=</span> table<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// rows is 3</span>
+columns <span class="token operator">=</span> table<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// columns is 5</span>
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[AP Computer Science: Arrays 2]]></title>
       <url>/2017/10/24/ap_comp_sci16/</url>
       <content type="html"><![CDATA[<h3 id="Array-Initializer-List"><a href="#Array-Initializer-List" class="headerlink" title="Array Initializer List"></a>Array Initializer List</h3><p>As a shortcut, an initializer list allows you to declare an array and assign values to each of its elements in a single statement.</p>
@@ -1268,9 +1343,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> DP </tag>
-            
             <tag> C++ </tag>
+            
+            <tag> DP </tag>
             
         </tags>
         
@@ -1441,9 +1516,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> DFS </tag>
-            
             <tag> C++ </tag>
+            
+            <tag> DFS </tag>
             
             <tag> Search </tag>
             
@@ -1547,11 +1622,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
+            <tag> C++ </tag>
+            
             <tag> DFS </tag>
             
             <tag> DP </tag>
-            
-            <tag> C++ </tag>
             
         </tags>
         
