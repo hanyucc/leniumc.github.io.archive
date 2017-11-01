@@ -3,8 +3,8 @@
   
     
     <entry>
-      <title><![CDATA[AP Computer Science: 2-D Arrays]]></title>
-      <url>/2017/10/30/ap_comp_sci17/</url>
+      <title><![CDATA[AP Computer Science A: 2-D Arrays]]></title>
+      <url>/2017/10/30/ap_comp_sci_a_17/</url>
       <content type="html"><![CDATA[<h3 id="Two-Dimensional-Arrays"><a href="#Two-Dimensional-Arrays" class="headerlink" title="Two-Dimensional Arrays"></a>Two-Dimensional Arrays</h3><p>Suppose I declare an array, and instead of filling the cells with integers or strings, I place an array in each cell.</p>
 <p>Essentially, I have created an array of arrays, also known as a two-dimensional array.</p>
 <p>In Java, two-dimensional arrays can be defined using the following notation:</p>
@@ -69,7 +69,7 @@ columns <span class="token operator">=</span> table<span class="token punctuatio
         
         <tags>
             
-            <tag> AP Computer Science </tag>
+            <tag> AP Computer Science A </tag>
             
             <tag> Java </tag>
             
@@ -78,8 +78,8 @@ columns <span class="token operator">=</span> table<span class="token punctuatio
     </entry>
     
     <entry>
-      <title><![CDATA[AP Computer Science: Arrays 2]]></title>
-      <url>/2017/10/24/ap_comp_sci16/</url>
+      <title><![CDATA[AP Computer Science A: Arrays II]]></title>
+      <url>/2017/10/24/ap_comp_sci_a_16/</url>
       <content type="html"><![CDATA[<h3 id="Array-Initializer-List"><a href="#Array-Initializer-List" class="headerlink" title="Array Initializer List"></a>Array Initializer List</h3><p>As a shortcut, an initializer list allows you to declare an array and assign values to each of its elements in a single statement.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> numbers <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
@@ -122,7 +122,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> AP Computer Science </tag>
+            <tag> AP Computer Science A </tag>
             
             <tag> Java </tag>
             
@@ -131,8 +131,8 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
     </entry>
     
     <entry>
-      <title><![CDATA[AP Computer Science: Arrays 1]]></title>
-      <url>/2017/10/23/ap_comp_sci15/</url>
+      <title><![CDATA[AP Computer Science A: Arrays I]]></title>
+      <url>/2017/10/23/ap_comp_sci_a_15/</url>
       <content type="html"><![CDATA[<h3 id="Data-Structures"><a href="#Data-Structures" class="headerlink" title="Data Structures"></a>Data Structures</h3><p>A data structure is a group of data elements combined together under one name.</p>
 <p>Data structures are used for storing and organizing data so that it can be used efficiently.</p>
 <h3 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h3><p>An array is a data structure that stores a collection of individual values that are of the same data type.</p>
@@ -164,7 +164,7 @@ numbers<span class="token punctuation">[</span><span class="token number">5</spa
         
         <tags>
             
-            <tag> AP Computer Science </tag>
+            <tag> AP Computer Science A </tag>
             
             <tag> Java </tag>
             
@@ -173,8 +173,8 @@ numbers<span class="token punctuation">[</span><span class="token number">5</spa
     </entry>
     
     <entry>
-      <title><![CDATA[AP Computer Science: Random Numbers]]></title>
-      <url>/2017/10/20/ap_comp_sci14/</url>
+      <title><![CDATA[AP Computer Science A: Random Numbers]]></title>
+      <url>/2017/10/20/ap_comp_sci_a_14/</url>
       <content type="html"><![CDATA[<h3 id="The-Math-random-Method"><a href="#The-Math-random-Method" class="headerlink" title="The Math.random() Method"></a>The <code>Math.random()</code> Method</h3><p>Java’s random number generator returns numbers chosen at random for a particular set interval.</p>
 <p>The <code>Math.random()</code> method creates a random double value which is greater than or equal to 0.0, and less than 1.0.</p>
 <p>This range can be modified through type casting, multiplication and addition.</p>
@@ -185,12 +185,12 @@ numbers<span class="token punctuation">[</span><span class="token number">5</spa
 <span class="token keyword">double</span> b <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// 10.0 &lt;= b &lt; 11.0</span>
 </code></pre>
-<h3 id="Creating-random-integers"><a href="#Creating-random-integers" class="headerlink" title="Creating random integers"></a>Creating random integers</h3><p>This statement produces a random integer in the range p &lt;= n &lt;= p + k – 1.</p>
+<h3 id="Creating-random-integers"><a href="#Creating-random-integers" class="headerlink" title="Creating random integers"></a>Creating random integers</h3><p>This statement produces a random integer in the range p &lt;= n &lt;= p + k ��?1.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> k<span class="token punctuation">)</span> <span class="token operator">+</span> p<span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// p &lt;= n &lt;= p + k – 1.</span>
+<span class="token comment" spellcheck="true">// p &lt;= n &lt;= p + k ��?1.</span>
 </code></pre>
 <p>Thus, if the desired range is a &lt;= n &lt;= b, use this equation.</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>b – a <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> a<span class="token punctuation">;</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>b ��<span class="token operator">?</span>a <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> a<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// a &lt;= n &lt;= b</span>
 </code></pre>
 ]]></content>
@@ -204,7 +204,7 @@ numbers<span class="token punctuation">[</span><span class="token number">5</spa
         
         <tags>
             
-            <tag> AP Computer Science </tag>
+            <tag> AP Computer Science A </tag>
             
             <tag> Java </tag>
             
@@ -213,8 +213,8 @@ numbers<span class="token punctuation">[</span><span class="token number">5</spa
     </entry>
     
     <entry>
-      <title><![CDATA[AP Computer Science: Math]]></title>
-      <url>/2017/10/19/ap_comp_sci13/</url>
+      <title><![CDATA[AP Computer Science A: Math]]></title>
+      <url>/2017/10/19/ap_comp_sci_a_13/</url>
       <content type="html"><![CDATA[<h3 id="The-Math-Class"><a href="#The-Math-Class" class="headerlink" title="The Math Class"></a>The Math Class</h3><p>This is a Java standard class which provides a range of common mathematical methods.</p>
 <table>
 <thead>
@@ -274,7 +274,7 @@ a <span class="token operator">=</span> Math<span class="token punctuation">.</s
         
         <tags>
             
-            <tag> AP Computer Science </tag>
+            <tag> AP Computer Science A </tag>
             
             <tag> Java </tag>
             
@@ -283,8 +283,8 @@ a <span class="token operator">=</span> Math<span class="token punctuation">.</s
     </entry>
     
     <entry>
-      <title><![CDATA[AP Computer Science: Parameter]]></title>
-      <url>/2017/10/18/ap_comp_sci12/</url>
+      <title><![CDATA[AP Computer Science A: Parameter]]></title>
+      <url>/2017/10/18/ap_comp_sci_a_12/</url>
       <content type="html"><![CDATA[<h3 id="Writing-a-Method-with-Parameters"><a href="#Writing-a-Method-with-Parameters" class="headerlink" title="Writing a Method with Parameters"></a>Writing a Method with Parameters</h3><p>To add parameters to your method definitions, you simply declare one or more variables in the parentheses that follow the method name.</p>
 <p>These variable declarations need to include a data type and an identifier name.</p>
 <p>A parameter is a special kind of variable that can only be used within your declared method.</p>
@@ -316,7 +316,7 @@ a <span class="token operator">=</span> Math<span class="token punctuation">.</s
         
         <tags>
             
-            <tag> AP Computer Science </tag>
+            <tag> AP Computer Science A </tag>
             
             <tag> Java </tag>
             
@@ -325,8 +325,8 @@ a <span class="token operator">=</span> Math<span class="token punctuation">.</s
     </entry>
     
     <entry>
-      <title><![CDATA[AP Computer Science: Methods 2]]></title>
-      <url>/2017/10/17/ap_comp_sci11/</url>
+      <title><![CDATA[AP Computer Science A: Methods II]]></title>
+      <url>/2017/10/17/ap_comp_sci_a_11/</url>
       <content type="html"><![CDATA[<h3 id="Non-Void-Method-Return"><a href="#Non-Void-Method-Return" class="headerlink" title="Non-Void Method Return"></a>Non-Void Method Return</h3><p>A non-void method’s return value can be just about anything, as long as the return keyword matches the return type.</p>
 <p>A method can return a literal value.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">return</span> <span class="token string">"hello world"</span><span class="token punctuation">;</span>
@@ -374,7 +374,7 @@ a <span class="token operator">=</span> Math<span class="token punctuation">.</s
         
         <tags>
             
-            <tag> AP Computer Science </tag>
+            <tag> AP Computer Science A </tag>
             
             <tag> Java </tag>
             
@@ -383,8 +383,8 @@ a <span class="token operator">=</span> Math<span class="token punctuation">.</s
     </entry>
     
     <entry>
-      <title><![CDATA[AP Computer Science: Methods 1]]></title>
-      <url>/2017/10/16/ap_comp_sci10/</url>
+      <title><![CDATA[AP Computer Science A: Methods I]]></title>
+      <url>/2017/10/16/ap_comp_sci_a_10/</url>
       <content type="html"><![CDATA[<h3 id="Method-Types"><a href="#Method-Types" class="headerlink" title="Method Types"></a>Method Types</h3><p>A method is simply a block of code that is given a name.</p>
 <p>In Java, there are two types of methods that you can write. These methods are identified by the task they perform.</p>
 <p><strong>Void methods</strong>: These are methods that do not give you anything back. They have no return statement.</p>
@@ -406,7 +406,7 @@ a <span class="token operator">=</span> Math<span class="token punctuation">.</s
         
         <tags>
             
-            <tag> AP Computer Science </tag>
+            <tag> AP Computer Science A </tag>
             
             <tag> Java </tag>
             
@@ -415,20 +415,20 @@ a <span class="token operator">=</span> Math<span class="token punctuation">.</s
     </entry>
     
     <entry>
-      <title><![CDATA[AP Computer Science: Strings]]></title>
-      <url>/2017/10/13/ap_comp_sci9/</url>
+      <title><![CDATA[AP Computer Science A: Strings]]></title>
+      <url>/2017/10/13/ap_comp_sci_a_9/</url>
       <content type="html"><![CDATA[<h3 id="Java-Strings"><a href="#Java-Strings" class="headerlink" title="Java Strings"></a>Java Strings</h3><p>Java does not have a built-in primitive data type for strings.<br>Instead, the standard Java library has a predefined class called String.</p>
-<h3 id="Instantiating-Creating-a-String-object"><a href="#Instantiating-Creating-a-String-object" class="headerlink" title="Instantiating (Creating) a String object"></a>Instantiating (Creating) a String object</h3><pre class=" language-java"><code class="language-java">String str <span class="token operator">=</span> “”<span class="token punctuation">;</span>
+<h3 id="Instantiating-Creating-a-String-object"><a href="#Instantiating-Creating-a-String-object" class="headerlink" title="Instantiating (Creating) a String object"></a>Instantiating (Creating) a String object</h3><pre class=" language-java"><code class="language-java">String str <span class="token operator">=</span> “��<span class="token operator">?</span>
 </code></pre>
 <h3 id="Concatenation"><a href="#Concatenation" class="headerlink" title="Concatenation"></a>Concatenation</h3><p>Java allows you to use the + sign to join two strings together.</p>
 <p>You can also concatenate a String with a numerical value.</p>
 <h3 id="Substrings"><a href="#Substrings" class="headerlink" title="Substrings"></a>Substrings</h3><p>A substring is defined as a string that is part of a longer string.</p>
 <p>In Java, you can extract a substring from a larger string with the substring method.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> l <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">,</span> r <span class="token operator">=</span> <span class="token number">16</span><span class="token punctuation">;</span>
-String str <span class="token operator">=</span> “<span class="token keyword">this</span> is a string”<span class="token punctuation">;</span>
+String str <span class="token operator">=</span> “<span class="token keyword">this</span> is a string��<span class="token operator">?</span>
 String substr <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>l<span class="token punctuation">,</span> r<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// gives you the characters in str from index l through r – 1</span>
-<span class="token comment" spellcheck="true">// which is the word “string”</span>
+<span class="token comment" spellcheck="true">// gives you the characters in str from index l through r ��?1</span>
+<span class="token comment" spellcheck="true">// which is the word “string��?</span>
 </code></pre>
 <h3 id="Length"><a href="#Length" class="headerlink" title="Length"></a>Length</h3><p>The <code>length()</code> method indicates how many characters are in a String.</p>
 <p>Strings are immutable. They can’t be directly changed or altered.</p>
@@ -437,8 +437,8 @@ String substr <span class="token operator">=</span> str<span class="token punctu
 <p>If the search is successful, then the index of the substring is returned.</p>
 <p>If the substring is not found within the String, the method returns a value of -1.</p>
 <h3 id="Equality-of-String-objects"><a href="#Equality-of-String-objects" class="headerlink" title="Equality of String objects"></a>Equality of String objects</h3><p>Use the <code>equals()</code> method to check 2 Strings or equality in the following manner:</p>
-<pre class=" language-java"><code class="language-java">String a <span class="token operator">=</span> “string”<span class="token punctuation">;</span>
-String b <span class="token operator">=</span> “string”<span class="token punctuation">;</span>
+<pre class=" language-java"><code class="language-java">String a <span class="token operator">=</span> “string��<span class="token operator">?</span>
+String b <span class="token operator">=</span> “string��<span class="token operator">?</span>
 Boolean result <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>You cannot use <code>==</code> to compare Strings, because Strings are not primitive types.</p>
@@ -454,7 +454,7 @@ Boolean result <span class="token operator">=</span> a<span class="token punctua
         
         <tags>
             
-            <tag> AP Computer Science </tag>
+            <tag> AP Computer Science A </tag>
             
             <tag> Java </tag>
             
@@ -463,8 +463,8 @@ Boolean result <span class="token operator">=</span> a<span class="token punctua
     </entry>
     
     <entry>
-      <title><![CDATA[AP Computer Science: Iteration For]]></title>
-      <url>/2017/09/19/ap_comp_sci8/</url>
+      <title><![CDATA[AP Computer Science A: Iteration For]]></title>
+      <url>/2017/09/19/ap_comp_sci_a_8/</url>
       <content type="html"><![CDATA[<h3 id="The-For-Statement"><a href="#The-For-Statement" class="headerlink" title="The For Statement"></a>The For Statement</h3><p>Counter-controlled loops are so frequently used that programming languages have developed a special structure for them.</p>
 <p>The for statement combines counter initialization, condition test, and counter update into a single expression.</p>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// The two pieces of code do basically the same thing.</span>
@@ -505,7 +505,7 @@ while (test counter) {
         
         <tags>
             
-            <tag> AP Computer Science </tag>
+            <tag> AP Computer Science A </tag>
             
             <tag> Java </tag>
             
@@ -514,8 +514,8 @@ while (test counter) {
     </entry>
     
     <entry>
-      <title><![CDATA[AP Computer Science: Iteration While]]></title>
-      <url>/2017/09/18/ap_comp_sci7/</url>
+      <title><![CDATA[AP Computer Science A: Iteration While]]></title>
+      <url>/2017/09/18/ap_comp_sci_a_7/</url>
       <content type="html"><![CDATA[<h3 id="The-While-Loop"><a href="#The-While-Loop" class="headerlink" title="The While Loop"></a>The While Loop</h3><p>A condition is a statement that evaluates to either true or false.</p>
 <p>A while loop repeats as long as its condition is true.</p>
 <p>Java’s while loop has the following structure:</p>
@@ -551,7 +551,7 @@ while (test counter) {
         
         <tags>
             
-            <tag> AP Computer Science </tag>
+            <tag> AP Computer Science A </tag>
             
             <tag> Java </tag>
             
@@ -560,8 +560,8 @@ while (test counter) {
     </entry>
     
     <entry>
-      <title><![CDATA[AP Computer Science: Relational / Logical Operators]]></title>
-      <url>/2017/09/14/ap_comp_sci6/</url>
+      <title><![CDATA[AP Computer Science A: Relational / Logical Operators]]></title>
+      <url>/2017/09/14/ap_comp_sci_a_6/</url>
       <content type="html"><![CDATA[<h3 id="Relational-Operators"><a href="#Relational-Operators" class="headerlink" title="Relational Operators"></a>Relational Operators</h3><p>A relational operator tests the relationship between two values.<br>Java has six relational operators:</p>
 <table>
 <thead>
@@ -652,7 +652,7 @@ while (test counter) {
 </tr>
 </tbody>
 </table>
-<h3 id="Short-Circuit-Evaluation"><a href="#Short-Circuit-Evaluation" class="headerlink" title="Short-Circuit Evaluation"></a>Short-Circuit Evaluation</h3><p>The “and” and “or” operators are “short-circuited”.</p>
+<h3 id="Short-Circuit-Evaluation"><a href="#Short-Circuit-Evaluation" class="headerlink" title="Short-Circuit Evaluation"></a>Short-Circuit Evaluation</h3><p>The “and��?and “or��?operators are “short-circuited��?</p>
 <p>If the left operand is enough to decide the boolean result of the entire logical operation, then the right operand is not evaluated.</p>
 ]]></content>
       
@@ -665,7 +665,7 @@ while (test counter) {
         
         <tags>
             
-            <tag> AP Computer Science </tag>
+            <tag> AP Computer Science A </tag>
             
             <tag> Java </tag>
             
@@ -674,8 +674,8 @@ while (test counter) {
     </entry>
     
     <entry>
-      <title><![CDATA[AP Computer Science: Conditional Statement]]></title>
-      <url>/2017/09/13/ap_comp_sci5/</url>
+      <title><![CDATA[AP Computer Science A: Conditional Statement]]></title>
+      <url>/2017/09/13/ap_comp_sci_a_5/</url>
       <content type="html"><![CDATA[<h3 id="Conditional-Statement"><a href="#Conditional-Statement" class="headerlink" title="Conditional Statement"></a>Conditional Statement</h3><p>The <code>if</code> structure in Java consists of 2 parts: a condition and a body.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">if</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     body<span class="token punctuation">;</span>
@@ -705,7 +705,7 @@ while (test counter) {
         
         <tags>
             
-            <tag> AP Computer Science </tag>
+            <tag> AP Computer Science A </tag>
             
             <tag> Java </tag>
             
@@ -714,8 +714,8 @@ while (test counter) {
     </entry>
     
     <entry>
-      <title><![CDATA[AP Computer Science: Data Conversion]]></title>
-      <url>/2017/09/12/ap_comp_sci4/</url>
+      <title><![CDATA[AP Computer Science A: Data Conversion]]></title>
+      <url>/2017/09/12/ap_comp_sci_a_4/</url>
       <content type="html"><![CDATA[<h3 id="Data-Conversion"><a href="#Data-Conversion" class="headerlink" title="Data Conversion"></a>Data Conversion</h3><p>This is a conversion from one primitive type to another.</p>
 <p>There are 2 categories.</p>
 <h5 id="Widening-conversion"><a href="#Widening-conversion" class="headerlink" title="Widening conversion"></a>Widening conversion</h5><p>Safest, because information is not lost. (int-&gt;double)</p>
@@ -744,7 +744,7 @@ int_b <span class="token operator">=</span> <span class="token punctuation">(</s
         
         <tags>
             
-            <tag> AP Computer Science </tag>
+            <tag> AP Computer Science A </tag>
             
             <tag> Java </tag>
             
@@ -753,8 +753,8 @@ int_b <span class="token operator">=</span> <span class="token punctuation">(</s
     </entry>
     
     <entry>
-      <title><![CDATA[AP Computer Science: Other Operators]]></title>
-      <url>/2017/09/11/ap_comp_sci3/</url>
+      <title><![CDATA[AP Computer Science A: Other Operators]]></title>
+      <url>/2017/09/11/ap_comp_sci_a_3/</url>
       <content type="html"><![CDATA[<h3 id="Modulus-Remainder-Operator"><a href="#Modulus-Remainder-Operator" class="headerlink" title="Modulus (Remainder) Operator (%)"></a>Modulus (Remainder) Operator (%)</h3><p>Returns the remainder after dividing the second operand into the first.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">;</span>
 
@@ -835,7 +835,7 @@ cnt<span class="token operator">--</span><span class="token punctuation">;</span
         
         <tags>
             
-            <tag> AP Computer Science </tag>
+            <tag> AP Computer Science A </tag>
             
             <tag> Java </tag>
             
@@ -844,8 +844,8 @@ cnt<span class="token operator">--</span><span class="token punctuation">;</span
     </entry>
     
     <entry>
-      <title><![CDATA[AP Computer Science: Basic Operators]]></title>
-      <url>/2017/09/09/ap_comp_sci2/</url>
+      <title><![CDATA[AP Computer Science A: Basic Operators]]></title>
+      <url>/2017/09/09/ap_comp_sci_a_2/</url>
       <content type="html"><![CDATA[<h3 id="The-Assignment-Operator"><a href="#The-Assignment-Operator" class="headerlink" title="The Assignment Operator (=)"></a>The Assignment Operator (=)</h3><p>This is used to assign a value to a variable.</p>
 <p>Be careful not to confuse it with the mathematical equals sign.</p>
 <p>The assignment occurs from right to left.</p>
@@ -881,7 +881,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> AP Computer Science </tag>
+            <tag> AP Computer Science A </tag>
             
             <tag> Java </tag>
             
@@ -890,8 +890,8 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
     </entry>
     
     <entry>
-      <title><![CDATA[AP Computer Science: Variables]]></title>
-      <url>/2017/09/08/ap_comp_sci1/</url>
+      <title><![CDATA[AP Computer Science A: Variables]]></title>
+      <url>/2017/09/08/ap_comp_sci_a_1/</url>
       <content type="html"><![CDATA[<h3 id="Variable-Declaration"><a href="#Variable-Declaration" class="headerlink" title="Variable Declaration"></a>Variable Declaration</h3><p>A variable is a named piece of memory that you can use to store information in a Java program.</p>
 <p>A variable declaration consists of two parts: a data type and an identifier name.</p>
 <h3 id="Primitive-Data-Types"><a href="#Primitive-Data-Types" class="headerlink" title="Primitive Data Types"></a>Primitive Data Types</h3><p>Integer data type (int)</p>
@@ -918,7 +918,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> AP Computer Science </tag>
+            <tag> AP Computer Science A </tag>
             
             <tag> Java </tag>
             
@@ -987,9 +987,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <tag> Supervised Learning </tag>
             
-            <tag> Regression </tag>
-            
             <tag> Unsupervised Learning </tag>
+            
+            <tag> Regression </tag>
             
         </tags>
         
