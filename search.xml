@@ -3,6 +3,62 @@
   
     
     <entry>
+      <title><![CDATA[AP Computer Science A: Object Oriented Programming]]></title>
+      <url>/2017/11/07/ap_comp_sci_a_18/</url>
+      <content type="html"><![CDATA[<h3 id="Object-Oriented-Programming"><a href="#Object-Oriented-Programming" class="headerlink" title="Object Oriented Programming"></a>Object Oriented Programming</h3><p>As programming problems become more complex, programmers look for better ways to store them.</p>
+<p>We can divide a programming problem into multiple classes, where each class has a specific task to perform in solving the problem.</p>
+<p>A class is a description, model, or blueprint from which an object is created.</p>
+<h3 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h3><p>A class describes 2 characteristics of an object:</p>
+<ul>
+<li>It describes what data an object stores, known as an object’s attributes. These are defined through the instance variables.</li>
+<li>It describes what an object does, known as an object’s behaviors. These are defined through the methods.</li>
+</ul>
+<p>The process of combining state and behavior into a single class is called encapsulation.</p>
+<h3 id="Defining-a-Class"><a href="#Defining-a-Class" class="headerlink" title="Defining a Class"></a>Defining a Class</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Die</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// instance variables</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> faceValue<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// constructors</span>
+    <span class="token keyword">public</span> <span class="token function">Die</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        faceValue <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// methods</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">roll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        faceValue <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">6</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getFaceValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> faceValue<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="Using-a-Class"><a href="#Using-a-Class" class="headerlink" title="Using a Class"></a>Using a Class</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DieTest</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Die die <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Die</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        die<span class="token punctuation">.</span><span class="token function">roll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> result <span class="token operator">=</span> die<span class="token punctuation">.</span><span class="token function">getFaceValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science A </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[AP Computer Science A: 2-D Arrays]]></title>
       <url>/2017/10/30/ap_comp_sci_a_17/</url>
       <content type="html"><![CDATA[<h3 id="Two-Dimensional-Arrays"><a href="#Two-Dimensional-Arrays" class="headerlink" title="Two-Dimensional Arrays"></a>Two-Dimensional Arrays</h3><p>Suppose I declare an array, and instead of filling the cells with integers or strings, I place an array in each cell.</p>
@@ -987,9 +1043,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <tag> Supervised Learning </tag>
             
-            <tag> Unsupervised Learning </tag>
-            
             <tag> Regression </tag>
+            
+            <tag> Unsupervised Learning </tag>
             
         </tags>
         
@@ -1071,11 +1127,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> C++ </tag>
-            
             <tag> Data Structure </tag>
             
             <tag> Stack </tag>
+            
+            <tag> C++ </tag>
             
         </tags>
         
