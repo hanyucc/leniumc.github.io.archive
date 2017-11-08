@@ -3,6 +3,73 @@
   
     
     <entry>
+      <title><![CDATA[AP Computer Science A: Instance Variables / Constructors]]></title>
+      <url>/2017/11/08/ap_comp_sci_a_19/</url>
+      <content type="html"><![CDATA[<h3 id="Instance-Variables"><a href="#Instance-Variables" class="headerlink" title="Instance Variables"></a>Instance Variables</h3><p>There are variables that describe the state of an object, also known as attributes.</p>
+<p>They are always declared private.</p>
+<p>You can use them in any method in the class.</p>
+<p>Don’t initiate them because they are always automatically assigned default values.</p>
+<ul>
+<li>int: 0</li>
+<li>double: 0.0</li>
+<li>boolean: false</li>
+<li>object references: null</li>
+</ul>
+<h3 id="Constructors"><a href="#Constructors" class="headerlink" title="Constructors"></a>Constructors</h3><p>A constructor is a special method within a class that has the same name as the class.</p>
+<p>The primary purpose of a constructor is to assign initial values to a class’ instance variables.</p>
+<p>When defining a constructor, you do not specify a return type.</p>
+<p>A constructor with no parameters is called the default constructor.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token function">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    name <span class="token operator">=</span> <span class="token string">"anonymous"</span><span class="token punctuation">;</span>
+    age <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="Multiple-Constructors"><a href="#Multiple-Constructors" class="headerlink" title="Multiple Constructors"></a>Multiple Constructors</h3><p>A class can have more than one constructor. Providing multiple constructors makes a class more flexible and easy to use.</p>
+<p>When using multiple constructors, the parameter list of each constructor within a class must be unique.</p>
+<p>Parameter lists must differ by either the number of parameters defined or the parameter type.</p>
+<p>Constructors are invoked or called when you “construct” an object using the keyword <code>new</code>.</p>
+<p><strong>Note</strong>: If a class contains no constructors, Java will automatically provide a default constructor for the class</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// instance variables</span>
+    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// constructors</span>
+    <span class="token keyword">public</span> <span class="token function">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        name <span class="token operator">=</span> <span class="token string">"anonymous"</span><span class="token punctuation">;</span>
+        age <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token function">Student</span><span class="token punctuation">(</span>String studentName<span class="token punctuation">,</span> <span class="token keyword">int</span> studentAge<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        name <span class="token operator">=</span> studentName<span class="token punctuation">;</span>
+        age <span class="token operator">=</span> studentAge<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StudentTest</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Student defaultStudent <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Student bob <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">"Bob"</span><span class="token punctuation">,</span> <span class="token number">17</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science A </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[AP Computer Science A: Object Oriented Programming]]></title>
       <url>/2017/11/07/ap_comp_sci_a_18/</url>
       <content type="html"><![CDATA[<h3 id="Object-Oriented-Programming"><a href="#Object-Oriented-Programming" class="headerlink" title="Object Oriented Programming"></a>Object Oriented Programming</h3><p>As programming problems become more complex, programmers look for better ways to store them.</p>
@@ -1574,9 +1641,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <tag> C++ </tag>
             
-            <tag> DFS </tag>
-            
             <tag> Search </tag>
+            
+            <tag> DFS </tag>
             
         </tags>
         
