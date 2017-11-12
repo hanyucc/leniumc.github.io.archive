@@ -3,6 +3,53 @@
   
     
     <entry>
+      <title><![CDATA[AP Computer Science A: Accessor / Mutator Methods]]></title>
+      <url>/2017/11/13/ap_comp_sci_a_20/</url>
+      <content type="html"><![CDATA[<h3 id="Accessor-Methods"><a href="#Accessor-Methods" class="headerlink" title="Accessor Methods"></a>Accessor Methods</h3><p>Instance variables should be declared as private.</p>
+<p>By declaring the instance variables as private, client programs that create objects from the class are not allowed to access the instance variables directly using the dot operator.</p>
+<p>However, client programs often need the ability to see the contents of the instance variables of an object. For this reason, classes are often designed with a special type of method called an accessor method.</p>
+<p>Accessor methods are methods defined in a class which allow clients to observe instance variables, but not modify them.</p>
+<p>Accessor methods are declared with a return type that corresponds to the data type of the instance variable being accessed.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>This method, when called, will return the value of the <code>name</code> instance variable.</p>
+<h3 id="Mutator-Methods"><a href="#Mutator-Methods" class="headerlink" title="Mutator Methods"></a>Mutator Methods</h3><p>Methods in a class that allow clients to modify an object’s instance variables are called mutator methods.</p>
+<p>If the instance variables of a class are declared private, then clients who instantiate (create) objects of this class do not have direct access to its instance variables.</p>
+<p>If you wish clients to have the ability to change the value of a particular instance variable, then you must provide a mutator method.</p>
+<p>Mutator methods are usually defined with a return type of void, since they usually do not return a value.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span>String studentName<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        name <span class="token operator">=</span> studentName<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>This method, when called, will change the value of the <code>name</code> instance variable to the value specified by the parameter <code>studentName</code>.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science A </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[AP Computer Science A: Instance Variables / Constructors]]></title>
       <url>/2017/11/08/ap_comp_sci_a_19/</url>
       <content type="html"><![CDATA[<h3 id="Instance-Variables"><a href="#Instance-Variables" class="headerlink" title="Instance Variables"></a>Instance Variables</h3><p>There are variables that describe the state of an object, also known as attributes.</p>
