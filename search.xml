@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[AP Computer Science A: Accessor / Mutator Methods]]></title>
       <url>/2017/11/13/ap_comp_sci_a_20/</url>
-      <content type="html"><![CDATA[<h3 id="Accessor-Methods"><a href="#Accessor-Methods" class="headerlink" title="Accessor Methods"></a>Accessor Methods</h3><p>Instance variables should be declared as private.</p>
+      <content type="html"><![CDATA[<h2 id="Accessor-Methods"><a href="#Accessor-Methods" class="headerlink" title="Accessor Methods"></a>Accessor Methods</h2><p>Instance variables should be declared as private.</p>
 <p>By declaring the instance variables as private, client programs that create objects from the class are not allowed to access the instance variables directly using the dot operator.</p>
 <p>However, client programs often need the ability to see the contents of the instance variables of an object. For this reason, classes are often designed with a special type of method called an accessor method.</p>
 <p>Accessor methods are methods defined in a class which allow clients to observe instance variables, but not modify them.</p>
@@ -18,7 +18,7 @@
 <span class="token punctuation">}</span>
 </code></pre>
 <p>This method, when called, will return the value of the <code>name</code> instance variable.</p>
-<h3 id="Mutator-Methods"><a href="#Mutator-Methods" class="headerlink" title="Mutator Methods"></a>Mutator Methods</h3><p>Methods in a class that allow clients to modify an object’s instance variables are called mutator methods.</p>
+<h2 id="Mutator-Methods"><a href="#Mutator-Methods" class="headerlink" title="Mutator Methods"></a>Mutator Methods</h2><p>Methods in a class that allow clients to modify an object’s instance variables are called mutator methods.</p>
 <p>If the instance variables of a class are declared private, then clients who instantiate (create) objects of this class do not have direct access to its instance variables.</p>
 <p>If you wish clients to have the ability to change the value of a particular instance variable, then you must provide a mutator method.</p>
 <p>Mutator methods are usually defined with a return type of void, since they usually do not return a value.</p>
@@ -52,7 +52,7 @@
     <entry>
       <title><![CDATA[AP Computer Science A: Instance Variables / Constructors]]></title>
       <url>/2017/11/08/ap_comp_sci_a_19/</url>
-      <content type="html"><![CDATA[<h3 id="Instance-Variables"><a href="#Instance-Variables" class="headerlink" title="Instance Variables"></a>Instance Variables</h3><p>There are variables that describe the state of an object, also known as attributes.</p>
+      <content type="html"><![CDATA[<h2 id="Instance-Variables"><a href="#Instance-Variables" class="headerlink" title="Instance Variables"></a>Instance Variables</h2><p>There are variables that describe the state of an object, also known as attributes.</p>
 <p>They are always declared private.</p>
 <p>You can use them in any method in the class.</p>
 <p>Don’t initiate them because they are always automatically assigned default values.</p>
@@ -62,7 +62,7 @@
 <li>boolean: false</li>
 <li>object references: null</li>
 </ul>
-<h3 id="Constructors"><a href="#Constructors" class="headerlink" title="Constructors"></a>Constructors</h3><p>A constructor is a special method within a class that has the same name as the class.</p>
+<h2 id="Constructors"><a href="#Constructors" class="headerlink" title="Constructors"></a>Constructors</h2><p>A constructor is a special method within a class that has the same name as the class.</p>
 <p>The primary purpose of a constructor is to assign initial values to a class’ instance variables.</p>
 <p>When defining a constructor, you do not specify a return type.</p>
 <p>A constructor with no parameters is called the default constructor.</p>
@@ -71,7 +71,7 @@
     age <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h3 id="Multiple-Constructors"><a href="#Multiple-Constructors" class="headerlink" title="Multiple Constructors"></a>Multiple Constructors</h3><p>A class can have more than one constructor. Providing multiple constructors makes a class more flexible and easy to use.</p>
+<h2 id="Multiple-Constructors"><a href="#Multiple-Constructors" class="headerlink" title="Multiple Constructors"></a>Multiple Constructors</h2><p>A class can have more than one constructor. Providing multiple constructors makes a class more flexible and easy to use.</p>
 <p>When using multiple constructors, the parameter list of each constructor within a class must be unique.</p>
 <p>Parameter lists must differ by either the number of parameters defined or the parameter type.</p>
 <p>Constructors are invoked or called when you “construct” an object using the keyword <code>new</code>.</p>
@@ -119,16 +119,16 @@
     <entry>
       <title><![CDATA[AP Computer Science A: Object Oriented Programming]]></title>
       <url>/2017/11/07/ap_comp_sci_a_18/</url>
-      <content type="html"><![CDATA[<h3 id="Object-Oriented-Programming"><a href="#Object-Oriented-Programming" class="headerlink" title="Object Oriented Programming"></a>Object Oriented Programming</h3><p>As programming problems become more complex, programmers look for better ways to store them.</p>
+      <content type="html"><![CDATA[<h2 id="Object-Oriented-Programming"><a href="#Object-Oriented-Programming" class="headerlink" title="Object Oriented Programming"></a>Object Oriented Programming</h2><p>As programming problems become more complex, programmers look for better ways to store them.</p>
 <p>We can divide a programming problem into multiple classes, where each class has a specific task to perform in solving the problem.</p>
 <p>A class is a description, model, or blueprint from which an object is created.</p>
-<h3 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h3><p>A class describes 2 characteristics of an object:</p>
+<h2 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h2><p>A class describes 2 characteristics of an object:</p>
 <ul>
 <li>It describes what data an object stores, known as an object’s attributes. These are defined through the instance variables.</li>
 <li>It describes what an object does, known as an object’s behaviors. These are defined through the methods.</li>
 </ul>
 <p>The process of combining state and behavior into a single class is called encapsulation.</p>
-<h3 id="Defining-a-Class"><a href="#Defining-a-Class" class="headerlink" title="Defining a Class"></a>Defining a Class</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Die</span> <span class="token punctuation">{</span>
+<h2 id="Defining-a-Class"><a href="#Defining-a-Class" class="headerlink" title="Defining a Class"></a>Defining a Class</h2><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Die</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// instance variables</span>
     <span class="token keyword">private</span> <span class="token keyword">int</span> faceValue<span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// constructors</span>
@@ -144,7 +144,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h3 id="Using-a-Class"><a href="#Using-a-Class" class="headerlink" title="Using a Class"></a>Using a Class</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DieTest</span> <span class="token punctuation">{</span>
+<h2 id="Using-a-Class"><a href="#Using-a-Class" class="headerlink" title="Using a Class"></a>Using a Class</h2><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DieTest</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         Die die <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Die</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         die<span class="token punctuation">.</span><span class="token function">roll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -175,7 +175,7 @@
     <entry>
       <title><![CDATA[AP Computer Science A: 2-D Arrays]]></title>
       <url>/2017/10/30/ap_comp_sci_a_17/</url>
-      <content type="html"><![CDATA[<h3 id="Two-Dimensional-Arrays"><a href="#Two-Dimensional-Arrays" class="headerlink" title="Two-Dimensional Arrays"></a>Two-Dimensional Arrays</h3><p>Suppose I declare an array, and instead of filling the cells with integers or strings, I place an array in each cell.</p>
+      <content type="html"><![CDATA[<h2 id="Two-Dimensional-Arrays"><a href="#Two-Dimensional-Arrays" class="headerlink" title="Two-Dimensional Arrays"></a>Two-Dimensional Arrays</h2><p>Suppose I declare an array, and instead of filling the cells with integers or strings, I place an array in each cell.</p>
 <p>Essentially, I have created an array of arrays, also known as a two-dimensional array.</p>
 <p>In Java, two-dimensional arrays can be defined using the following notation:</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> table <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span>rows<span class="token punctuation">]</span><span class="token punctuation">[</span>columns<span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -221,7 +221,7 @@
 </table>
 <p>The first index declares the number of rows. The second index declares the number of columns.<br>For example, location [1][3] would be 2 rows down and 4 columns across.</p>
 <p><strong>Remember</strong>: all the elements of a two-dimensional array must be of the same data type.</p>
-<h3 id="Size-of-2-D-Arrays"><a href="#Size-of-2-D-Arrays" class="headerlink" title="Size of 2-D Arrays"></a>Size of 2-D Arrays</h3><p>You can get the number of rows that a 2-D array contains by using the variable <code>table.length</code>.<br>You can get the number of columns that a 2-D array contains by using the variable <code>table[0].length</code>.</p>
+<h2 id="Size-of-2-D-Arrays"><a href="#Size-of-2-D-Arrays" class="headerlink" title="Size of 2-D Arrays"></a>Size of 2-D Arrays</h2><p>You can get the number of rows that a 2-D array contains by using the variable <code>table.length</code>.<br>You can get the number of columns that a 2-D array contains by using the variable <code>table[0].length</code>.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> table <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 rows <span class="token operator">=</span> table<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// rows is 3</span>
@@ -250,11 +250,11 @@ columns <span class="token operator">=</span> table<span class="token punctuatio
     <entry>
       <title><![CDATA[AP Computer Science A: Arrays II]]></title>
       <url>/2017/10/24/ap_comp_sci_a_16/</url>
-      <content type="html"><![CDATA[<h3 id="Array-Initializer-List"><a href="#Array-Initializer-List" class="headerlink" title="Array Initializer List"></a>Array Initializer List</h3><p>As a shortcut, an initializer list allows you to declare an array and assign values to each of its elements in a single statement.</p>
+      <content type="html"><![CDATA[<h2 id="Array-Initializer-List"><a href="#Array-Initializer-List" class="headerlink" title="Array Initializer List"></a>Array Initializer List</h2><p>As a shortcut, an initializer list allows you to declare an array and assign values to each of its elements in a single statement.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> numbers <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <p>If you attempt to index an element of an array that does not exist, Java will return an <code>IndexOutOfBounds</code> exception.</p>
-<h3 id="Iterating-Through-an-Array-Traversing"><a href="#Iterating-Through-an-Array-Traversing" class="headerlink" title="Iterating Through an Array (Traversing)"></a>Iterating Through an Array (Traversing)</h3><p>Suppose we want to create an integer array of size 20, and fill each element of the array with a random number in the range 0 to 99.</p>
+<h2 id="Iterating-Through-an-Array-Traversing"><a href="#Iterating-Through-an-Array-Traversing" class="headerlink" title="Iterating Through an Array (Traversing)"></a>Iterating Through an Array (Traversing)</h2><p>Suppose we want to create an integer array of size 20, and fill each element of the array with a random number in the range 0 to 99.</p>
 <p>It would be inefficient to assign the random values to each element of the array.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -275,7 +275,7 @@ nums<span class="token punctuation">[</span><span class="token number">19</span>
     System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h3 id="Array-Length"><a href="#Array-Length" class="headerlink" title="Array Length"></a>Array Length</h3><p>Java allows you to access the size of an array using length, a data member of the array object.</p>
+<h2 id="Array-Length"><a href="#Array-Length" class="headerlink" title="Array Length"></a>Array Length</h2><p>Java allows you to access the size of an array using length, a data member of the array object.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> arraySize <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arraySize<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// prints 20</span>
@@ -303,17 +303,17 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
     <entry>
       <title><![CDATA[AP Computer Science A: Arrays I]]></title>
       <url>/2017/10/23/ap_comp_sci_a_15/</url>
-      <content type="html"><![CDATA[<h3 id="Data-Structures"><a href="#Data-Structures" class="headerlink" title="Data Structures"></a>Data Structures</h3><p>A data structure is a group of data elements combined together under one name.</p>
+      <content type="html"><![CDATA[<h2 id="Data-Structures"><a href="#Data-Structures" class="headerlink" title="Data Structures"></a>Data Structures</h2><p>A data structure is a group of data elements combined together under one name.</p>
 <p>Data structures are used for storing and organizing data so that it can be used efficiently.</p>
-<h3 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h3><p>An array is a data structure that stores a collection of individual values that are of the same data type.</p>
-<h3 id="Declaring-an-Array"><a href="#Declaring-an-Array" class="headerlink" title="Declaring an Array"></a>Declaring an Array</h3><p>To declare an array variable, you must include square brackets [] between the data type and the variable name.</p>
+<h2 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h2><p>An array is a data structure that stores a collection of individual values that are of the same data type.</p>
+<h2 id="Declaring-an-Array"><a href="#Declaring-an-Array" class="headerlink" title="Declaring an Array"></a>Declaring an Array</h2><p>To declare an array variable, you must include square brackets [] between the data type and the variable name.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> numbers<span class="token punctuation">;</span>
 </code></pre>
-<h3 id="Defining-an-Array"><a href="#Defining-an-Array" class="headerlink" title="Defining an Array"></a>Defining an Array</h3><p>To create the array itself, we must specify its data type and how many elements it is to contain (its size).</p>
+<h2 id="Defining-an-Array"><a href="#Defining-an-Array" class="headerlink" title="Defining an Array"></a>Defining an Array</h2><p>To create the array itself, we must specify its data type and how many elements it is to contain (its size).</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> size <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
 numbers <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span>size<span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="Accessing-Array-Elements"><a href="#Accessing-Array-Elements" class="headerlink" title="Accessing Array Elements"></a>Accessing Array Elements</h3><p>To access the individual elements of an array, you must use the array variable’s name, followed by the number of the element enclosed in square brackets. This number is referred to as an index.</p>
+<h2 id="Accessing-Array-Elements"><a href="#Accessing-Array-Elements" class="headerlink" title="Accessing Array Elements"></a>Accessing Array Elements</h2><p>To access the individual elements of an array, you must use the array variable’s name, followed by the number of the element enclosed in square brackets. This number is referred to as an index.</p>
 <p>Note that the index starts from 0 instead of 1.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> numbers <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
@@ -345,7 +345,7 @@ numbers<span class="token punctuation">[</span><span class="token number">5</spa
     <entry>
       <title><![CDATA[AP Computer Science A: Random Numbers]]></title>
       <url>/2017/10/20/ap_comp_sci_a_14/</url>
-      <content type="html"><![CDATA[<h3 id="The-Math-random-Method"><a href="#The-Math-random-Method" class="headerlink" title="The Math.random() Method"></a>The <code>Math.random()</code> Method</h3><p>Java’s random number generator returns numbers chosen at random for a particular set interval.</p>
+      <content type="html"><![CDATA[<h2 id="The-Math-random-Method"><a href="#The-Math-random-Method" class="headerlink" title="The Math.random() Method"></a>The <code>Math.random()</code> Method</h2><p>Java’s random number generator returns numbers chosen at random for a particular set interval.</p>
 <p>The <code>Math.random()</code> method creates a random double value which is greater than or equal to 0.0, and less than 1.0.</p>
 <p>This range can be modified through type casting, multiplication and addition.</p>
 <p>If you multiply Math.random() by an integer x, the range of the random number will change to 0.0 &lt;= n &lt; x.</p>
@@ -355,12 +355,12 @@ numbers<span class="token punctuation">[</span><span class="token number">5</spa
 <span class="token keyword">double</span> b <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// 10.0 &lt;= b &lt; 11.0</span>
 </code></pre>
-<h3 id="Creating-random-integers"><a href="#Creating-random-integers" class="headerlink" title="Creating random integers"></a>Creating random integers</h3><p>This statement produces a random integer in the range p &lt;= n &lt;= p + k ��?1.</p>
+<h2 id="Creating-random-integers"><a href="#Creating-random-integers" class="headerlink" title="Creating random integers"></a>Creating random integers</h2><p>This statement produces a random integer in the range p &lt;= n &lt;= p + k - 1.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> k<span class="token punctuation">)</span> <span class="token operator">+</span> p<span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// p &lt;= n &lt;= p + k ��?1.</span>
+<span class="token comment" spellcheck="true">// p &lt;= n &lt;= p + k - 1.</span>
 </code></pre>
 <p>Thus, if the desired range is a &lt;= n &lt;= b, use this equation.</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>b ��<span class="token operator">?</span>a <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> a<span class="token punctuation">;</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>b <span class="token operator">-</span> a <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> a<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// a &lt;= n &lt;= b</span>
 </code></pre>
 ]]></content>
@@ -385,7 +385,7 @@ numbers<span class="token punctuation">[</span><span class="token number">5</spa
     <entry>
       <title><![CDATA[AP Computer Science A: Math]]></title>
       <url>/2017/10/19/ap_comp_sci_a_13/</url>
-      <content type="html"><![CDATA[<h3 id="The-Math-Class"><a href="#The-Math-Class" class="headerlink" title="The Math Class"></a>The Math Class</h3><p>This is a Java standard class which provides a range of common mathematical methods.</p>
+      <content type="html"><![CDATA[<h2 id="The-Math-Class"><a href="#The-Math-Class" class="headerlink" title="The Math Class"></a>The Math Class</h2><p>This is a Java standard class which provides a range of common mathematical methods.</p>
 <table>
 <thead>
 <tr>
@@ -455,7 +455,7 @@ a <span class="token operator">=</span> Math<span class="token punctuation">.</s
     <entry>
       <title><![CDATA[AP Computer Science A: Parameter]]></title>
       <url>/2017/10/18/ap_comp_sci_a_12/</url>
-      <content type="html"><![CDATA[<h3 id="Writing-a-Method-with-Parameters"><a href="#Writing-a-Method-with-Parameters" class="headerlink" title="Writing a Method with Parameters"></a>Writing a Method with Parameters</h3><p>To add parameters to your method definitions, you simply declare one or more variables in the parentheses that follow the method name.</p>
+      <content type="html"><![CDATA[<h2 id="Writing-a-Method-with-Parameters"><a href="#Writing-a-Method-with-Parameters" class="headerlink" title="Writing a Method with Parameters"></a>Writing a Method with Parameters</h2><p>To add parameters to your method definitions, you simply declare one or more variables in the parentheses that follow the method name.</p>
 <p>These variable declarations need to include a data type and an identifier name.</p>
 <p>A parameter is a special kind of variable that can only be used within your declared method.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">function</span><span class="token punctuation">(</span>String param<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -463,10 +463,10 @@ a <span class="token operator">=</span> Math<span class="token punctuation">.</s
   <span class="token comment" spellcheck="true">// prints param</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h3 id="Parameter-Scope"><a href="#Parameter-Scope" class="headerlink" title="Parameter Scope"></a>Parameter Scope</h3><p>The parameter can’t be used outside its body.</p>
+<h2 id="Parameter-Scope"><a href="#Parameter-Scope" class="headerlink" title="Parameter Scope"></a>Parameter Scope</h2><p>The parameter can’t be used outside its body.</p>
 <p>The scope of a parameter is limited to the method that it is declared in.</p>
 <p>In other words, we can’t use parameters outside their declared method.</p>
-<h3 id="Parameters-and-Arguments"><a href="#Parameters-and-Arguments" class="headerlink" title="Parameters and Arguments"></a>Parameters and Arguments</h3><p>Note that parameters are the variables that you declare when you define a method while arguments are the data you pass into the method when calling it.</p>
+<h2 id="Parameters-and-Arguments"><a href="#Parameters-and-Arguments" class="headerlink" title="Parameters and Arguments"></a>Parameters and Arguments</h2><p>Note that parameters are the variables that you declare when you define a method while arguments are the data you pass into the method when calling it.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">function</span><span class="token punctuation">(</span>String param<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// parameter</span>
   System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>param<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
@@ -497,7 +497,7 @@ a <span class="token operator">=</span> Math<span class="token punctuation">.</s
     <entry>
       <title><![CDATA[AP Computer Science A: Methods II]]></title>
       <url>/2017/10/17/ap_comp_sci_a_11/</url>
-      <content type="html"><![CDATA[<h3 id="Non-Void-Method-Return"><a href="#Non-Void-Method-Return" class="headerlink" title="Non-Void Method Return"></a>Non-Void Method Return</h3><p>A non-void method’s return value can be just about anything, as long as the return keyword matches the return type.</p>
+      <content type="html"><![CDATA[<h2 id="Non-Void-Method-Return"><a href="#Non-Void-Method-Return" class="headerlink" title="Non-Void Method Return"></a>Non-Void Method Return</h2><p>A non-void method’s return value can be just about anything, as long as the return keyword matches the return type.</p>
 <p>A method can return a literal value.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">return</span> <span class="token string">"hello world"</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// "hello world"</span>
@@ -515,7 +515,7 @@ a <span class="token operator">=</span> Math<span class="token punctuation">.</s
 <pre class=" language-java"><code class="language-java"><span class="token keyword">return</span> <span class="token number">1</span> <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// true</span>
 </code></pre>
-<h3 id="Calling-Non-Void-Methods"><a href="#Calling-Non-Void-Methods" class="headerlink" title="Calling Non-Void Methods"></a>Calling Non-Void Methods</h3><p>Non-void methods always returns a value, then this value has to be stored in a variable, printed, or passed to a Java control structure.</p>
+<h2 id="Calling-Non-Void-Methods"><a href="#Calling-Non-Void-Methods" class="headerlink" title="Calling Non-Void Methods"></a>Calling Non-Void Methods</h2><p>Non-void methods always returns a value, then this value has to be stored in a variable, printed, or passed to a Java control structure.</p>
 <p>A method call can be in an assignment statement.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token function">getInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -530,7 +530,7 @@ a <span class="token operator">=</span> Math<span class="token punctuation">.</s
 <p>A method call can be inside the return statement of another method.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">return</span> <span class="token function">getDouble</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">1.1</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="Arguments"><a href="#Arguments" class="headerlink" title="Arguments"></a>Arguments</h3><p>An argument is a value that is passed to a method so that the method can use that value in its processing.</p>
+<h2 id="Arguments"><a href="#Arguments" class="headerlink" title="Arguments"></a>Arguments</h2><p>An argument is a value that is passed to a method so that the method can use that value in its processing.</p>
 <p>An argument is located inside the parentheses that follow a method name.</p>
 <p>A method can have 0, 1, or more arguments. Multiple arguments are separated by commas.</p>
 ]]></content>
@@ -555,13 +555,13 @@ a <span class="token operator">=</span> Math<span class="token punctuation">.</s
     <entry>
       <title><![CDATA[AP Computer Science A: Methods I]]></title>
       <url>/2017/10/16/ap_comp_sci_a_10/</url>
-      <content type="html"><![CDATA[<h3 id="Method-Types"><a href="#Method-Types" class="headerlink" title="Method Types"></a>Method Types</h3><p>A method is simply a block of code that is given a name.</p>
+      <content type="html"><![CDATA[<h2 id="Method-Types"><a href="#Method-Types" class="headerlink" title="Method Types"></a>Method Types</h2><p>A method is simply a block of code that is given a name.</p>
 <p>In Java, there are two types of methods that you can write. These methods are identified by the task they perform.</p>
 <p><strong>Void methods</strong>: These are methods that do not give you anything back. They have no return statement.</p>
 <p><strong>Non-void methods</strong>: These are methods that give you something back. They must have a return statement.</p>
-<h3 id="Void-Methods"><a href="#Void-Methods" class="headerlink" title="Void Methods"></a>Void Methods</h3><p>To execute or call a void method, you write the method name, along with open and closed parentheses.</p>
+<h2 id="Void-Methods"><a href="#Void-Methods" class="headerlink" title="Void Methods"></a>Void Methods</h2><p>To execute or call a void method, you write the method name, along with open and closed parentheses.</p>
 <p>Note that a void method is called as a single statement on a line by itself.</p>
-<h3 id="Non-Void-Methods"><a href="#Non-Void-Methods" class="headerlink" title="Non-Void Methods"></a>Non-Void Methods</h3><p>Non-void methods differ from void methods in that they give something back.</p>
+<h2 id="Non-Void-Methods"><a href="#Non-Void-Methods" class="headerlink" title="Non-Void Methods"></a>Non-Void Methods</h2><p>Non-void methods differ from void methods in that they give something back.</p>
 <p>What they give back is dependent upon the return type.</p>
 <p>The return type declares what the method is going to give back, or return.</p>
 <p>The keyword return is required in all non-void methods.</p>
@@ -587,28 +587,28 @@ a <span class="token operator">=</span> Math<span class="token punctuation">.</s
     <entry>
       <title><![CDATA[AP Computer Science A: Strings]]></title>
       <url>/2017/10/13/ap_comp_sci_a_9/</url>
-      <content type="html"><![CDATA[<h3 id="Java-Strings"><a href="#Java-Strings" class="headerlink" title="Java Strings"></a>Java Strings</h3><p>Java does not have a built-in primitive data type for strings.<br>Instead, the standard Java library has a predefined class called String.</p>
-<h3 id="Instantiating-Creating-a-String-object"><a href="#Instantiating-Creating-a-String-object" class="headerlink" title="Instantiating (Creating) a String object"></a>Instantiating (Creating) a String object</h3><pre class=" language-java"><code class="language-java">String str <span class="token operator">=</span> “��<span class="token operator">?</span>
+      <content type="html"><![CDATA[<h2 id="Java-Strings"><a href="#Java-Strings" class="headerlink" title="Java Strings"></a>Java Strings</h2><p>Java does not have a built-in primitive data type for strings.<br>Instead, the standard Java library has a predefined class called String.</p>
+<h2 id="Instantiating-Creating-a-String-object"><a href="#Instantiating-Creating-a-String-object" class="headerlink" title="Instantiating (Creating) a String object"></a>Instantiating (Creating) a String object</h2><pre class=" language-java"><code class="language-java">String str <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="Concatenation"><a href="#Concatenation" class="headerlink" title="Concatenation"></a>Concatenation</h3><p>Java allows you to use the + sign to join two strings together.</p>
+<h2 id="Concatenation"><a href="#Concatenation" class="headerlink" title="Concatenation"></a>Concatenation</h2><p>Java allows you to use the + sign to join two strings together.</p>
 <p>You can also concatenate a String with a numerical value.</p>
-<h3 id="Substrings"><a href="#Substrings" class="headerlink" title="Substrings"></a>Substrings</h3><p>A substring is defined as a string that is part of a longer string.</p>
+<h2 id="Substrings"><a href="#Substrings" class="headerlink" title="Substrings"></a>Substrings</h2><p>A substring is defined as a string that is part of a longer string.</p>
 <p>In Java, you can extract a substring from a larger string with the substring method.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> l <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">,</span> r <span class="token operator">=</span> <span class="token number">16</span><span class="token punctuation">;</span>
-String str <span class="token operator">=</span> “<span class="token keyword">this</span> is a string��<span class="token operator">?</span>
+String str <span class="token operator">=</span> <span class="token string">"this is a string"</span>
 String substr <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>l<span class="token punctuation">,</span> r<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// gives you the characters in str from index l through r ��?1</span>
-<span class="token comment" spellcheck="true">// which is the word “string��?</span>
+<span class="token comment" spellcheck="true">// gives you the characters in str from index l through r - 1</span>
+<span class="token comment" spellcheck="true">// which is the word "string"</span>
 </code></pre>
-<h3 id="Length"><a href="#Length" class="headerlink" title="Length"></a>Length</h3><p>The <code>length()</code> method indicates how many characters are in a String.</p>
+<h2 id="Length"><a href="#Length" class="headerlink" title="Length"></a>Length</h2><p>The <code>length()</code> method indicates how many characters are in a String.</p>
 <p>Strings are immutable. They can’t be directly changed or altered.</p>
 <p>You can make new Strings, but you can’t alter existing ones.</p>
-<h3 id="Searching-through-a-String"><a href="#Searching-through-a-String" class="headerlink" title="Searching through a String"></a>Searching through a String</h3><p>The String class provides a method called <code>indexOf()</code> that will allow you to search for an individual character or substring within a String.</p>
+<h2 id="Searching-through-a-String"><a href="#Searching-through-a-String" class="headerlink" title="Searching through a String"></a>Searching through a String</h2><p>The String class provides a method called <code>indexOf()</code> that will allow you to search for an individual character or substring within a String.</p>
 <p>If the search is successful, then the index of the substring is returned.</p>
 <p>If the substring is not found within the String, the method returns a value of -1.</p>
-<h3 id="Equality-of-String-objects"><a href="#Equality-of-String-objects" class="headerlink" title="Equality of String objects"></a>Equality of String objects</h3><p>Use the <code>equals()</code> method to check 2 Strings or equality in the following manner:</p>
-<pre class=" language-java"><code class="language-java">String a <span class="token operator">=</span> “string��<span class="token operator">?</span>
-String b <span class="token operator">=</span> “string��<span class="token operator">?</span>
+<h2 id="Equality-of-String-objects"><a href="#Equality-of-String-objects" class="headerlink" title="Equality of String objects"></a>Equality of String objects</h2><p>Use the <code>equals()</code> method to check 2 Strings or equality in the following manner:</p>
+<pre class=" language-java"><code class="language-java">String a <span class="token operator">=</span> <span class="token string">"string"</span>
+String b <span class="token operator">=</span> <span class="token string">"string"</span>
 Boolean result <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>You cannot use <code>==</code> to compare Strings, because Strings are not primitive types.</p>
@@ -635,7 +635,7 @@ Boolean result <span class="token operator">=</span> a<span class="token punctua
     <entry>
       <title><![CDATA[AP Computer Science A: Iteration For]]></title>
       <url>/2017/09/19/ap_comp_sci_a_8/</url>
-      <content type="html"><![CDATA[<h3 id="The-For-Statement"><a href="#The-For-Statement" class="headerlink" title="The For Statement"></a>The For Statement</h3><p>Counter-controlled loops are so frequently used that programming languages have developed a special structure for them.</p>
+      <content type="html"><![CDATA[<h2 id="The-For-Statement"><a href="#The-For-Statement" class="headerlink" title="The For Statement"></a>The For Statement</h2><p>Counter-controlled loops are so frequently used that programming languages have developed a special structure for them.</p>
 <p>The for statement combines counter initialization, condition test, and counter update into a single expression.</p>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// The two pieces of code do basically the same thing.</span>
 
@@ -662,7 +662,7 @@ while (test counter) {
     i<span class="token operator">++</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h3 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h3><p>In the while loop, the counter is declared outside the while code block, so this means it can be used elsewhere in your program.</p>
+<h2 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h2><p>In the while loop, the counter is declared outside the while code block, so this means it can be used elsewhere in your program.</p>
 <p>In the for loop, the counter is declared within the scope of the for loop’s code block. This means it can only be used inside that block.</p>
 ]]></content>
       
@@ -686,14 +686,14 @@ while (test counter) {
     <entry>
       <title><![CDATA[AP Computer Science A: Iteration While]]></title>
       <url>/2017/09/18/ap_comp_sci_a_7/</url>
-      <content type="html"><![CDATA[<h3 id="The-While-Loop"><a href="#The-While-Loop" class="headerlink" title="The While Loop"></a>The While Loop</h3><p>A condition is a statement that evaluates to either true or false.</p>
+      <content type="html"><![CDATA[<h2 id="The-While-Loop"><a href="#The-While-Loop" class="headerlink" title="The While Loop"></a>The While Loop</h2><p>A condition is a statement that evaluates to either true or false.</p>
 <p>A while loop repeats as long as its condition is true.</p>
 <p>Java’s while loop has the following structure:</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">while</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     body<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h3 id="Counter-Controlled-Loop"><a href="#Counter-Controlled-Loop" class="headerlink" title="Counter-Controlled Loop"></a>Counter-Controlled Loop</h3><p>A counter-controlled loop is one that repeats a predetermined number of times.</p>
+<h2 id="Counter-Controlled-Loop"><a href="#Counter-Controlled-Loop" class="headerlink" title="Counter-Controlled Loop"></a>Counter-Controlled Loop</h2><p>A counter-controlled loop is one that repeats a predetermined number of times.</p>
 <p>The condition in this loop is controlled by a counter variable.</p>
 <p>The counter variable keeps track of the number of times that a loop is executed.</p>
 <pre class=" language-java"><code class="language-java">i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
@@ -703,7 +703,7 @@ while (test counter) {
 <span class="token punctuation">}</span>
 <span class="token comment" spellcheck="true">// the numbers 0 through 10 are printed</span>
 </code></pre>
-<h3 id="Infinite-Loop"><a href="#Infinite-Loop" class="headerlink" title="Infinite Loop"></a>Infinite Loop</h3><p>A common mistake is when a programmer forgets to increment the counter variable within the body of the while loop.<br>The counter will never reach the condition that ends the loop.</p>
+<h2 id="Infinite-Loop"><a href="#Infinite-Loop" class="headerlink" title="Infinite Loop"></a>Infinite Loop</h2><p>A common mistake is when a programmer forgets to increment the counter variable within the body of the while loop.<br>The counter will never reach the condition that ends the loop.</p>
 <pre class=" language-java"><code class="language-java">i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -732,7 +732,7 @@ while (test counter) {
     <entry>
       <title><![CDATA[AP Computer Science A: Relational / Logical Operators]]></title>
       <url>/2017/09/14/ap_comp_sci_a_6/</url>
-      <content type="html"><![CDATA[<h3 id="Relational-Operators"><a href="#Relational-Operators" class="headerlink" title="Relational Operators"></a>Relational Operators</h3><p>A relational operator tests the relationship between two values.<br>Java has six relational operators:</p>
+      <content type="html"><![CDATA[<h2 id="Relational-Operators"><a href="#Relational-Operators" class="headerlink" title="Relational Operators"></a>Relational Operators</h2><p>A relational operator tests the relationship between two values.<br>Java has six relational operators:</p>
 <table>
 <thead>
 <tr>
@@ -767,9 +767,9 @@ while (test counter) {
 </tr>
 </tbody>
 </table>
-<h3 id="Equality-Operator"><a href="#Equality-Operator" class="headerlink" title="Equality Operator"></a>Equality Operator</h3><p>Denotes equality testing.</p>
+<h2 id="Equality-Operator"><a href="#Equality-Operator" class="headerlink" title="Equality Operator"></a>Equality Operator</h2><p>Denotes equality testing.</p>
 <p>The equality operator, ==, is very confusing to most Java beginners, because it is easy to mix up with the assignment operator, =.<br>Can be used to test primitive types, but not objects such as Strings.</p>
-<h3 id="Logical-Operators"><a href="#Logical-Operators" class="headerlink" title="Logical Operators"></a>Logical Operators</h3><p>There are three logical operators in Java:</p>
+<h2 id="Logical-Operators"><a href="#Logical-Operators" class="headerlink" title="Logical Operators"></a>Logical Operators</h2><p>There are three logical operators in Java:</p>
 <table>
 <thead>
 <tr>
@@ -800,7 +800,7 @@ while (test counter) {
 </tr>
 </tbody>
 </table>
-<h3 id="Operator-Precedence"><a href="#Operator-Precedence" class="headerlink" title="Operator Precedence"></a>Operator Precedence</h3><table>
+<h2 id="Operator-Precedence"><a href="#Operator-Precedence" class="headerlink" title="Operator Precedence"></a>Operator Precedence</h2><table>
 <thead>
 <tr>
 <th>Operator</th>
@@ -822,7 +822,7 @@ while (test counter) {
 </tr>
 </tbody>
 </table>
-<h3 id="Short-Circuit-Evaluation"><a href="#Short-Circuit-Evaluation" class="headerlink" title="Short-Circuit Evaluation"></a>Short-Circuit Evaluation</h3><p>The “and��?and “or��?operators are “short-circuited��?</p>
+<h2 id="Short-Circuit-Evaluation"><a href="#Short-Circuit-Evaluation" class="headerlink" title="Short-Circuit Evaluation"></a>Short-Circuit Evaluation</h2><p>The “and” and “or” operators are “short-circuited”</p>
 <p>If the left operand is enough to decide the boolean result of the entire logical operation, then the right operand is not evaluated.</p>
 ]]></content>
       
@@ -846,7 +846,7 @@ while (test counter) {
     <entry>
       <title><![CDATA[AP Computer Science A: Conditional Statement]]></title>
       <url>/2017/09/13/ap_comp_sci_a_5/</url>
-      <content type="html"><![CDATA[<h3 id="Conditional-Statement"><a href="#Conditional-Statement" class="headerlink" title="Conditional Statement"></a>Conditional Statement</h3><p>The <code>if</code> structure in Java consists of 2 parts: a condition and a body.</p>
+      <content type="html"><![CDATA[<h2 id="Conditional-Statement"><a href="#Conditional-Statement" class="headerlink" title="Conditional Statement"></a>Conditional Statement</h2><p>The <code>if</code> structure in Java consists of 2 parts: a condition and a body.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">if</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     body<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
@@ -886,11 +886,11 @@ while (test counter) {
     <entry>
       <title><![CDATA[AP Computer Science A: Data Conversion]]></title>
       <url>/2017/09/12/ap_comp_sci_a_4/</url>
-      <content type="html"><![CDATA[<h3 id="Data-Conversion"><a href="#Data-Conversion" class="headerlink" title="Data Conversion"></a>Data Conversion</h3><p>This is a conversion from one primitive type to another.</p>
+      <content type="html"><![CDATA[<h2 id="Data-Conversion"><a href="#Data-Conversion" class="headerlink" title="Data Conversion"></a>Data Conversion</h2><p>This is a conversion from one primitive type to another.</p>
 <p>There are 2 categories.</p>
-<h5 id="Widening-conversion"><a href="#Widening-conversion" class="headerlink" title="Widening conversion"></a>Widening conversion</h5><p>Safest, because information is not lost. (int-&gt;double)</p>
+<h4 id="Widening-conversion"><a href="#Widening-conversion" class="headerlink" title="Widening conversion"></a>Widening conversion</h4><p>Safest, because information is not lost. (int-&gt;double)</p>
 <h5 id="Narrowing-conversion"><a href="#Narrowing-conversion" class="headerlink" title="Narrowing conversion"></a>Narrowing conversion</h5><p>This should be avoided because information is lost. (double-&gt;int)</p>
-<h3 id="Type-Casting"><a href="#Type-Casting" class="headerlink" title="Type Casting"></a>Type Casting</h3><p>A type cast is used to convert a variable from one type to another.</p>
+<h2 id="Type-Casting"><a href="#Type-Casting" class="headerlink" title="Type Casting"></a>Type Casting</h2><p>A type cast is used to convert a variable from one type to another.</p>
 <p>Place the type name in parentheses in front of the variable to be converted.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> int_a<span class="token punctuation">,</span> int_b<span class="token punctuation">;</span>
 <span class="token keyword">double</span> double_a<span class="token punctuation">,</span> double_b<span class="token punctuation">;</span>
@@ -925,7 +925,7 @@ int_b <span class="token operator">=</span> <span class="token punctuation">(</s
     <entry>
       <title><![CDATA[AP Computer Science A: Other Operators]]></title>
       <url>/2017/09/11/ap_comp_sci_a_3/</url>
-      <content type="html"><![CDATA[<h3 id="Modulus-Remainder-Operator"><a href="#Modulus-Remainder-Operator" class="headerlink" title="Modulus (Remainder) Operator (%)"></a>Modulus (Remainder) Operator (%)</h3><p>Returns the remainder after dividing the second operand into the first.</p>
+      <content type="html"><![CDATA[<h2 id="Modulus-Remainder-Operator"><a href="#Modulus-Remainder-Operator" class="headerlink" title="Modulus (Remainder) Operator (%)"></a>Modulus (Remainder) Operator (%)</h2><p>Returns the remainder after dividing the second operand into the first.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">;</span>
 
 a <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">;</span>
@@ -934,7 +934,7 @@ b <span class="token operator">=</span> <span class="token number">3</span><span
 c <span class="token operator">=</span> a <span class="token operator">%</span> b<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// c is now 7 % 3 = 1</span>
 </code></pre>
-<h3 id="Division-Operator"><a href="#Division-Operator" class="headerlink" title="Division Operator (/)"></a>Division Operator (/)</h3><p>If the first and second operands are both integers, then / performs integer division, where the fractional component of the result is discarded.</p>
+<h2 id="Division-Operator"><a href="#Division-Operator" class="headerlink" title="Division Operator (/)"></a>Division Operator (/)</h2><p>If the first and second operands are both integers, then / performs integer division, where the fractional component of the result is discarded.</p>
 <p>If either or both of the operands are doubles, the floating-point (decimal) division is performed.</p>
 <p>Multiplying by 1.0 will give you a decimal result without changing the result.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> int_a <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">,</span> int_b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> int_res<span class="token punctuation">;</span>
@@ -949,7 +949,7 @@ double_res <span class="token operator">=</span> double_a <span class="token ope
 double_res <span class="token operator">=</span> <span class="token number">1.0</span> <span class="token operator">*</span> int_a <span class="token operator">/</span> int_b<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// double_res is now 1.0 * 7 / 2 = 3.5</span>
 </code></pre>
-<h3 id="Operator-Precedence"><a href="#Operator-Precedence" class="headerlink" title="Operator Precedence"></a>Operator Precedence</h3><table>
+<h2 id="Operator-Precedence"><a href="#Operator-Precedence" class="headerlink" title="Operator Precedence"></a>Operator Precedence</h2><table>
 <thead>
 <tr>
 <th>Precedence</th>
@@ -985,7 +985,7 @@ double_res <span class="token operator">=</span> <span class="token number">1.0<
 </tr>
 </tbody>
 </table>
-<h3 id="Increment-Decrement-Operator-–"><a href="#Increment-Decrement-Operator-–" class="headerlink" title="Increment/Decrement Operator (++/–)"></a>Increment/Decrement Operator (++/–)</h3><p>Increases/Decreases the value of a variable by 1.</p>
+<h2 id="Increment-Decrement-Operator-–"><a href="#Increment-Decrement-Operator-–" class="headerlink" title="Increment/Decrement Operator (++/–)"></a>Increment/Decrement Operator (++/–)</h2><p>Increases/Decreases the value of a variable by 1.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> cnt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
 cnt<span class="token operator">++</span><span class="token punctuation">;</span>
@@ -1016,7 +1016,7 @@ cnt<span class="token operator">--</span><span class="token punctuation">;</span
     <entry>
       <title><![CDATA[AP Computer Science A: Basic Operators]]></title>
       <url>/2017/09/09/ap_comp_sci_a_2/</url>
-      <content type="html"><![CDATA[<h3 id="The-Assignment-Operator"><a href="#The-Assignment-Operator" class="headerlink" title="The Assignment Operator (=)"></a>The Assignment Operator (=)</h3><p>This is used to assign a value to a variable.</p>
+      <content type="html"><![CDATA[<h2 id="The-Assignment-Operator"><a href="#The-Assignment-Operator" class="headerlink" title="The Assignment Operator (=)"></a>The Assignment Operator (=)</h2><p>This is used to assign a value to a variable.</p>
 <p>Be careful not to confuse it with the mathematical equals sign.</p>
 <p>The assignment occurs from right to left.</p>
 <p>The value on the right is copied into the variable on the left.</p>
@@ -1026,7 +1026,7 @@ decimal <span class="token operator">=</span> <span class="token number">0.12</s
 
 bool <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="Initializing-Replacing-Variables"><a href="#Initializing-Replacing-Variables" class="headerlink" title="Initializing/Replacing Variables"></a>Initializing/Replacing Variables</h3><p>You can declare and assign a value to a variable at the same time.</p>
+<h2 id="Initializing-Replacing-Variables"><a href="#Initializing-Replacing-Variables" class="headerlink" title="Initializing/Replacing Variables"></a>Initializing/Replacing Variables</h2><p>You can declare and assign a value to a variable at the same time.</p>
 <p>The assignment operator can be used to replace the contents of a variable with a new one.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> integer <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// integer is now 20;</span>
@@ -1034,7 +1034,7 @@ bool <span class="token operator">=</span> <span class="token boolean">true</spa
 integer <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// integer is now 30;</span>
 </code></pre>
-<h3 id="The-Concatenation-Operator"><a href="#The-Concatenation-Operator" class="headerlink" title="The Concatenation Operator (+)"></a>The Concatenation Operator (+)</h3><p>When the plus sign is used in a <code>System.out.println()</code> statement with a String, it concatenates the two pieces of data together.</p>
+<h2 id="The-Concatenation-Operator"><a href="#The-Concatenation-Operator" class="headerlink" title="The Concatenation Operator (+)"></a>The Concatenation Operator (+)</h2><p>When the plus sign is used in a <code>System.out.println()</code> statement with a String, it concatenates the two pieces of data together.</p>
 <pre class=" language-java"><code class="language-java">String string <span class="token operator">=</span> <span class="token string">"Hello "</span><span class="token punctuation">;</span>
 
 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>string <span class="token operator">+</span> <span class="token string">"World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1062,12 +1062,12 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
     <entry>
       <title><![CDATA[AP Computer Science A: Variables]]></title>
       <url>/2017/09/08/ap_comp_sci_a_1/</url>
-      <content type="html"><![CDATA[<h3 id="Variable-Declaration"><a href="#Variable-Declaration" class="headerlink" title="Variable Declaration"></a>Variable Declaration</h3><p>A variable is a named piece of memory that you can use to store information in a Java program.</p>
+      <content type="html"><![CDATA[<h2 id="Variable-Declaration"><a href="#Variable-Declaration" class="headerlink" title="Variable Declaration"></a>Variable Declaration</h2><p>A variable is a named piece of memory that you can use to store information in a Java program.</p>
 <p>A variable declaration consists of two parts: a data type and an identifier name.</p>
-<h3 id="Primitive-Data-Types"><a href="#Primitive-Data-Types" class="headerlink" title="Primitive Data Types"></a>Primitive Data Types</h3><p>Integer data type (int)</p>
+<h2 id="Primitive-Data-Types"><a href="#Primitive-Data-Types" class="headerlink" title="Primitive Data Types"></a>Primitive Data Types</h2><p>Integer data type (int)</p>
 <p>Double data type (double)</p>
 <p>Boolean data type (boolean)</p>
-<h3 id="Variable-Naming-Rules"><a href="#Variable-Naming-Rules" class="headerlink" title="Variable Naming Rules"></a>Variable Naming Rules</h3><p>A variable name must begin with a letter.</p>
+<h2 id="Variable-Naming-Rules"><a href="#Variable-Naming-Rules" class="headerlink" title="Variable Naming Rules"></a>Variable Naming Rules</h2><p>A variable name must begin with a letter.</p>
 <p>It must be a sequence of letters and digits.</p>
 <p>Symbols cannot be used in variable names.</p>
 <p>The length of a variable name is unlimited.</p>
@@ -1100,11 +1100,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
       <title><![CDATA[Week 2: Machine Learning Gradient Descent and Vectorization]]></title>
       <url>/2017/04/15/machine_learning_gradient_descent_and_vectorization/</url>
       <content type="html"><![CDATA[<p>Resources from <a href="https://www.coursera.org/learn/machine-learning/" target="_blank" rel="external">Coursera</a>.</p>
-<h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>The second week of the machine learning course. Basically focused on the same topic as the first week, regression problems (including linear and polynomial regression) and gradient descent. However, more details of gradient descent were talked about, and the idea of using vectorization to increase the efficiency of gradient descent was introduced.</p>
-<h3 id="Polynomial-Regression"><a href="#Polynomial-Regression" class="headerlink" title="Polynomial Regression"></a>Polynomial Regression</h3><p>The process of polynomial regression is based on the process of linear regression, except for the fact that it creates new features out of the original features of the dataset. In other words, suppose if you have two features <em>a</em> and <em>b</em>, we can create three more features <em>a<sup>2</sup></em>, <em>ab</em>, and <em>b<sup>2</sup></em>. This way, we can fit non-linear data using a method very similar to linear regression.</p>
+<h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><p>The second week of the machine learning course. Basically focused on the same topic as the first week, regression problems (including linear and polynomial regression) and gradient descent. However, more details of gradient descent were talked about, and the idea of using vectorization to increase the efficiency of gradient descent was introduced.</p>
+<h2 id="Polynomial-Regression"><a href="#Polynomial-Regression" class="headerlink" title="Polynomial Regression"></a>Polynomial Regression</h2><p>The process of polynomial regression is based on the process of linear regression, except for the fact that it creates new features out of the original features of the dataset. In other words, suppose if you have two features <em>a</em> and <em>b</em>, we can create three more features <em>a<sup>2</sup></em>, <em>ab</em>, and <em>b<sup>2</sup></em>. This way, we can fit non-linear data using a method very similar to linear regression.</p>
 <p>It is also worth noticing in this example of the relationship between house prices and house sizes that, although both hypotheses fit the dataset well, it is uncommon for house prices to drop when the size reaches a certain amount, so the second hypothesis would be a better choice.</p>
 <p><img src="https://raw.githubusercontent.com/leniumC/blog_resources/master/polynomial_regression.png" width="500"></p>
-<h3 id="Vectorization"><a href="#Vectorization" class="headerlink" title="Vectorization"></a>Vectorization</h3><p>Vectorization is a way increase the efficiency of calculations by doing matrix and vector multiplications instead of using looping over the elements one by one. It works because most programming languages have linear algebra libraries that are optimized for computations like this.</p>
+<h2 id="Vectorization"><a href="#Vectorization" class="headerlink" title="Vectorization"></a>Vectorization</h2><p>Vectorization is a way increase the efficiency of calculations by doing matrix and vector multiplications instead of using looping over the elements one by one. It works because most programming languages have linear algebra libraries that are optimized for computations like this.</p>
 <p>This is an example of vectorization. The superscript <em>T</em> means taking the transpose of the matrix or vector.</p>
 <p><img src="https://raw.githubusercontent.com/leniumC/blog_resources/master/vectorization.png" width="700"></p>
 ]]></content>
@@ -1134,12 +1134,12 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
       <title><![CDATA[Week 1: Machine Learning Introduction and Linear Regression]]></title>
       <url>/2017/04/07/machine_learning_introduction_and_linear_regression/</url>
       <content type="html"><![CDATA[<p>Resources from <a href="https://www.coursera.org/learn/machine-learning/" target="_blank" rel="external">Coursera</a>.</p>
-<h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>Just took up a machine learning course on Coursera recommended by a friend of mine last week. So I decided to update this blog constantly to keep track of what I’ve learnt so far. The lectures and reading materials in the first week were quite easy to understand. Andrew Ng, the professor who taught the course, went over concepts related to different types of machine learning, and talked briefly about linear regression with one variable.</p>
-<h3 id="Supervised-and-Unsupervised-Learning"><a href="#Supervised-and-Unsupervised-Learning" class="headerlink" title="Supervised and Unsupervised Learning"></a>Supervised and Unsupervised Learning</h3><p>In supervised learning, we are given a dataset and already know what the correct output should look like, and we use the relationship between the given inputs and outputs to predict the outputs of new inputs.</p>
+<h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><p>Just took up a machine learning course on Coursera recommended by a friend of mine last week. So I decided to update this blog constantly to keep track of what I’ve learnt so far. The lectures and reading materials in the first week were quite easy to understand. Andrew Ng, the professor who taught the course, went over concepts related to different types of machine learning, and talked briefly about linear regression with one variable.</p>
+<h2 id="Supervised-and-Unsupervised-Learning"><a href="#Supervised-and-Unsupervised-Learning" class="headerlink" title="Supervised and Unsupervised Learning"></a>Supervised and Unsupervised Learning</h2><p>In supervised learning, we are given a dataset and already know what the correct output should look like, and we use the relationship between the given inputs and outputs to predict the outputs of new inputs.</p>
 <p>In unsupervised learning, we do not know the relationship between inputs and outputs, instead, we try to find structures in the data given by making clusters out of the dataset.</p>
 <p><img src="https://raw.githubusercontent.com/leniumC/blog_resources/master/supervised_learning.png" width="250" height="230"> <img src="https://raw.githubusercontent.com/leniumC/blog_resources/master/unsupervised_learning.png" width="250" height="230"></p>
-<h3 id="Classification-and-Regression"><a href="#Classification-and-Regression" class="headerlink" title="Classification and Regression"></a>Classification and Regression</h3><p>Supervised learning can also be divided into two categories, classification and regression. In classification problems, we try to predict the categories of the given inputs. In regression problems, we try to predict the outputs within a continuous output; in other words, we try to find a continuous function which predicts an output value for each input value.</p>
-<h3 id="Linear-Regression"><a href="#Linear-Regression" class="headerlink" title="Linear Regression"></a>Linear Regression</h3><p>Generally speaking, linear regression is simply the process of finding linear function that fits the dataset well. The function is called the hypothesis. In the process, we do iterations to minimize a cost function <span>$J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x_{i}) - y_{i} \right)^2$</span><!-- Has MathJax -->, which represents the sum of squared error between the hypothesis function and the given outputs of the dataset.</p>
+<h2 id="Classification-and-Regression"><a href="#Classification-and-Regression" class="headerlink" title="Classification and Regression"></a>Classification and Regression</h2><p>Supervised learning can also be divided into two categories, classification and regression. In classification problems, we try to predict the categories of the given inputs. In regression problems, we try to predict the outputs within a continuous output; in other words, we try to find a continuous function which predicts an output value for each input value.</p>
+<h2 id="Linear-Regression"><a href="#Linear-Regression" class="headerlink" title="Linear Regression"></a>Linear Regression</h2><p>Generally speaking, linear regression is simply the process of finding linear function that fits the dataset well. The function is called the hypothesis. In the process, we do iterations to minimize a cost function <span>$J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x_{i}) - y_{i} \right)^2$</span><!-- Has MathJax -->, which represents the sum of squared error between the hypothesis function and the given outputs of the dataset.</p>
 <p>To do this, we implement something called gradient descent. During gradient descent, we calculate the partial derivative of the cost function with respect to each parameter and change the parameter in a way that decreases the cost function by the largest amount. <span>$\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta)$</span><!-- Has MathJax --></p>
 <p><img src="https://raw.githubusercontent.com/leniumC/blog_resources/master/gradient_descent.png" width="600"></p>
 ]]></content>

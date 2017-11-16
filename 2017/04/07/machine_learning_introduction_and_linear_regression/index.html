@@ -117,7 +117,7 @@
   }
 
   a {
-    color: #ffeb3b;
+    color: #4caf50;
   }
 
   .mdl-card__media,
@@ -168,7 +168,7 @@
   }
 
   .post-toc a:hover {
-    color: #ffeb3b;
+    color: #4caf50;
     text-decoration: underline;
   }
 
@@ -268,7 +268,7 @@
 
     
         <meta property="article:published_time" content="Fri Apr 07 2017 00:00:00 GMT+0800" />
-        <meta property="article:modified_time" content="Thu Aug 17 2017 22:17:53 GMT+0800" />
+        <meta property="article:modified_time" content="Fri Nov 17 2017 02:21:14 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -295,7 +295,7 @@
     "mainEntityOfPage": "http://yoursite.com/2017/04/07/machine_learning_introduction_and_linear_regression/index.html",
     "headline": "Week 1: Machine Learning Introduction and Linear Regression",
     "datePublished": "Fri Apr 07 2017 00:00:00 GMT+0800",
-    "dateModified": "Thu Aug 17 2017 22:17:53 GMT+0800",
+    "dateModified": "Fri Nov 17 2017 02:21:14 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "leniumC",
@@ -379,7 +379,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Intro"><span class="post-toc-number">1.</span> <span class="post-toc-text">Intro</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Supervised-and-Unsupervised-Learning"><span class="post-toc-number">2.</span> <span class="post-toc-text">Supervised and Unsupervised Learning</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Classification-and-Regression"><span class="post-toc-number">3.</span> <span class="post-toc-text">Classification and Regression</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Linear-Regression"><span class="post-toc-number">4.</span> <span class="post-toc-text">Linear Regression</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Intro"><span class="post-toc-number">1.</span> <span class="post-toc-text">Intro</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Supervised-and-Unsupervised-Learning"><span class="post-toc-number">2.</span> <span class="post-toc-text">Supervised and Unsupervised Learning</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Classification-and-Regression"><span class="post-toc-number">3.</span> <span class="post-toc-text">Classification and Regression</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Linear-Regression"><span class="post-toc-number">4.</span> <span class="post-toc-text">Linear Regression</span></a></li></ol>
     </ul>
     
 
@@ -528,12 +528,12 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <p>Resources from <a href="https://www.coursera.org/learn/machine-learning/" target="_blank" rel="external">Coursera</a>.</p>
-<h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>Just took up a machine learning course on Coursera recommended by a friend of mine last week. So I decided to update this blog constantly to keep track of what I’ve learnt so far. The lectures and reading materials in the first week were quite easy to understand. Andrew Ng, the professor who taught the course, went over concepts related to different types of machine learning, and talked briefly about linear regression with one variable.</p>
-<h3 id="Supervised-and-Unsupervised-Learning"><a href="#Supervised-and-Unsupervised-Learning" class="headerlink" title="Supervised and Unsupervised Learning"></a>Supervised and Unsupervised Learning</h3><p>In supervised learning, we are given a dataset and already know what the correct output should look like, and we use the relationship between the given inputs and outputs to predict the outputs of new inputs.</p>
+<h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><p>Just took up a machine learning course on Coursera recommended by a friend of mine last week. So I decided to update this blog constantly to keep track of what I’ve learnt so far. The lectures and reading materials in the first week were quite easy to understand. Andrew Ng, the professor who taught the course, went over concepts related to different types of machine learning, and talked briefly about linear regression with one variable.</p>
+<h2 id="Supervised-and-Unsupervised-Learning"><a href="#Supervised-and-Unsupervised-Learning" class="headerlink" title="Supervised and Unsupervised Learning"></a>Supervised and Unsupervised Learning</h2><p>In supervised learning, we are given a dataset and already know what the correct output should look like, and we use the relationship between the given inputs and outputs to predict the outputs of new inputs.</p>
 <p>In unsupervised learning, we do not know the relationship between inputs and outputs, instead, we try to find structures in the data given by making clusters out of the dataset.</p>
 <p><img src="https://raw.githubusercontent.com/leniumC/blog_resources/master/supervised_learning.png" width="250" height="230"> <img src="https://raw.githubusercontent.com/leniumC/blog_resources/master/unsupervised_learning.png" width="250" height="230"></p>
-<h3 id="Classification-and-Regression"><a href="#Classification-and-Regression" class="headerlink" title="Classification and Regression"></a>Classification and Regression</h3><p>Supervised learning can also be divided into two categories, classification and regression. In classification problems, we try to predict the categories of the given inputs. In regression problems, we try to predict the outputs within a continuous output; in other words, we try to find a continuous function which predicts an output value for each input value.</p>
-<h3 id="Linear-Regression"><a href="#Linear-Regression" class="headerlink" title="Linear Regression"></a>Linear Regression</h3><p>Generally speaking, linear regression is simply the process of finding linear function that fits the dataset well. The function is called the hypothesis. In the process, we do iterations to minimize a cost function <span>$J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x_{i}) - y_{i} \right)^2$</span><!-- Has MathJax -->, which represents the sum of squared error between the hypothesis function and the given outputs of the dataset.</p>
+<h2 id="Classification-and-Regression"><a href="#Classification-and-Regression" class="headerlink" title="Classification and Regression"></a>Classification and Regression</h2><p>Supervised learning can also be divided into two categories, classification and regression. In classification problems, we try to predict the categories of the given inputs. In regression problems, we try to predict the outputs within a continuous output; in other words, we try to find a continuous function which predicts an output value for each input value.</p>
+<h2 id="Linear-Regression"><a href="#Linear-Regression" class="headerlink" title="Linear Regression"></a>Linear Regression</h2><p>Generally speaking, linear regression is simply the process of finding linear function that fits the dataset well. The function is called the hypothesis. In the process, we do iterations to minimize a cost function <span>$J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x_{i}) - y_{i} \right)^2$</span><!-- Has MathJax -->, which represents the sum of squared error between the hypothesis function and the given outputs of the dataset.</p>
 <p>To do this, we implement something called gradient descent. During gradient descent, we calculate the partial derivative of the cost function with respect to each parameter and change the parameter in a way that decreases the cost function by the largest amount. <span>$\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta)$</span><!-- Has MathJax --></p>
 <p><img src="https://raw.githubusercontent.com/leniumC/blog_resources/master/gradient_descent.png" width="600"></p>
 
@@ -910,6 +910,10 @@ It will not impact the appearance and can give developers a lot of support :)
 </script>
 
 
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+    
 
 
 

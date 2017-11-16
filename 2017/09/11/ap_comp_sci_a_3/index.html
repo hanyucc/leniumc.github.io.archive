@@ -117,7 +117,7 @@
   }
 
   a {
-    color: #ffeb3b;
+    color: #4caf50;
   }
 
   .mdl-card__media,
@@ -168,7 +168,7 @@
   }
 
   .post-toc a:hover {
-    color: #ffeb3b;
+    color: #4caf50;
     text-decoration: underline;
   }
 
@@ -268,7 +268,7 @@
 
     
         <meta property="article:published_time" content="Mon Sep 11 2017 00:00:00 GMT+0800" />
-        <meta property="article:modified_time" content="Thu Nov 02 2017 00:30:58 GMT+0800" />
+        <meta property="article:modified_time" content="Fri Nov 17 2017 02:08:54 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -295,7 +295,7 @@
     "mainEntityOfPage": "http://yoursite.com/2017/09/11/ap_comp_sci_a_3/index.html",
     "headline": "AP Computer Science A: Other Operators",
     "datePublished": "Mon Sep 11 2017 00:00:00 GMT+0800",
-    "dateModified": "Thu Nov 02 2017 00:30:58 GMT+0800",
+    "dateModified": "Fri Nov 17 2017 02:08:54 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "leniumC",
@@ -379,7 +379,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Modulus-Remainder-Operator"><span class="post-toc-number">1.</span> <span class="post-toc-text">Modulus (Remainder) Operator (%)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Division-Operator"><span class="post-toc-number">2.</span> <span class="post-toc-text">Division Operator (/)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Operator-Precedence"><span class="post-toc-number">3.</span> <span class="post-toc-text">Operator Precedence</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Increment-Decrement-Operator-–"><span class="post-toc-number">4.</span> <span class="post-toc-text">Increment/Decrement Operator (++/–)</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Modulus-Remainder-Operator"><span class="post-toc-number">1.</span> <span class="post-toc-text">Modulus (Remainder) Operator (%)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Division-Operator"><span class="post-toc-number">2.</span> <span class="post-toc-text">Division Operator (/)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Operator-Precedence"><span class="post-toc-number">3.</span> <span class="post-toc-text">Operator Precedence</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Increment-Decrement-Operator-–"><span class="post-toc-number">4.</span> <span class="post-toc-text">Increment/Decrement Operator (++/–)</span></a></li></ol>
     </ul>
     
 
@@ -527,7 +527,7 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h3 id="Modulus-Remainder-Operator"><a href="#Modulus-Remainder-Operator" class="headerlink" title="Modulus (Remainder) Operator (%)"></a>Modulus (Remainder) Operator (%)</h3><p>Returns the remainder after dividing the second operand into the first.</p>
+        <h2 id="Modulus-Remainder-Operator"><a href="#Modulus-Remainder-Operator" class="headerlink" title="Modulus (Remainder) Operator (%)"></a>Modulus (Remainder) Operator (%)</h2><p>Returns the remainder after dividing the second operand into the first.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">;</span>
 
 a <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">;</span>
@@ -536,7 +536,7 @@ b <span class="token operator">=</span> <span class="token number">3</span><span
 c <span class="token operator">=</span> a <span class="token operator">%</span> b<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// c is now 7 % 3 = 1</span>
 </code></pre>
-<h3 id="Division-Operator"><a href="#Division-Operator" class="headerlink" title="Division Operator (/)"></a>Division Operator (/)</h3><p>If the first and second operands are both integers, then / performs integer division, where the fractional component of the result is discarded.</p>
+<h2 id="Division-Operator"><a href="#Division-Operator" class="headerlink" title="Division Operator (/)"></a>Division Operator (/)</h2><p>If the first and second operands are both integers, then / performs integer division, where the fractional component of the result is discarded.</p>
 <p>If either or both of the operands are doubles, the floating-point (decimal) division is performed.</p>
 <p>Multiplying by 1.0 will give you a decimal result without changing the result.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> int_a <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">,</span> int_b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> int_res<span class="token punctuation">;</span>
@@ -551,7 +551,7 @@ double_res <span class="token operator">=</span> double_a <span class="token ope
 double_res <span class="token operator">=</span> <span class="token number">1.0</span> <span class="token operator">*</span> int_a <span class="token operator">/</span> int_b<span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// double_res is now 1.0 * 7 / 2 = 3.5</span>
 </code></pre>
-<h3 id="Operator-Precedence"><a href="#Operator-Precedence" class="headerlink" title="Operator Precedence"></a>Operator Precedence</h3><table>
+<h2 id="Operator-Precedence"><a href="#Operator-Precedence" class="headerlink" title="Operator Precedence"></a>Operator Precedence</h2><table>
 <thead>
 <tr>
 <th>Precedence</th>
@@ -587,7 +587,7 @@ double_res <span class="token operator">=</span> <span class="token number">1.0<
 </tr>
 </tbody>
 </table>
-<h3 id="Increment-Decrement-Operator-–"><a href="#Increment-Decrement-Operator-–" class="headerlink" title="Increment/Decrement Operator (++/–)"></a>Increment/Decrement Operator (++/–)</h3><p>Increases/Decreases the value of a variable by 1.</p>
+<h2 id="Increment-Decrement-Operator-–"><a href="#Increment-Decrement-Operator-–" class="headerlink" title="Increment/Decrement Operator (++/–)"></a>Increment/Decrement Operator (++/–)</h2><p>Increases/Decreases the value of a variable by 1.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> cnt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
 cnt<span class="token operator">++</span><span class="token punctuation">;</span>
@@ -970,6 +970,10 @@ It will not impact the appearance and can give developers a lot of support :)
 </script>
 
 
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+    
 
 
 

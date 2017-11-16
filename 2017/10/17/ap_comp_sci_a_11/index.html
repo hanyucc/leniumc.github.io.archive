@@ -117,7 +117,7 @@
   }
 
   a {
-    color: #ffeb3b;
+    color: #4caf50;
   }
 
   .mdl-card__media,
@@ -168,7 +168,7 @@
   }
 
   .post-toc a:hover {
-    color: #ffeb3b;
+    color: #4caf50;
     text-decoration: underline;
   }
 
@@ -268,7 +268,7 @@
 
     
         <meta property="article:published_time" content="Tue Oct 17 2017 00:00:00 GMT+0800" />
-        <meta property="article:modified_time" content="Thu Nov 02 2017 00:33:06 GMT+0800" />
+        <meta property="article:modified_time" content="Fri Nov 17 2017 02:15:37 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -295,7 +295,7 @@
     "mainEntityOfPage": "http://yoursite.com/2017/10/17/ap_comp_sci_a_11/index.html",
     "headline": "AP Computer Science A: Methods II",
     "datePublished": "Tue Oct 17 2017 00:00:00 GMT+0800",
-    "dateModified": "Thu Nov 02 2017 00:33:06 GMT+0800",
+    "dateModified": "Fri Nov 17 2017 02:15:37 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "leniumC",
@@ -379,7 +379,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Non-Void-Method-Return"><span class="post-toc-number">1.</span> <span class="post-toc-text">Non-Void Method Return</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Calling-Non-Void-Methods"><span class="post-toc-number">2.</span> <span class="post-toc-text">Calling Non-Void Methods</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Arguments"><span class="post-toc-number">3.</span> <span class="post-toc-text">Arguments</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Non-Void-Method-Return"><span class="post-toc-number">1.</span> <span class="post-toc-text">Non-Void Method Return</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Calling-Non-Void-Methods"><span class="post-toc-number">2.</span> <span class="post-toc-text">Calling Non-Void Methods</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Arguments"><span class="post-toc-number">3.</span> <span class="post-toc-text">Arguments</span></a></li></ol>
     </ul>
     
 
@@ -527,7 +527,7 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h3 id="Non-Void-Method-Return"><a href="#Non-Void-Method-Return" class="headerlink" title="Non-Void Method Return"></a>Non-Void Method Return</h3><p>A non-void method’s return value can be just about anything, as long as the return keyword matches the return type.</p>
+        <h2 id="Non-Void-Method-Return"><a href="#Non-Void-Method-Return" class="headerlink" title="Non-Void Method Return"></a>Non-Void Method Return</h2><p>A non-void method’s return value can be just about anything, as long as the return keyword matches the return type.</p>
 <p>A method can return a literal value.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">return</span> <span class="token string">"hello world"</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// "hello world"</span>
@@ -545,7 +545,7 @@
 <pre class=" language-java"><code class="language-java"><span class="token keyword">return</span> <span class="token number">1</span> <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// true</span>
 </code></pre>
-<h3 id="Calling-Non-Void-Methods"><a href="#Calling-Non-Void-Methods" class="headerlink" title="Calling Non-Void Methods"></a>Calling Non-Void Methods</h3><p>Non-void methods always returns a value, then this value has to be stored in a variable, printed, or passed to a Java control structure.</p>
+<h2 id="Calling-Non-Void-Methods"><a href="#Calling-Non-Void-Methods" class="headerlink" title="Calling Non-Void Methods"></a>Calling Non-Void Methods</h2><p>Non-void methods always returns a value, then this value has to be stored in a variable, printed, or passed to a Java control structure.</p>
 <p>A method call can be in an assignment statement.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token function">getInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -560,7 +560,7 @@
 <p>A method call can be inside the return statement of another method.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">return</span> <span class="token function">getDouble</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">1.1</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 id="Arguments"><a href="#Arguments" class="headerlink" title="Arguments"></a>Arguments</h3><p>An argument is a value that is passed to a method so that the method can use that value in its processing.</p>
+<h2 id="Arguments"><a href="#Arguments" class="headerlink" title="Arguments"></a>Arguments</h2><p>An argument is a value that is passed to a method so that the method can use that value in its processing.</p>
 <p>An argument is located inside the parentheses that follow a method name.</p>
 <p>A method can have 0, 1, or more arguments. Multiple arguments are separated by commas.</p>
 
@@ -937,6 +937,10 @@ It will not impact the appearance and can give developers a lot of support :)
 </script>
 
 
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+    
 
 
 

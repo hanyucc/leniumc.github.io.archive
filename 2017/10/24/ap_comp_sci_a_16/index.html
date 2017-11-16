@@ -117,7 +117,7 @@
   }
 
   a {
-    color: #ffeb3b;
+    color: #4caf50;
   }
 
   .mdl-card__media,
@@ -168,7 +168,7 @@
   }
 
   .post-toc a:hover {
-    color: #ffeb3b;
+    color: #4caf50;
     text-decoration: underline;
   }
 
@@ -268,7 +268,7 @@
 
     
         <meta property="article:published_time" content="Tue Oct 24 2017 00:00:00 GMT+0800" />
-        <meta property="article:modified_time" content="Thu Nov 02 2017 00:33:25 GMT+0800" />
+        <meta property="article:modified_time" content="Fri Nov 17 2017 02:19:05 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -295,7 +295,7 @@
     "mainEntityOfPage": "http://yoursite.com/2017/10/24/ap_comp_sci_a_16/index.html",
     "headline": "AP Computer Science A: Arrays II",
     "datePublished": "Tue Oct 24 2017 00:00:00 GMT+0800",
-    "dateModified": "Thu Nov 02 2017 00:33:25 GMT+0800",
+    "dateModified": "Fri Nov 17 2017 02:19:05 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "leniumC",
@@ -379,7 +379,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Array-Initializer-List"><span class="post-toc-number">1.</span> <span class="post-toc-text">Array Initializer List</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Iterating-Through-an-Array-Traversing"><span class="post-toc-number">2.</span> <span class="post-toc-text">Iterating Through an Array (Traversing)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Array-Length"><span class="post-toc-number">3.</span> <span class="post-toc-text">Array Length</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Array-Initializer-List"><span class="post-toc-number">1.</span> <span class="post-toc-text">Array Initializer List</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Iterating-Through-an-Array-Traversing"><span class="post-toc-number">2.</span> <span class="post-toc-text">Iterating Through an Array (Traversing)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Array-Length"><span class="post-toc-number">3.</span> <span class="post-toc-text">Array Length</span></a></li></ol>
     </ul>
     
 
@@ -527,11 +527,11 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h3 id="Array-Initializer-List"><a href="#Array-Initializer-List" class="headerlink" title="Array Initializer List"></a>Array Initializer List</h3><p>As a shortcut, an initializer list allows you to declare an array and assign values to each of its elements in a single statement.</p>
+        <h2 id="Array-Initializer-List"><a href="#Array-Initializer-List" class="headerlink" title="Array Initializer List"></a>Array Initializer List</h2><p>As a shortcut, an initializer list allows you to declare an array and assign values to each of its elements in a single statement.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> numbers <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <p>If you attempt to index an element of an array that does not exist, Java will return an <code>IndexOutOfBounds</code> exception.</p>
-<h3 id="Iterating-Through-an-Array-Traversing"><a href="#Iterating-Through-an-Array-Traversing" class="headerlink" title="Iterating Through an Array (Traversing)"></a>Iterating Through an Array (Traversing)</h3><p>Suppose we want to create an integer array of size 20, and fill each element of the array with a random number in the range 0 to 99.</p>
+<h2 id="Iterating-Through-an-Array-Traversing"><a href="#Iterating-Through-an-Array-Traversing" class="headerlink" title="Iterating Through an Array (Traversing)"></a>Iterating Through an Array (Traversing)</h2><p>Suppose we want to create an integer array of size 20, and fill each element of the array with a random number in the range 0 to 99.</p>
 <p>It would be inefficient to assign the random values to each element of the array.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -552,7 +552,7 @@ nums<span class="token punctuation">[</span><span class="token number">19</span>
     System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h3 id="Array-Length"><a href="#Array-Length" class="headerlink" title="Array Length"></a>Array Length</h3><p>Java allows you to access the size of an array using length, a data member of the array object.</p>
+<h2 id="Array-Length"><a href="#Array-Length" class="headerlink" title="Array Length"></a>Array Length</h2><p>Java allows you to access the size of an array using length, a data member of the array object.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> arraySize <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arraySize<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// prints 20</span>
@@ -932,6 +932,10 @@ It will not impact the appearance and can give developers a lot of support :)
 </script>
 
 
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+    
 
 
 
