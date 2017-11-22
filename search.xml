@@ -3,6 +3,106 @@
   
     
     <entry>
+      <title><![CDATA[AP Computer Science A: References and Arrays of Objects]]></title>
+      <url>/2017/11/21/ap_comp_sci_a_22/</url>
+      <content type="html"><![CDATA[<h2 id="The-Die-Class"><a href="#The-Die-Class" class="headerlink" title="The Die Class"></a>The <code>Die</code> Class</h2><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Die</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// instance variables</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> faceValue<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// constructors</span>
+    <span class="token keyword">public</span> <span class="token function">Die</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        faceValue <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// methods</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">roll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        faceValue <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">6</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getFaceValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> faceValue<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="Object-References"><a href="#Object-References" class="headerlink" title="Object References"></a>Object References</h2><pre class=" language-java"><code class="language-java">Die cube <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Die</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Consider what happens in Java’s memory when the object reference <code>cube</code> is created.</p>
+<p><code>cube</code> is assigned a six-digit hexadecimal number. This number corresponds to a specific location in Java’s memory banks. The object reference called <code>cube</code> points to that location.</p>
+<p>In other words, <code>cube</code> only contains a memory location address, not the object itself.</p>
+<h2 id="Arrays-of-Objects"><a href="#Arrays-of-Objects" class="headerlink" title="Arrays of Objects"></a>Arrays of Objects</h2><p>You have already seen how arrays can be used to store primitive types:</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Arrays can also be used to store objects of classes that you define.</p>
+<pre class=" language-java"><code class="language-java">Die dice <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Die</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="Constructors"><a href="#Constructors" class="headerlink" title="Constructors"></a>Constructors</h2><p>The constructor starts by initializing the array of length 5, and it assigns its reference (memory location) to the variable dice.</p>
+<p>The array elements do not contain Die object yet, so they are assigned a value of <code>null</code>. The keyword <code>null</code> is the default value for an object variable that does not contain an object.</p>
+<p>Next, the constructor instantiates (creates) 5 Die objects and stores their references (memory location) in the array. Each Die object occupies a different array index.</p>
+<h2 id="Iterating-Over-Arrays"><a href="#Iterating-Over-Arrays" class="headerlink" title="Iterating Over Arrays"></a>Iterating Over Arrays</h2><p>This uses a for loop to access each Die object in the array.</p>
+<p>In the for loop, an array is index is used to retrieve each Die object’s reference and store it in the local variable <code>cube</code>.</p>
+<p>Then the <code>roll()</code> method is called on the reference value stored in the Die object <code>cube</code>.</p>
+<p>The <code>roll()</code> method assigns an random value to the <code>faceValue</code> variable of that object.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science A </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[AP Computer Science A: Object to String]]></title>
+      <url>/2017/11/15/ap_comp_sci_a_21/</url>
+      <content type="html"><![CDATA[<h2 id="The-toString-Method"><a href="#The-toString-Method" class="headerlink" title="The toString() Method"></a>The <code>toString()</code> Method</h2><p>The purpose of the <code>toString()</code> method is to provide client programs with a easy way to print the contents of the instance variables of a class.</p>
+<p>It can also be used to display other information within an object, such as the results of method calls.</p>
+<p>The <code>toString()</code> method of an object is activated by enclosing the object name within a <code>println()</code> statement.</p>
+<pre class=" language-java"><code class="language-java">Student bob <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">"Bob"</span><span class="token punctuation">,</span> <span class="token number">17</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>bob<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Any class can include a <code>toString()</code> method in its implementation. The method must use the following format:</p>
+<pre class=" language-java"><code class="language-java">Public String <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// do something and return a String</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Within the body of the <code>toString()</code>, a String is defined and returned to the <code>println()</code> method of the client program.</p>
+<p>The String is often build using a series of concatenation operators (+), so the String can include more than one variable.</p>
+<p>Labels are often included within the String to make the output more clear.</p>
+<p>The escape sequence <code>\n</code> is also used to embed newline characters within the String, so that the output can be displayed on multiple lines.</p>
+<pre class=" language-java"><code class="language-java">Public String <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    String result <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+    result <span class="token operator">+=</span> <span class="token string">"name: "</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+    result <span class="token operator">+=</span> <span class="token string">"Age: "</span> <span class="token operator">+</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP Computer Science A </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[AP Computer Science A: Accessor / Mutator Methods]]></title>
       <url>/2017/11/13/ap_comp_sci_a_20/</url>
       <content type="html"><![CDATA[<h2 id="Accessor-Methods"><a href="#Accessor-Methods" class="headerlink" title="Accessor Methods"></a>Accessor Methods</h2><p>Instance variables should be declared as private.</p>
@@ -1688,9 +1788,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <tag> C++ </tag>
             
-            <tag> DFS </tag>
-            
             <tag> Search </tag>
+            
+            <tag> DFS </tag>
             
         </tags>
         
