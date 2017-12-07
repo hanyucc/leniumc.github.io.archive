@@ -3,6 +3,51 @@
   
     
     <entry>
+      <title><![CDATA[AP CompSci A: Wrapper Classes]]></title>
+      <url>/2017/12/07/ap_comp_sci_a_24/</url>
+      <content type="html"><![CDATA[<h2 id="Wrapper-Classes"><a href="#Wrapper-Classes" class="headerlink" title="Wrapper Classes"></a>Wrapper Classes</h2><p>Unlike an array, and ArrayList can only contain objects, not primitive data types.</p>
+<p>Since numbers are primitive data types in Java, you cannot directly insert them into an ArrayList.</p>
+<p>You must convert them into objects by using wrapper classes.</p>
+<ul>
+<li>int -&gt; Integer</li>
+<li>double -&gt; Double</li>
+</ul>
+<p>Note that the wrapper class names start with uppercase letters.</p>
+<p>Each wrapper class object contains a value of the corresponding primitive type.</p>
+<p>For example, you can create an object of the wrapper class <code>Double</code> with the following code:</p>
+<pre class=" language-java"><code class="language-java">Double num <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Double</span><span class="token punctuation">(</span><span class="token number">29.95</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>The object that gets created contains a value of type double.</p>
+<p>Wrapper objects can be used with anywhere objects are required, instead of primitive type values.</p>
+<h2 id="Auto-boxing"><a href="#Auto-boxing" class="headerlink" title="Auto-boxing"></a>Auto-boxing</h2><p>Conversion between primitive types and the corresponding wrapper classes is automatic.</p>
+<p>This process is called auto-boxing.</p>
+<p>For example, if you assign a number to a <code>Double</code> object, that number is automatically “put into a box”, namely, a wrapper object.</p>
+<pre class=" language-java"><code class="language-java">Double num <span class="token operator">=</span> <span class="token number">29.95</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Wrapper objects are automatically “unboxed”:</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">double</span> val <span class="token operator">=</span> num<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// val is 29.95</span>
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[AP CompSci A: ArrayList Methods]]></title>
       <url>/2017/12/05/ap_comp_sci_a_23/</url>
       <content type="html"><![CDATA[<h2 id="add-Method"><a href="#add-Method" class="headerlink" title="add() Method"></a><code>add()</code> Method</h2><p>ArrayList provides two methods for adding elements to the list, both of which are named <code>add()</code>.</p>
@@ -47,9 +92,9 @@ words<span class="token punctuation">.</span><span class="token function">set</s
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -82,9 +127,9 @@ words<span class="token punctuation">.</span><span class="token function">set</s
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -142,16 +187,16 @@ words<span class="token punctuation">.</span><span class="token function">set</s
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
     </entry>
     
     <entry>
-      <title><![CDATA[AP Computer Science A: References and Arrays of Objects]]></title>
+      <title><![CDATA[AP CompSci A: References and Arrays of Objects]]></title>
       <url>/2017/11/21/ap_comp_sci_a_20/</url>
       <content type="html"><![CDATA[<h2 id="The-Die-Class"><a href="#The-Die-Class" class="headerlink" title="The Die Class"></a>The <code>Die</code> Class</h2><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Die</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// instance variables</span>
@@ -198,7 +243,7 @@ words<span class="token punctuation">.</span><span class="token function">set</s
         
         <tags>
             
-            <tag> AP Computer Science A </tag>
+            <tag> AP CompSci A </tag>
             
             <tag> Java </tag>
             
@@ -209,7 +254,8 @@ words<span class="token punctuation">.</span><span class="token function">set</s
     <entry>
       <title><![CDATA[用Python写一个Pixiv爬虫（一）]]></title>
       <url>/2017/11/16/pixiv_crawler_1/</url>
-      <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>很久以前的一个想法…大概就是想做一个可以用来爬Pixiv图片的爬虫，主要功能是可以按图片的收藏数量来筛选图片。</p>
+      <content type="html"><![CDATA[<p>完整程序详见GitHub.</p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>很久以前的一个想法…大概就是想做一个可以用来爬Pixiv图片的爬虫，主要功能是可以按图片的收藏数量来筛选图片。</p>
 <p>毕竟Pixiv不开通会员找高质量图片还是比较麻烦的，也方便之后自己做机器学习项目爬图片用。</p>
 <p>于是乎在这里简单记录一下过程…</p>
 <h2 id="依赖库"><a href="#依赖库" class="headerlink" title="依赖库"></a>依赖库</h2><ul>
@@ -330,9 +376,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -397,9 +443,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -453,9 +499,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -574,9 +620,9 @@ columns <span class="token operator">=</span> table<span class="token punctuatio
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -627,9 +673,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -669,9 +715,9 @@ numbers<span class="token punctuation">[</span><span class="token number">5</spa
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -709,9 +755,9 @@ numbers<span class="token punctuation">[</span><span class="token number">5</spa
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -779,9 +825,9 @@ a <span class="token operator">=</span> Math<span class="token punctuation">.</s
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -821,9 +867,9 @@ a <span class="token operator">=</span> Math<span class="token punctuation">.</s
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -879,9 +925,9 @@ a <span class="token operator">=</span> Math<span class="token punctuation">.</s
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -911,9 +957,9 @@ a <span class="token operator">=</span> Math<span class="token punctuation">.</s
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -959,9 +1005,9 @@ Boolean result <span class="token operator">=</span> a<span class="token punctua
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -1068,9 +1114,9 @@ while (test counter) {
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -1182,9 +1228,9 @@ while (test counter) {
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -1222,9 +1268,9 @@ while (test counter) {
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -1261,9 +1307,9 @@ int_b <span class="token operator">=</span> <span class="token punctuation">(</s
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -1352,9 +1398,9 @@ cnt<span class="token operator">--</span><span class="token punctuation">;</span
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -1398,9 +1444,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -1435,9 +1481,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
             
         </tags>
         
@@ -2107,9 +2153,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <tag> C++ </tag>
             
-            <tag> DFS </tag>
-            
             <tag> DP </tag>
+            
+            <tag> DFS </tag>
             
         </tags>
         
