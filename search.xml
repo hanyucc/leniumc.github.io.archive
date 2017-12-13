@@ -3,6 +3,68 @@
   
     
     <entry>
+      <title><![CDATA[AP CompSci A: Enhanced For Loop / Removing Items]]></title>
+      <url>/2017/12/11/ap_comp_sci_a_25/</url>
+      <content type="html"><![CDATA[<h2 id="Enhanced-For-Loop"><a href="#Enhanced-For-Loop" class="headerlink" title="Enhanced For Loop"></a>Enhanced For Loop</h2><p>There is a convenient shortcut for iterating through a sequence of elements, such as an array or an ArrayList.</p>
+<p>It is called the enhanced for loop, or for-each loop.</p>
+<p>Suppose you want to total up all the values in an array named <code>data</code>.</p>
+<p>If you use a regular for loop:</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">double</span><span class="token punctuation">[</span><span class="token punctuation">]</span> data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1.1</span><span class="token punctuation">,</span> <span class="token number">2.5</span><span class="token punctuation">,</span> <span class="token number">3.8</span><span class="token punctuation">,</span> <span class="token number">4.2</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">double</span> sum <span class="token operator">=</span> <span class="token number">0.0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> data<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    sum <span class="token operator">+=</span> data<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>If you use an enhanced for loop:</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">double</span><span class="token punctuation">[</span><span class="token punctuation">]</span> data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1.1</span><span class="token punctuation">,</span> <span class="token number">2.5</span><span class="token punctuation">,</span> <span class="token number">3.8</span><span class="token punctuation">,</span> <span class="token number">4.2</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">double</span> sum <span class="token operator">=</span> <span class="token number">0.0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">double</span> item<span class="token operator">:</span> data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    sum <span class="token operator">+=</span> item<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The loop body is executed for each element in the array <code>data</code>.</p>
+<p>At the beginning of each loop iteration, the next element is assigned to the variable <code>item</code>.</p>
+<p>Then, the loop body is executed. You can read this loop as, “for each item in data”.</p>
+<p>Note an important difference between the for-each loop and the regular for loop.</p>
+<p>In the for-each loop, the element varible <code>item</code> is assigned values <code>data[0], data[1]</code> and so on. In the regular for loop, the index variable <code>i</code> is assigned values <code>0, 1</code> and so on.</p>
+<h2 id="Looping-Through-an-ArrayList-and-Removing-Multiple-Items"><a href="#Looping-Through-an-ArrayList-and-Removing-Multiple-Items" class="headerlink" title="Looping Through an ArrayList and Removing Multiple Items."></a>Looping Through an ArrayList and Removing Multiple Items.</h2><p>Removing single items, or items that are not neighbours, from an ArrayList, is simple.</p>
+<p>However, care must be taken when removing two items that are adjacent to each other in an ArrayList.</p>
+<p>Consider the following example in which we attempt to remove all of the even numbers from ArrayList.</p>
+<pre class=" language-java"><code class="language-java">ArrayList<span class="token operator">&lt;</span>Integer<span class="token operator">></span> nums <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        nums<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// Expected: 9, 3, 5, 1</span>
+<span class="token comment" spellcheck="true">// Result: 9, 3, 5, 6, 8, 1</span>
+</code></pre>
+<p>This problem can be solved quite easily by iterating backwards instead.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[AP CompSci A: Wrapper Classes]]></title>
       <url>/2017/12/07/ap_comp_sci_a_24/</url>
       <content type="html"><![CDATA[<h2 id="Wrapper-Classes"><a href="#Wrapper-Classes" class="headerlink" title="Wrapper Classes"></a>Wrapper Classes</h2><p>Unlike an array, and ArrayList can only contain objects, not primitive data types.</p>
@@ -268,6 +330,17 @@ words<span class="token punctuation">.</span><span class="token function">set</s
 pip3 <span class="token function">install</span> beautifulsoup4
 pip3 <span class="token function">install</span> fake-useragent
 </code></pre>
+<p>如需使用Sock5代理（Shadowsocks等），则需要执行</p>
+<pre class=" language-bash"><code class="language-bash">pip3 <span class="token function">install</span> requests<span class="token punctuation">[</span>socks5<span class="token punctuation">]</span>
+</code></pre>
+<h2 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h2><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> requests
+<span class="token keyword">import</span> json
+<span class="token keyword">import</span> time
+<span class="token keyword">import</span> os
+<span class="token keyword">import</span> shutil
+<span class="token keyword">from</span> fake_useragent <span class="token keyword">import</span> UserAgent
+<span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
+</code></pre>
 <h2 id="用户输入"><a href="#用户输入" class="headerlink" title="用户输入"></a>用户输入</h2><pre class=" language-python"><code class="language-python">raw_keyword <span class="token operator">=</span> input<span class="token punctuation">(</span><span class="token string">'Enter search keyword: '</span><span class="token punctuation">)</span>
 search_keyword <span class="token operator">=</span> requests<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>quote<span class="token punctuation">(</span>raw_keyword<span class="token punctuation">)</span>
 </code></pre>
@@ -275,8 +348,8 @@ search_keyword <span class="token operator">=</span> requests<span class="token 
 <pre class=" language-python"><code class="language-python">start_page <span class="token operator">=</span> <span class="token punctuation">[</span>int<span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> input<span class="token punctuation">(</span><span class="token string">'Enter start page: '</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
 end_page <span class="token operator">=</span> <span class="token punctuation">[</span>int<span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> input<span class="token punctuation">(</span><span class="token string">'Enter end page: '</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
 </code></pre>
-<p>在Pixiv上获取图片时，<code>start_page</code>为所爬网页的起始页码，<code>end_page</code>为终止页码。这样做的一个好处是，如果爬取图片时中途出现问题，下次运行的时候就不用从头开始了。</p>
-<pre class=" language-python"><code class="language-python">fav_thresh <span class="token operator">=</span> <span class="token punctuation">[</span>int<span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> input<span class="token punctuation">(</span><span class="token string">'Enter least number of bookmarks accepted: '</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+<p>在Pixiv上获取图片时，<code>start_page</code>为所爬网页的起始页码，<code>end_page</code>为终止页码。</p>
+<pre class=" language-python"><code class="language-python">bookmark_thresh <span class="token operator">=</span> <span class="token punctuation">[</span>int<span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> input<span class="token punctuation">(</span><span class="token string">'Enter least number of bookmarks accepted: '</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
 multi_images <span class="token operator">=</span> input<span class="token punctuation">(</span><span class="token string">'Accept multiple images (manga)? (y/n): '</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
 
 pixiv_id <span class="token operator">=</span> input<span class="token punctuation">(</span><span class="token string">'Enter pixiv id or email: '</span><span class="token punctuation">)</span>
@@ -290,10 +363,15 @@ headers <span class="token operator">=</span> <span class="token punctuation">{<
     <span class="token string">'Referer'</span><span class="token punctuation">:</span> <span class="token string">'https://accounts.pixiv.net/login?lang=zh&amp;source=pc&amp;view_type=page&amp;ref=wwwtop_accounts_index'</span><span class="token punctuation">,</span>
     <span class="token string">"User-Agent"</span><span class="token punctuation">:</span> <span class="token string">"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36"</span>
 <span class="token punctuation">}</span>
+proxies <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'http'</span><span class="token punctuation">:</span> <span class="token string">'socks5h://127.0.0.1:1080'</span><span class="token punctuation">,</span>
+    <span class="token string">'https'</span><span class="token punctuation">:</span> <span class="token string">'socks5h://127.0.0.1:1080'</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<p><code>ua</code>为创建的一个fake-useragent的object，在之后会用于生成随机的<code>header</code>中的<code>User-Agent</code>。</p>
+<p><code>ua</code>为创建的一个fake-useragent的object，在之后会用于生成随机的<code>header</code>中的<code>User-Agent</code>。第一次运行的时候可能由于网络原因会卡很长时间。</p>
 <p><code>se</code>为创建的一个requests session，之后的请求均会通过它发送，主要原因是同一个session中是会储存cookie的，所以才能实现登录之后爬取图片的操作。</p>
-<p><code>headers</code>就是发请求的时候的request header，<code>Referer</code>是在登录的时候和获取图片的时候网站都会检查的，所以之后也会不断在变。<code>User-Agent</code>就是之前说的随机生成的fake-useragent。</p>
+<p><code>headers</code>就是发请求的时候的request header，<code>Referer</code>是在登录的时候和获取图片的时候网站都会检查的，之后会进行修改。<code>User-Agent</code>就是之前说的随机生成的fake-useragent。</p>
+<p><code>proxies</code>为可选项，如需使用代理则需要在之后所有的请求中加上<code>proxies=proxies</code>。</p>
 ]]></content>
       
         <categories>
@@ -1600,11 +1678,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> C++ </tag>
-            
             <tag> Data Structure </tag>
             
             <tag> Stack </tag>
+            
+            <tag> C++ </tag>
             
         </tags>
         
@@ -2047,9 +2125,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <tag> C++ </tag>
             
-            <tag> Search </tag>
-            
             <tag> DFS </tag>
+            
+            <tag> Search </tag>
             
         </tags>
         
@@ -2153,9 +2231,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <tag> C++ </tag>
             
-            <tag> DP </tag>
-            
             <tag> DFS </tag>
+            
+            <tag> DP </tag>
             
         </tags>
         
