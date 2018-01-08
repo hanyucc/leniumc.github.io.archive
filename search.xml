@@ -3,6 +3,77 @@
   
     
     <entry>
+      <title><![CDATA[用Python写一个Pixiv爬虫（二）]]></title>
+      <url>/2017/12/15/pixiv_crawler_2/</url>
+      <content type="html"><![CDATA[<p>完整程序详见<a href="https://github.com/leniumC/pixiv-crawler/" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="登录分析"><a href="#登录分析" class="headerlink" title="登录分析"></a>登录分析</h2><p>先打开Pixiv的<a href="https://accounts.pixiv.net/login?lang=zh&amp;source=pc&amp;view_type=page&amp;ref=wwwtop_accounts_index" target="_blank" rel="external">登录</a>页面，尝试登录并用开发者工具查看登录时发送的请求。</p>
+<p>发现有一个名为<code>login?lang=zh</code>的请求，查看form data格式为</p>
+<pre class=" language-python"><code class="language-python">pixiv_id<span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 用户名</span>
+password<span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 密码</span>
+captcha<span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 验证码（空）</span>
+g_recaptcha_response<span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 验证码（空）</span>
+post_key<span class="token punctuation">:</span> <span class="token comment" spellcheck="true"># 名为post_key的字符串</span>
+source<span class="token punctuation">:</span> pc
+ref<span class="token punctuation">:</span> wwwtop_accounts_index
+return_to<span class="token punctuation">:</span> https<span class="token punctuation">:</span><span class="token operator">//</span>www<span class="token punctuation">.</span>pixiv<span class="token punctuation">.</span>net<span class="token operator">/</span>
+</code></pre>
+<p>其中<code>source</code>, <code>ref</code>可在登录链接中找到，而<code>captcha</code>与<code>g_recaptcha_response</code>验证码并没有在请求中用到。猜想有用的数据只有<code>pixiv_id</code>, <code>password</code>, <code>post_key</code>三个。</p>
+<p>显然<code>pixiv_id</code>与<code>password</code>分别为P站用户名与密码，而<code>post_key</code>每次登录时都是不同的，猜想存放在Cookie中或Html源码中。分别进行搜索，发现存放在一个名为<code>post_key</code>的<code>input</code>标签中。</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>hidden<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>post_key<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+</code></pre>
+<p>获取用户输入的用户名与密码，然后再从Html中获取<code>post_key</code>的值，便可以正常登录了。</p>
+<h2 id="登录实现"><a href="#登录实现" class="headerlink" title="登录实现"></a>登录实现</h2><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">login</span><span class="token punctuation">(</span>pixiv_id<span class="token punctuation">,</span> password<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    base_url <span class="token operator">=</span> <span class="token string">'https://accounts.pixiv.net/login?lang=zh&amp;source=pc&amp;view_type=page&amp;ref=wwwtop_accounts_index'</span>
+    login_url <span class="token operator">=</span> <span class="token string">'https://accounts.pixiv.net/api/login?lang=zh'</span>
+    post_key_html <span class="token operator">=</span> se<span class="token punctuation">.</span>get<span class="token punctuation">(</span>base_url<span class="token punctuation">,</span> headers<span class="token operator">=</span>headers<span class="token punctuation">)</span><span class="token punctuation">.</span>text
+    post_key_soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>post_key_html<span class="token punctuation">,</span> <span class="token string">'lxml'</span><span class="token punctuation">)</span>
+    post_key <span class="token operator">=</span> post_key_soup<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'value'</span><span class="token punctuation">]</span>
+    data <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">'pixiv_id'</span><span class="token punctuation">:</span> pixiv_id<span class="token punctuation">,</span>
+        <span class="token string">'password'</span><span class="token punctuation">:</span> password<span class="token punctuation">,</span>
+        <span class="token string">'post_key'</span><span class="token punctuation">:</span> post_key
+    <span class="token punctuation">}</span>
+    se<span class="token punctuation">.</span>post<span class="token punctuation">(</span>login_url<span class="token punctuation">,</span> data<span class="token operator">=</span>data<span class="token punctuation">,</span> headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
+</code></pre>
+<p>首先定义登录页面网址与发送请求的网址。</p>
+<pre class=" language-python"><code class="language-python">base_url <span class="token operator">=</span> <span class="token string">'https://accounts.pixiv.net/login?lang=zh&amp;source=pc&amp;view_type=page&amp;ref=wwwtop_accounts_index'</span>
+login_url <span class="token operator">=</span> <span class="token string">'https://accounts.pixiv.net/api/login?lang=zh'</span>
+</code></pre>
+<p>首先通过Get请求获取登录页面Html源码<code>post_key_html</code>，然后使用BeautifulSoup对其进行解析，寻找Html中第一个<code>name</code>为<code>post_key</code>的<code>input</code>标签并获取其<code>value</code>属性。</p>
+<pre class=" language-python"><code class="language-python">post_key_html <span class="token operator">=</span> se<span class="token punctuation">.</span>get<span class="token punctuation">(</span>base_url<span class="token punctuation">,</span> headers<span class="token operator">=</span>headers<span class="token punctuation">)</span><span class="token punctuation">.</span>text
+post_key_soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>post_key_html<span class="token punctuation">,</span> <span class="token string">'lxml'</span><span class="token punctuation">)</span>
+post_key <span class="token operator">=</span> post_key_soup<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span> <span class="token string">'post_key'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'value'</span><span class="token punctuation">]</span>
+</code></pre>
+<p>最后，用dictionary创建form data，并发送Post请求完成登录。</p>
+<pre class=" language-python"><code class="language-python">data <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'pixiv_id'</span><span class="token punctuation">:</span> pixiv_id<span class="token punctuation">,</span>
+    <span class="token string">'password'</span><span class="token punctuation">:</span> password<span class="token punctuation">,</span>
+    <span class="token string">'post_key'</span><span class="token punctuation">:</span> post_key
+<span class="token punctuation">}</span>
+se<span class="token punctuation">.</span>post<span class="token punctuation">(</span>login_url<span class="token punctuation">,</span> data<span class="token operator">=</span>data<span class="token punctuation">,</span> headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Crawler </tag>
+            
+            <tag> Web </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[AP CompSci A: Enhanced For Loop / Removing Items]]></title>
       <url>/2017/12/11/ap_comp_sci_a_25/</url>
       <content type="html"><![CDATA[<h2 id="Enhanced-For-Loop"><a href="#Enhanced-For-Loop" class="headerlink" title="Enhanced For Loop"></a>Enhanced For Loop</h2><p>There is a convenient shortcut for iterating through a sequence of elements, such as an array or an ArrayList.</p>
@@ -316,7 +387,7 @@ words<span class="token punctuation">.</span><span class="token function">set</s
     <entry>
       <title><![CDATA[用Python写一个Pixiv爬虫（一）]]></title>
       <url>/2017/11/16/pixiv_crawler_1/</url>
-      <content type="html"><![CDATA[<p>完整程序详见GitHub.</p>
+      <content type="html"><![CDATA[<p>完整程序详见<img src="https://github.com/leniumC/pixiv-crawler/" alt="GitHub">.</p>
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>很久以前的一个想法…大概就是想做一个可以用来爬Pixiv图片的爬虫，主要功能是可以按图片的收藏数量来筛选图片。</p>
 <p>毕竟Pixiv不开通会员找高质量图片还是比较麻烦的，也方便之后自己做机器学习项目爬图片用。</p>
 <p>于是乎在这里简单记录一下过程…</p>
@@ -1594,9 +1665,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <tag> Supervised Learning </tag>
             
-            <tag> Unsupervised Learning </tag>
-            
             <tag> Regression </tag>
+            
+            <tag> Unsupervised Learning </tag>
             
         </tags>
         
@@ -1678,11 +1749,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
+            <tag> C++ </tag>
+            
             <tag> Data Structure </tag>
             
             <tag> Stack </tag>
-            
-            <tag> C++ </tag>
             
         </tags>
         
@@ -2125,9 +2196,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <tag> C++ </tag>
             
-            <tag> DFS </tag>
-            
             <tag> Search </tag>
+            
+            <tag> DFS </tag>
             
         </tags>
         
