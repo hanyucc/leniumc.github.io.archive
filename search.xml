@@ -3,6 +3,72 @@
   
     
     <entry>
+      <title><![CDATA[AP CompSci A: Inheritance]]></title>
+      <url>/2018/03/05/ap_comp_sci_a_26/</url>
+      <content type="html"><![CDATA[<h2 id="Inheritance"><a href="#Inheritance" class="headerlink" title="Inheritance"></a>Inheritance</h2><p>This provides a unique form of code sharing by allowing you to take the implementation of any class and build a new class based on that implementation.</p>
+<p>A subclass starts by inheriting all the public data and methods that are defined in the superclass.</p>
+<p>The subclass can then extend its behavior by adding additional data and new methods.</p>
+<p>The subclass can also extend or replace behavior in the superclass by overriding methods that were already implemented.</p>
+<p>Inheritance implements the “is-a” relationship between objects.</p>
+<p>Subclass “is a” Superclass.</p>
+<p>E.g. Dog “is a” Pet.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// instance variables</span>
+    <span class="token comment" spellcheck="true">// constructors</span>
+    <span class="token comment" spellcheck="true">// mutator and accessor methods</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">extends</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// instance variables</span>
+    <span class="token comment" spellcheck="true">// constructors</span>
+    <span class="token comment" spellcheck="true">// mutator and accessor methods</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="Partial-Overriding"><a href="#Partial-Overriding" class="headerlink" title="Partial Overriding"></a>Partial Overriding</h2><p>Sometimes the code for overriding method includes call to the superclass method. This is called partial overriding.</p>
+<p>Typically, this occurs when the subclass method wants to do what the superclass method does, plus something extra.</p>
+<p>This is achieved by using the keyword super in the implementation.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> name<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// constructors</span>
+    <span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">extends</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// mutator and accessor methods</span>
+    <span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="Rules-for-Subclasses"><a href="#Rules-for-Subclasses" class="headerlink" title="Rules for Subclasses"></a>Rules for Subclasses</h2><p>A subclass can add new private instance variables.</p>
+<p>A subclass can add new public or private methods.</p>
+<p>A subclass can override (redefine) inherited methods.</p>
+<p>A subclass must define its own constructors. Constructors are never inherited. Therefore, a subclass has to provide its own.</p>
+<p>A subclass constructor can explicitly call a superclass constructor by using the keyword super. If super is used, then it must be the first statement in the subclass’s constructor.</p>
+<p>A subclass cannot directly access the private members of its superclass.</p>
+<p>A subclass should use the publicly declared accessor or mutator methods to access the instance variables of its superclass.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[用Python写一个Pixiv爬虫（二）]]></title>
       <url>/2017/12/15/pixiv_crawler_2/</url>
       <content type="html"><![CDATA[<p>完整程序详见<a href="https://github.com/leniumC/pixiv-crawler/" target="_blank" rel="external">GitHub</a>.</p>
@@ -387,7 +453,7 @@ words<span class="token punctuation">.</span><span class="token function">set</s
     <entry>
       <title><![CDATA[用Python写一个Pixiv爬虫（一）]]></title>
       <url>/2017/11/16/pixiv_crawler_1/</url>
-      <content type="html"><![CDATA[<p>完整程序详见<img src="https://github.com/leniumC/pixiv-crawler/" alt="GitHub">.</p>
+      <content type="html"><![CDATA[<p>完整程序详见<a href="https://github.com/leniumC/pixiv-crawler/" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>很久以前的一个想法…大概就是想做一个可以用来爬Pixiv图片的爬虫，主要功能是可以按图片的收藏数量来筛选图片。</p>
 <p>毕竟Pixiv不开通会员找高质量图片还是比较麻烦的，也方便之后自己做机器学习项目爬图片用。</p>
 <p>于是乎在这里简单记录一下过程…</p>
@@ -1665,9 +1731,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <tag> Supervised Learning </tag>
             
-            <tag> Regression </tag>
-            
             <tag> Unsupervised Learning </tag>
+            
+            <tag> Regression </tag>
             
         </tags>
         
@@ -1749,11 +1815,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> C++ </tag>
-            
             <tag> Data Structure </tag>
             
             <tag> Stack </tag>
+            
+            <tag> C++ </tag>
             
         </tags>
         
@@ -2196,9 +2262,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <tag> C++ </tag>
             
-            <tag> Search </tag>
-            
             <tag> DFS </tag>
+            
+            <tag> Search </tag>
             
         </tags>
         
