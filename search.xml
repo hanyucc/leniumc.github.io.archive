@@ -3,6 +3,186 @@
   
     
     <entry>
+      <title><![CDATA[AP CompSci A: Interfaces]]></title>
+      <url>/2018/03/12/ap_comp_sci_a_29/</url>
+      <content type="html"><![CDATA[<h2 id="Interfaces"><a href="#Interfaces" class="headerlink" title="Interfaces"></a>Interfaces</h2><p>An interface contains a collection of related abstract methods.</p>
+<p>Any class that implements an interface must incorporate those abstract methods into its design.<br>Any interface is not a class.</p>
+<p>Interfaces are somewhat similar to abstract classes in that they both contain abstract methods.</p>
+<p>However, interfaces cannot contain any instance variables, constructors, or implemented methods. They can only contain abstract methods. </p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">abstract</span> String <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">extends</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> String <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">"chews bone"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Cat</span> <span class="token keyword">extends</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> String <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">"eats fish"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>To define an interface, you must use the keyword <code>interface</code>, followed by its given name.</p>
+<p>The methods declared in an interface must be both public and abstract.</p>
+<p>The <code>public</code> and <code>abstract</code> keywords are optional.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+    String <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[AP CompSci A: Abstract Classes]]></title>
+      <url>/2018/03/07/ap_comp_sci_a_28/</url>
+      <content type="html"><![CDATA[<h2 id="Abstract-Classes"><a href="#Abstract-Classes" class="headerlink" title="Abstract Classes"></a>Abstract Classes</h2><p>An abstract class can pass along methods and variables, but it can never be instantiated on its own. That is, we cannot create an object from an abstract class.<br>An abstract class contains one or more abstract methods.</p>
+<p>The idea of an abstract method is to indicate the name and return type of a method, without providing the implementation of that method. Rather, the implementation is handled in the subclasses.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> String <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+`
+</code></pre>
+<p>Note the semicolon after the method declaration.</p>
+<p>A class is declared abstract by using the abstract keyword in the class header.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// instance variables</span>
+    <span class="token comment" spellcheck="true">// constructors</span>
+    <span class="token comment" spellcheck="true">// normal and abstract methods</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Any class that contains one or more abstract methods must be declared abstract.</p>
+<p>However, a class that is declared abstract does not have to contain any abstract methods, and it can also contain regular methods.<br>The purpose of an abstract class is to act as a placeholder in a class hierarchy.</p>
+<p>An abstract class may contain a partial description that is inherited by all of its descendants.</p>
+<p>Its subclasses, which are more specific, fill the gaps.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token function">Pet</span><span class="token punctuation">(</span>String n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        name <span class="token operator">=</span> n<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token keyword">abstract</span> String <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">extends</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> String <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">"woof"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Snake</span> <span class="token keyword">extends</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> String <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">"hiss"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="Polymorphism"><a href="#Polymorphism" class="headerlink" title="Polymorphism"></a>Polymorphism</h2><p>Abstract classes can also utilize polymorphism.</p>
+<p>A superclass variable can store objects of its subclass.</p>
+<p>However, a downcast is required to access the methods defined in the subclass, similar to regular classes.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[AP CompSci A: Polymorphism]]></title>
+      <url>/2018/03/06/ap_comp_sci_a_27/</url>
+      <content type="html"><![CDATA[<h2 id="Method-Overloading"><a href="#Method-Overloading" class="headerlink" title="Method Overloading"></a>Method Overloading</h2><p>This is where more than one method in the same class has the same name, but different parameter lists.</p>
+<h2 id="Superclass-references"><a href="#Superclass-references" class="headerlink" title="Superclass references"></a>Superclass references</h2><p>This is where the super keyword is used.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> name<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// constructors</span>
+    <span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">extends</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// mutator and accessor methods</span>
+    <span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="Downcastng"><a href="#Downcastng" class="headerlink" title="Downcastng"></a>Downcastng</h2><p>This is where we perform a required type cast on a reference, when using polymorphism.</p>
+<p>Subclass objects can be stored in superclass variables. However, the methods of the subclass cannot be directed accessed when stored this way.</p>
+<p>The object of the superclass type needs to be casted to the subclass to access the methods.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> name<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// constructors</span>
+    <span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">extends</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// mutator and accessor methods</span>
+    <span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> String <span class="token function">bark</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">"woof"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">display</span><span class="token punctuation">(</span>Pet pet<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>pet<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// System.out.println(pet.bark()); not valid</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">(</span>Dog<span class="token punctuation">)</span>pet<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">bark</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// valid if an Dog object is passed in</span>
+<span class="token punctuation">}</span>
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[AP CompSci A: Inheritance]]></title>
       <url>/2018/03/05/ap_comp_sci_a_26/</url>
       <content type="html"><![CDATA[<h2 id="Inheritance"><a href="#Inheritance" class="headerlink" title="Inheritance"></a>Inheritance</h2><p>This provides a unique form of code sharing by allowing you to take the implementation of any class and build a new class based on that implementation.</p>
@@ -12,13 +192,13 @@
 <p>Inheritance implements the “is-a” relationship between objects.</p>
 <p>Subclass “is a” Superclass.</p>
 <p>E.g. Dog “is a” Pet.</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// instance variables</span>
     <span class="token comment" spellcheck="true">// constructors</span>
     <span class="token comment" spellcheck="true">// mutator and accessor methods</span>
 <span class="token punctuation">}</span>
 
-<span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">extends</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">extends</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// instance variables</span>
     <span class="token comment" spellcheck="true">// constructors</span>
     <span class="token comment" spellcheck="true">// mutator and accessor methods</span>
@@ -26,8 +206,8 @@
 </code></pre>
 <h2 id="Partial-Overriding"><a href="#Partial-Overriding" class="headerlink" title="Partial Overriding"></a>Partial Overriding</h2><p>Sometimes the code for overriding method includes call to the superclass method. This is called partial overriding.</p>
 <p>Typically, this occurs when the subclass method wants to do what the superclass method does, plus something extra.</p>
-<p>This is achieved by using the keyword super in the implementation.</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+<p>This is achieved by using the keyword <code>super</code> in the implementation.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
     <span class="token keyword">private</span> name<span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// constructors</span>
     <span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -35,7 +215,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">extends</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">extends</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">// mutator and accessor methods</span>
     <span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -46,7 +226,7 @@
 <p>A subclass can add new public or private methods.</p>
 <p>A subclass can override (redefine) inherited methods.</p>
 <p>A subclass must define its own constructors. Constructors are never inherited. Therefore, a subclass has to provide its own.</p>
-<p>A subclass constructor can explicitly call a superclass constructor by using the keyword super. If super is used, then it must be the first statement in the subclass’s constructor.</p>
+<p>A subclass constructor can explicitly call a superclass constructor by using the keyword <code>super</code>. If <code>super</code> is used, then it must be the first statement in the subclass’s constructor.</p>
 <p>A subclass cannot directly access the private members of its superclass.</p>
 <p>A subclass should use the publicly declared accessor or mutator methods to access the instance variables of its superclass.</p>
 ]]></content>
@@ -1731,9 +1911,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <tag> Supervised Learning </tag>
             
-            <tag> Regression </tag>
-            
             <tag> Unsupervised Learning </tag>
+            
+            <tag> Regression </tag>
             
         </tags>
         
