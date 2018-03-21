@@ -3,6 +3,108 @@
   
     
     <entry>
+      <title><![CDATA[AP CompSci A: Binary Search]]></title>
+      <url>/2018/03/21/ap_comp_sci_a_31/</url>
+      <content type="html"><![CDATA[<h2 id="Binary-Search"><a href="#Binary-Search" class="headerlink" title="Binary Search"></a>Binary Search</h2><p>Linear search works well for arrays that are fairly small (a few hundred elements). as the array gets very large (millions or billions of elements), the efficiency of the search degrades.</p>
+<p>If the array of elements is in sorted order, then there is a much better algorithm is binary search.</p>
+<h2 id="The-Binary-Search-Algorithm"><a href="#The-Binary-Search-Algorithm" class="headerlink" title="The Binary Search Algorithm"></a>The Binary Search Algorithm</h2><p>Before a binary search can be performed, the data must be in sorted order.</p>
+<p>The basic idea is to examine the element at the array’s midpoint on each pass through the search loop.</p>
+<p>If the current element matches the target, we return its position. </p>
+<p>If the current element is less than target, then we search the part of the array to the right of the midpoint (containing the positions of the greater elements).<br>Otherwise, if the current element is greater than the target, we search the part of the array to the left of the midpoint (containing the positions of the lesser elements).</p>
+<p>On each pass through the loop, the current leftmost position or the current right most position is adjusted to track the position of the array being searched.</p>
+<h2 id="Binary-Search-Algorithm-Analysis"><a href="#Binary-Search-Algorithm-Analysis" class="headerlink" title="Binary Search Algorithm Analysis"></a>Binary Search Algorithm Analysis</h2><p>Assume that n represents the size of the array to be searched.</p>
+<p>Best case: the key is found in the first try.</p>
+<p>Worst case: the key is not in the array or at either end of the subarray.</p>
+<p>In the worst case, the n elements must be divided by 2 until there is just one element left, and then that element must be tested.</p>
+<p>Therefore, in the worst case, the binary search algorithm takes log<sub>2</sub>n runtime.</p>
+<p>For example, if the size of the array is 32, then the maximum number of comparisons is 5, since log<sub>2</sub>32=5.</p>
+<p>Average case: takes about half the comparisons of the worst case.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BinarySearch</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">search</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> l <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> r <span class="token operator">=</span> a<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>l <span class="token operator">&lt;=</span> r<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">int</span> m <span class="token operator">=</span> <span class="token punctuation">(</span>l <span class="token operator">+</span> r<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">==</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> m<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">></span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                r <span class="token operator">=</span> m<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                l <span class="token operator">=</span> m <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> 
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[AP CompSci A: Linear Search]]></title>
+      <url>/2018/03/19/ap_comp_sci_a_30/</url>
+      <content type="html"><![CDATA[<h2 id="Linear-Search"><a href="#Linear-Search" class="headerlink" title="Linear Search"></a>Linear Search</h2><p>Often, programmers work with large amounts of data stored in arrays. It may be necessary to determine whether an array contains a value that matches a certain key value.</p>
+<p>The process of locating a key value in an array is called searching.</p>
+<p>The linear search algorithm begins searching at the beginning of an array. It compares the search key values (the value looking for) with the first item in the array.</p>
+<p>If there is a match, then you stop the search. If there is not a match, then the second item in the array is examined.</p>
+<p>The process is repeated until a match is found, or the end of the array is reached.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LinearSearch</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">search</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> a<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> i<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Sometimes it is useful to know at which location in the array the element was found.</p>
+<p>A return value of -1 indicates that the searched element is not in the array.</p>
+<h2 id="Linear-Search-Algorithm-Analysis"><a href="#Linear-Search-Algorithm-Analysis" class="headerlink" title="Linear Search Algorithm Analysis"></a>Linear Search Algorithm Analysis</h2><p>Computer scientists talk about the efficiency of an algorithm in terms of its best, average and worst case.</p>
+<p>The best case occurs when the data is organized in such a way that the algorithm works at its peak performance, or fastest.</p>
+<p>The average case occurs when the data is organized in such a way that the algorithm works at its average speed.</p>
+<p>The worst case occurs when the algorithm is least efficient or works at its slowest speed.</p>
+<p>The worst case is often the one that people examine when analyzing an algorithm, because it gives you the best guaranteed performance of the algorithm.</p>
+<p>Assume that n represents the size of the array to be searched.</p>
+<p>The linear search algorithm has the following time efficiency:</p>
+<p><strong>Best case</strong>: when the item to be searched is the first item in the array.</p>
+<p><strong>Worst case</strong>: when the item to be searched is the last item in the array or it is not in the array.</p>
+<p><strong>Average case</strong>: when the item to be searched is in a random location. The search makes on average n/2 comparisons before it locates the element.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[AP CompSci A: Interfaces]]></title>
       <url>/2018/03/12/ap_comp_sci_a_29/</url>
       <content type="html"><![CDATA[<h2 id="Interfaces"><a href="#Interfaces" class="headerlink" title="Interfaces"></a>Interfaces</h2><p>An interface contains a collection of related abstract methods.</p>
@@ -30,6 +132,19 @@
 <p>The <code>public</code> and <code>abstract</code> keywords are optional.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
     String <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>To implement an interface, a class must use the keyword <code>implements</code>.</p>
+<p>Since interfaces are not classes, they cannot be instantiated.</p>
+<p>Interfaces are used in Java to establish a common framework among related classes.</p>
+<p>Implementing an interface allows a class to be more formal about the behavior it promises to provide. That is, it forms a contract between the class and the outside world.</p>
+<p>If your class claims to implement an interface, all the methods defined in that interface must appear in your class.</p>
+<h2 id="Multiple-Interfaces"><a href="#Multiple-Interfaces" class="headerlink" title="Multiple Interfaces"></a>Multiple Interfaces</h2><p>When using inheritance in Java, a subclass can only extend a single superclass.</p>
+<p>This is called single inheritance. That is, multiple inheritance is not allowed.</p>
+<p>Interfaces, however, are not classes. Therefore, the implementation of multiple interfaces is permitted.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">implements</span> <span class="token class-name">Pet</span><span class="token punctuation">,</span> Security
+<span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// implementation of class</span>
 <span class="token punctuation">}</span>
 </code></pre>
 ]]></content>
