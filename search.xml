@@ -293,13 +293,13 @@
     <span class="token keyword">public</span> <span class="token keyword">abstract</span> String <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">extends</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">implements</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> String <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token string">"chews bone"</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Cat</span> <span class="token keyword">extends</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Cat</span> <span class="token keyword">implements</span> <span class="token class-name">Pet</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> String <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token string">"eats fish"</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
@@ -350,7 +350,6 @@
       <content type="html"><![CDATA[<h2 id="Abstract-Classes"><a href="#Abstract-Classes" class="headerlink" title="Abstract Classes"></a>Abstract Classes</h2><p>An abstract class can pass along methods and variables, but it can never be instantiated on its own. That is, we cannot create an object from an abstract class.<br>An abstract class contains one or more abstract methods.</p>
 <p>The idea of an abstract method is to indicate the name and return type of a method, without providing the implementation of that method. Rather, the implementation is handled in the subclasses.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> String <span class="token function">speak</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-`
 </code></pre>
 <p>Note the semicolon after the method declaration.</p>
 <p>A class is declared abstract by using the abstract keyword in the class header.</p>
@@ -2204,9 +2203,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <tag> Supervised Learning </tag>
             
-            <tag> Regression </tag>
-            
             <tag> Unsupervised Learning </tag>
+            
+            <tag> Regression </tag>
             
         </tags>
         
@@ -2288,11 +2287,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
+            <tag> C++ </tag>
+            
             <tag> Data Structure </tag>
             
             <tag> Stack </tag>
-            
-            <tag> C++ </tag>
             
         </tags>
         
