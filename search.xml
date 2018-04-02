@@ -3,6 +3,51 @@
   
     
     <entry>
+      <title><![CDATA[AP CompSci A: Recursion]]></title>
+      <url>/2018/04/02/ap_comp_sci_a_35/</url>
+      <content type="html"><![CDATA[<h2 id="Recursion"><a href="#Recursion" class="headerlink" title="Recursion"></a>Recursion</h2><p>Recursion is a programming technique in which a method calls itself.</p>
+<p>Recursion can always be used in place of iteration, and iteration can always be used in place of recursion.</p>
+<p>There are many situations in which recursion provides the clearest, shortest, and most elegant solution to a programming task.</p>
+<p>A recursive method has two kinds of cases.</p>
+<p>1) One of more stopping or base cases that solve the problem without any recursive calls.</p>
+<p>2) One or more cases that include a recursive call (involving a simpler problem).</p>
+<h2 id="Guidelines-for-Writing-Recursive-Methods"><a href="#Guidelines-for-Writing-Recursive-Methods" class="headerlink" title="Guidelines for Writing Recursive Methods"></a>Guidelines for Writing Recursive Methods</h2><h3 id="Must-have-a-base-case"><a href="#Must-have-a-base-case" class="headerlink" title="Must have a base case"></a>Must have a base case</h3><p>Just as we guard against infinite loops, we must avoid recursions that never come to an end.</p>
+<p>A recursive method must have a well-defined termination or stopping state, also referred to as a base case.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">if</span> <span class="token punctuation">(</span>I <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="Recursive-case-must-approach-the-base-case"><a href="#Recursive-case-must-approach-the-base-case" class="headerlink" title="Recursive case must approach the base case"></a>Recursive case must approach the base case</h3><p>The recursive step, in which a method calls itself, must eventually lead to a base case.</p>
+<p>Since each invocation of the method is passed a smaller value, eventually the stopping state must be reached.</p>
+<p>If a method failed to reach a stopping state, the Java interpreter would run out of memory, at which point the program would terminate with a stack overflow error.</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> n <span class="token operator">*</span> <span class="token function">f</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="Characteristics-of-Recursive-Methods"><a href="#Characteristics-of-Recursive-Methods" class="headerlink" title="Characteristics of Recursive Methods"></a>Characteristics of Recursive Methods</h2><p>Here are the key features common to all recursive routines:</p>
+<p>The method calls itself.</p>
+<p>When the method calls itself, it does so to solve a smaller problem.</p>
+<p>There’s some version of the problem which is so simple that the method can solve it and return (this is the base case).</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> AP CompSci A </tag>
+            
+            <tag> Java </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[AP CompSci A: Merge Sort]]></title>
       <url>/2018/03/27/ap_comp_sci_a_34/</url>
       <content type="html"><![CDATA[<h2 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a>Merge Sort</h2><p>Merge sort is a good example of the divide and conquer principle.</p>
@@ -2287,11 +2332,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> C++ </tag>
-            
             <tag> Data Structure </tag>
             
             <tag> Stack </tag>
+            
+            <tag> C++ </tag>
             
         </tags>
         
