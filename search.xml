@@ -3,12 +3,70 @@
   
     
     <entry>
+      <title><![CDATA[用Python写一个Pixiv爬虫（三）]]></title>
+      <url>/2018/04/18/pixiv_crawler_3/</url>
+      <content type="html"><![CDATA[<p>完整程序详见<a href="https://github.com/leniumC/pixiv-crawler/" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="获取搜索结果网页"><a href="#获取搜索结果网页" class="headerlink" title="获取搜索结果网页"></a>获取搜索结果网页</h2><p>打开任意搜索结果页，发现URL为如下格式。</p>
+<pre class=" language-python"><code class="language-python">url <span class="token operator">=</span><span class="token string">'https://www.pixiv.net/search.php?s_mode=s_tag&amp;word='</span> <span class="token operator">+</span> search_keyword <span class="token operator">+</span> <span class="token string">'&amp;p='</span> <span class="token operator">+</span> str<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+</code></pre>
+<p>其中<code>search_keyword</code>为搜索关键词，<code>str(i)</code>为搜索结果的页码。</p>
+<p>同时，发现<code>search_keyword</code>需要经过URL Encode，Python中实现如下。</p>
+<pre class=" language-python"><code class="language-python">search_keyword <span class="token operator">=</span> requests<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>quote<span class="token punctuation">(</span>raw_keyword<span class="token punctuation">)</span>
+</code></pre>
+<p>其中，<code>raw_keyword</code>为用户输入的关键词，<code>search_keyword</code>为经过URL Encode的关键词。</p>
+<p>通过循环遍历<code>i</code>的值以爬取所有搜索结果（可加以限定以满足用户要求）。</p>
+<p>每次循环，通过以下方式获取网页HTML并保存至文件中。</p>
+<pre class=" language-python"><code class="language-python">html <span class="token operator">=</span> se<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span> headers<span class="token operator">=</span>headers<span class="token punctuation">,</span> timeout<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token keyword">with</span> open<span class="token punctuation">(</span><span class="token string">'htmls/page-'</span> <span class="token operator">+</span> str<span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'.html'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'UTF-8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> file<span class="token punctuation">:</span>
+    file<span class="token punctuation">.</span>write<span class="token punctuation">(</span>html<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="获取图片信息"><a href="#获取图片信息" class="headerlink" title="获取图片信息"></a>获取图片信息</h2><p>对搜索结果页面HTML进行分析，发现每张图片均对应一个<code>class=&quot;_25taFA4&quot;</code>的<code>div</code>标签，里面储存了较多与图片相关的信息。</p>
+<p>然而，查看爬取到的HTML文件，并没有这样的<code>div</code>标签，猜测是通过其它信息在网页加载之后生成的。</p>
+<p>于是，在HTML文件中对图片名称进行搜索，发现一个很长的<code>input</code>标签。</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>hidden<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>js-mount-point-search-result-list<span class="token punctuation">"</span></span> <span class="token attr-name">data-items</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>(json data)<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+</code></pre>
+<p>其中，<code>data-items</code>里以json的形式储存了该页面所有图片的信息。</p>
+<p>使用Python自带的json模块进行解码与转换。</p>
+<pre class=" language-python"><code class="language-python">soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>html<span class="token punctuation">,</span> <span class="token string">'lxml'</span><span class="token punctuation">)</span>
+data_items <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>soup<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">,</span> id<span class="token operator">=</span><span class="token string">'js-mount-point-search-result-list'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'data-items'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>得到类似以下格式的信息。</p>
+<pre><code>{&#39;illustId&#39;: &#39;68214616&#39;, &#39;illustTitle&#39;: &#39;マジカルミライ&#39;, &#39;illustType&#39;: &#39;0&#39;, 
+&#39;url&#39;: &#39;https://i.pximg.net/c/240x240/img-master/img/2018/04/14/00/02/34/68214616_p0_master1200.jpg&#39;, 
+&#39;tags&#39;: [&#39;初音ミク&#39;, &#39;マジカルミライ&#39;, &#39;マジカルミライ2018&#39;, &#39;仕事絵&#39;, &#39;オリジナル&#39;, &#39;本家&#39;, &#39;VOCALOID&#39;, &#39;VOCALOID10000users入り&#39;], 
+&#39;userId&#39;: &#39;1039353&#39;, &#39;userName&#39;: &#39;Mika Pikazo&#39;, 
+&#39;userImage&#39;: &#39;https://i.pximg.net/user-profile/img/2015/11/29/14/24/39/10176306_867db1c4e1ae0c1be06d5e00e4a6381e_50.png&#39;, 
+&#39;isBookmarkable&#39;: True, &#39;isBookmarked&#39;: False, &#39;width&#39;: 921, &#39;height&#39;: 900, 
+&#39;pageCount&#39;: 2, &#39;bookmarkCount&#39;: 12678, &#39;responseCount&#39;: 0}
+</code></pre><p>对图片进行大小、图片数量、收藏数量等数据进行筛选即可获取需要的图片。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Crawler </tag>
+            
+            <tag> Web </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[AP CompSci A: Recursion]]></title>
       <url>/2018/04/02/ap_comp_sci_a_35/</url>
       <content type="html"><![CDATA[<h2 id="Recursion"><a href="#Recursion" class="headerlink" title="Recursion"></a>Recursion</h2><p>Recursion is a programming technique in which a method calls itself.</p>
 <p>Recursion can always be used in place of iteration, and iteration can always be used in place of recursion.</p>
 <p>There are many situations in which recursion provides the clearest, shortest, and most elegant solution to a programming task.</p>
-<p>A recursive method has two kinds of cases.</p>
+<p>A recursive method has two kinds of cases:</p>
 <p>1) One of more stopping or base cases that solve the problem without any recursive calls.</p>
 <p>2) One or more cases that include a recursive call (involving a simpler problem).</p>
 <h2 id="Guidelines-for-Writing-Recursive-Methods"><a href="#Guidelines-for-Writing-Recursive-Methods" class="headerlink" title="Guidelines for Writing Recursive Methods"></a>Guidelines for Writing Recursive Methods</h2><h3 id="Must-have-a-base-case"><a href="#Must-have-a-base-case" class="headerlink" title="Must have a base case"></a>Must have a base case</h3><p>Just as we guard against infinite loops, we must avoid recursions that never come to an end.</p>
@@ -977,12 +1035,10 @@ words<span class="token punctuation">.</span><span class="token function">set</s
 <h2 id="依赖库"><a href="#依赖库" class="headerlink" title="依赖库"></a>依赖库</h2><ul>
 <li>Requests</li>
 <li>BeautifulSoup 4</li>
-<li>fake-useragent</li>
 </ul>
-<p>Request可以用于发送大部分请求，BeautifulSoup用于从html文件中提取图片网址与有用信息，fake-useragent用于生成请求header中的user-agent，以降低被网站发现是爬虫（并拒绝请求）的几率。</p>
+<p>Request可以用于发送大部分请求，BeautifulSoup用于从html文件中提取图片网址与有用信息。</p>
 <pre class=" language-bash"><code class="language-bash">pip3 <span class="token function">install</span> requests
 pip3 <span class="token function">install</span> beautifulsoup4
-pip3 <span class="token function">install</span> fake-useragent
 </code></pre>
 <p>如需使用Sock5代理（Shadowsocks等），则需要执行</p>
 <pre class=" language-bash"><code class="language-bash">pip3 <span class="token function">install</span> requests<span class="token punctuation">[</span>socks5<span class="token punctuation">]</span>
@@ -992,7 +1048,6 @@ pip3 <span class="token function">install</span> fake-useragent
 <span class="token keyword">import</span> time
 <span class="token keyword">import</span> os
 <span class="token keyword">import</span> shutil
-<span class="token keyword">from</span> fake_useragent <span class="token keyword">import</span> UserAgent
 <span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
 </code></pre>
 <h2 id="用户输入"><a href="#用户输入" class="headerlink" title="用户输入"></a>用户输入</h2><pre class=" language-python"><code class="language-python">raw_keyword <span class="token operator">=</span> input<span class="token punctuation">(</span><span class="token string">'Enter search keyword: '</span><span class="token punctuation">)</span>
@@ -1011,8 +1066,7 @@ password <span class="token operator">=</span> input<span class="token punctuati
 </code></pre>
 <p>其余的变量分别储存了收藏数量的阈值、是否下载多图（漫画）内容、Pixiv ID或Email以及Pixiv密码。</p>
 <h2 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h2><p>虽然使用全局变量似乎并不是很好的编程习惯…</p>
-<pre class=" language-python"><code class="language-python">ua <span class="token operator">=</span> UserAgent<span class="token punctuation">(</span><span class="token punctuation">)</span>
-se <span class="token operator">=</span> requests<span class="token punctuation">.</span>session<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre class=" language-python"><code class="language-python">se <span class="token operator">=</span> requests<span class="token punctuation">.</span>session<span class="token punctuation">(</span><span class="token punctuation">)</span>
 headers <span class="token operator">=</span> <span class="token punctuation">{</span>
     <span class="token string">'Referer'</span><span class="token punctuation">:</span> <span class="token string">'https://accounts.pixiv.net/login?lang=zh&amp;source=pc&amp;view_type=page&amp;ref=wwwtop_accounts_index'</span><span class="token punctuation">,</span>
     <span class="token string">"User-Agent"</span><span class="token punctuation">:</span> <span class="token string">"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36"</span>
@@ -1022,7 +1076,6 @@ proxies <span class="token operator">=</span> <span class="token punctuation">{<
     <span class="token string">'https'</span><span class="token punctuation">:</span> <span class="token string">'socks5h://127.0.0.1:1080'</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><code>ua</code>为创建的一个fake-useragent的object，在之后会用于生成随机的<code>header</code>中的<code>User-Agent</code>。第一次运行的时候可能由于网络原因会卡很长时间。</p>
 <p><code>se</code>为创建的一个requests session，之后的请求均会通过它发送，主要原因是同一个session中是会储存cookie的，所以才能实现登录之后爬取图片的操作。</p>
 <p><code>headers</code>就是发请求的时候的request header，<code>Referer</code>是在登录的时候和获取图片的时候网站都会检查的，之后会进行修改。<code>User-Agent</code>就是之前说的随机生成的fake-useragent。</p>
 <p><code>proxies</code>为可选项，如需使用代理则需要在之后所有的请求中加上<code>proxies=proxies</code>。</p>
@@ -2248,9 +2301,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <tag> Supervised Learning </tag>
             
-            <tag> Unsupervised Learning </tag>
-            
             <tag> Regression </tag>
+            
+            <tag> Unsupervised Learning </tag>
             
         </tags>
         
