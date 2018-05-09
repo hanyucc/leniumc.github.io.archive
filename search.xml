@@ -3,6 +3,120 @@
   
     
     <entry>
+      <title><![CDATA[PACTF 2018 Write-Ups (Round 1 Part 2)]]></title>
+      <url>/2018/05/05/pactf_2018_round_1_part_2/</url>
+      <content type="html"><![CDATA[<p>Problems can be found on <a href="https://2018.pactf.com" target="_blank" rel="external">PACTF</a>.</p>
+<p><a href="https://github.com/MarchingVoxels" target="_blank" rel="external">aqdajz</a>, <a href="https://github.com/Sky1213814284" target="_blank" rel="external">illuminati</a>, <a href="https://github.com/altareen" target="_blank" rel="external">altareen</a>.</p>
+<h2 id="Open-Sourcery-2018-30-pt"><a href="#Open-Sourcery-2018-30-pt" class="headerlink" title="Open Sourcery 2018 (30 pt)"></a>Open Sourcery 2018 (30 pt)</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>The solution to this problem lies within the Chromium source code. Literally. There is some string in there that mentions a flag and PACTF…</p>
+<p>Hint: This problem builds off of a similarly named problem in PACTF 2017.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
+<p>I actually looked through the problems and <a href="https://github.com/LFlare/ctf-writeups/tree/master/2017/pactf_2017/boole/open-sourcery-2_40" target="_blank" rel="external">write-ups</a> from PACTF 2017 and found a <a href="https://cs.chromium.org/codesearch/f/chromium/src/net/http/transport_security_state_static.json?cl=a3e1c143da13a37a641839334df9cfad6bba89b2" target="_blank" rel="external">website</a> related to Chromium.</p>
+<p>Searching for <code>pactf</code> in the file reveals the flag.</p>
+<pre><code>pactf-flag-4boxdpa21ogonzkcrs9p.com
+</code></pre><h2 id="Credit-Card-Leak-35-pt"><a href="#Credit-Card-Leak-35-pt" class="headerlink" title="Credit Card Leak (35 pt)"></a>Credit Card Leak (35 pt)</h2><h3 id="Problem-1"><a href="#Problem-1" class="headerlink" title="Problem"></a>Problem</h3><p>ShoeShop was hacked, and all of their customer records were released online—including credit card numbers. One credit card in the leak is invalid, however. What is the invalid credit card number?</p>
+<p>Here’s the leak: <a href="https://2018.pactf.com/static/ctfproblems/97042e12-5f99-4e79-a703-5593d531e4a2/cc_leak.txt.eecc6f896436.bz2" target="_blank" rel="external">cc_leak.txt.bz2</a></p>
+<p>Hint: The credit card numbers in the leak are obviously all invalid, but most would pass a certain credit card validity test. All credit card numbers except one, that is.</p>
+<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by altareen.</p>
+<p>There was something called the Luhn Algorithm that could be used to solve this. The credit card numbers are clearly too much to paste onto an online validity check, so we used a simple Python script instead.</p>
+<p>The flag was the invalid credit card number.</p>
+<pre><code>8692015931457397
+</code></pre><h2 id="Third-Eye-40-pt"><a href="#Third-Eye-40-pt" class="headerlink" title="Third Eye (40 pt)"></a>Third Eye (40 pt)</h2><h3 id="Problem-2"><a href="#Problem-2" class="headerlink" title="Problem"></a>Problem</h3><p>Sometimes​‌‌‌​‌‌‌​‌‌​ there‌​​​​‌‌​​​​‌ is ​‌‌‌​‌​​​‌​‌‌‌more ‌‌​‌‌​​‌​‌​‌‌​‌‌​​​‌‌‌​​‌‌​‌‌​​‌​‌​‌​‌‌‌‌‌​‌‌​‌‌​​​‌‌‌​‌​‌​‌‌‌​​‌​​‌‌​‌​‌‌​‌‌‌​​‌‌​‌​‌‌‌‌‌​‌‌​​​‌than ​​‌‌​​‌​‌​‌‌​‌‌meets ‌​​‌‌​​‌​‌​‌‌​​​the ​‌​‌‌‌​‌​​​‌‌​‌​​​​‌​‌‌‌‌‌​‌‌‌eye​‌​​​‌‌​‌​​​​‌‌​​‌​‌​‌​‌‌‌‌‌​‌‌​​‌​‌​‌‌‌‌​​‌​‌‌​​‌​‌.</p>
+<p>Hint: Maybe if you just squint harder…</p>
+<h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by altareen and me.</p>
+<p>You’ll have to go to the original webpage to solve this.</p>
+<p>Looking at the HTML code of the page, we found this.</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+Sometimes<span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span> 
+there<span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span> 
+is <span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span>
+<span class="token entity" title="&zwnj;">&amp;zwnj;</span>more <span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span>
+<span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span>
+<span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span>
+<span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span>
+<span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span>
+<span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span>
+<span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span>
+<span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span>than <span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span>
+<span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span>meets <span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span>
+<span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span>the <span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span>
+<span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span>
+<span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span>eye<span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span>
+<span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span>
+<span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span>
+<span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span>
+<span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span><span class="token entity" title="&#8203;">&amp;#8203;</span><span class="token entity" title="&zwnj;">&amp;zwnj;</span>.
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>Treating <code>&amp;#8203;</code> as 0 and <code>&amp;zwnj;</code> as 1 and putting them in groups of 8, we obtain this.</p>
+<pre><code>01110111
+01101000
+01100001
+01110100
+01011111
+01100101
+01101100
+01110011
+01100101
+01011111
+01101100
+01110101
+01110010
+01101011
+01110011
+01011111
+01100010
+01100101
+01101110
+01100101
+01100001
+01110100
+01101000
+01011111
+01110100
+01101000
+01100101
+01011111
+01100101
+01111001
+01100101
+</code></pre><p>Treating each group as a binary ascii value, and converting them to letters reveal the flag.</p>
+<pre><code>what_else_lurks_beneath_the_eye
+</code></pre><h2 id="Security-Through-Obscurity-50-pt"><a href="#Security-Through-Obscurity-50-pt" class="headerlink" title="Security Through Obscurity? (50 pt)"></a>Security Through Obscurity? (50 pt)</h2><h3 id="Problem-3"><a href="#Problem-3" class="headerlink" title="Problem"></a>Problem</h3><p>We intercepted this message, but we can’t make heads or tails of it. It was rattled off so fast, too… How could anyone be that good at using a cipher?</p>
+<p>Anyway, here’s the message. Good luck!</p>
+<p><code>Tązhii, Łį́į́ʼ, Dzeeh Mąʼii, Dibé yázhí, Wóláchííʼ, Tłʼízí Tin, Dibé Mósí, Łį́į́ʼ, Dzeeh, Dibé, Tązhii, Dzeeh, Gah, Neeshchʼííʼ, Dzeeh, Béésh dootłʼizh</code></p>
+<p>Hint: This definitely doesn’t look like English. What else could it be? Perhaps looking through the history books might help…</p>
+<h3 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by aqdajz.</p>
+<p>After some Googling, we found that the message was written in a language called Navajo, and taking the first letter of the English translation of each word, we could obtain the flag.</p>
+<p>Fortunately, we found a <a href="https://gist.github.com/TheZ3ro/572ef81c0f20bf9c4c435b32a62a7056" target="_blank" rel="external">script</a> that could do it for us. We end up with the sentence “THE FLAG IS CHESTERNEZ”.</p>
+<pre><code>CHESTERNEZ
+</code></pre><h2 id="Beats-by-Dr-K-Problem-55-pt"><a href="#Beats-by-Dr-K-Problem-55-pt" class="headerlink" title="Beats by Dr. K Problem (55 pt)"></a>Beats by Dr. K Problem (55 pt)</h2><h3 id="Problem-4"><a href="#Problem-4" class="headerlink" title="Problem"></a>Problem</h3><p>Dr. K just released her new EP — download her <a href="https://2018.pactf.com/static/ctfproblems/1b2c440a-37e0-4500-bd85-c88e2ebba3a5/bits.675c46a10049.wav" target="_blank" rel="external">track</a> now!</p>
+<p>Hint: Listen to each bit…</p>
+<h3 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by altareen.</p>
+<p>Opening the wav file in an audio editor and looking at the high frequency part of the spectrogram of the audio, we could find a pattern. Each beat can be intepreted as a 0 or 1 based on its pattern in the spectrogram. Using the same technique as the one used in <code>Third Eye</code>, we can obtain the flag.</p>
+]]></content>
+      
+        <categories>
+            
+            <category> CTF </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> CTF </tag>
+            
+            <tag> PACTF </tag>
+            
+            <tag> Forensics </tag>
+            
+            <tag> Cryptography </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[PACTF 2018 Write-Ups (Round 1 Part 1)]]></title>
       <url>/2018/05/01/pactf_2018_round_1_part_1/</url>
       <content type="html"><![CDATA[<p>My first CTF game. Problems can be found on <a href="https://2018.pactf.com" target="_blank" rel="external">PACTF</a>.</p>
@@ -2444,11 +2558,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
+            <tag> C++ </tag>
+            
             <tag> Data Structure </tag>
             
             <tag> Stack </tag>
-            
-            <tag> C++ </tag>
             
         </tags>
         
