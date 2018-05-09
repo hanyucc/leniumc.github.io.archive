@@ -252,7 +252,7 @@
 
     
         <meta property="article:published_time" content="Sat May 05 2018 00:00:00 GMT+0800" />
-        <meta property="article:modified_time" content="Wed May 09 2018 14:08:56 GMT+0800" />
+        <meta property="article:modified_time" content="Wed May 09 2018 14:31:38 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -279,7 +279,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/05/05/pactf_2018_round_1_part_2/index.html",
     "headline": "PACTF 2018 Write-Ups (Round 1 Part 2)",
     "datePublished": "Sat May 05 2018 00:00:00 GMT+0800",
-    "dateModified": "Wed May 09 2018 14:08:56 GMT+0800",
+    "dateModified": "Wed May 09 2018 14:31:38 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "leniumC",
@@ -599,7 +599,24 @@ is <span class="token entity" title="&#8203;">&amp;#8203;</span><span class="tok
 <p>Hint: Listen to each bit…</p>
 <h3 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by altareen.</p>
 <p>Opening the wav file in an audio editor and looking at the high frequency part of the spectrogram of the audio, we could find a pattern. Each beat can be intepreted as a 0 or 1 based on its pattern in the spectrogram. Using the same technique as the one used in <code>Third Eye</code>, we can obtain the flag.</p>
-
+<pre><code>01100110
+01101100
+01100001
+01100111
+01101001
+01110011
+01110000
+01100001
+01100011
+01110100
+01100110
+01101101
+01110101
+01110011
+01101001
+01100011
+</code></pre><pre><code>flagispactfmusic
+</code></pre>
         
     
 

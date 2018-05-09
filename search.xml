@@ -93,7 +93,24 @@ is <span class="token entity" title="&#8203;">&amp;#8203;</span><span class="tok
 <p>Hint: Listen to each bit…</p>
 <h3 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by altareen.</p>
 <p>Opening the wav file in an audio editor and looking at the high frequency part of the spectrogram of the audio, we could find a pattern. Each beat can be intepreted as a 0 or 1 based on its pattern in the spectrogram. Using the same technique as the one used in <code>Third Eye</code>, we can obtain the flag.</p>
-]]></content>
+<pre><code>01100110
+01101100
+01100001
+01100111
+01101001
+01110011
+01110000
+01100001
+01100011
+01110100
+01100110
+01101101
+01110101
+01110011
+01101001
+01100011
+</code></pre><pre><code>flagispactfmusic
+</code></pre>]]></content>
       
         <categories>
             
@@ -2558,11 +2575,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> C++ </tag>
-            
             <tag> Data Structure </tag>
             
             <tag> Stack </tag>
+            
+            <tag> C++ </tag>
             
         </tags>
         
