@@ -21,49 +21,22 @@
 </code></pre><h2 id="Am-I-Pwned-15-pt"><a href="#Am-I-Pwned-15-pt" class="headerlink" title="Am I Pwned? (15 pt)"></a>Am I Pwned? (15 pt)</h2><h3 id="Problem-2"><a href="#Problem-2" class="headerlink" title="Problem"></a>Problem</h3><p>I was talking on IRC with a guy who tricked me into giving him a hash of my password and then said he could hack me! He said I might be “pwned”! I know the hashing algorithm is MD5; that’s still secure, right?</p>
 <p>… Oh, you want to know whether my password is secure or not?</p>
 <p>It doesn’t have any uppercase letters or numbers or punctuation, but isn’t six characters still a lot? what he meant by that one. Would you be able to hack my password? Here’s the hash:</p>
-<pre class=" language-eca065fba51916821eb7274c786c67d9```"><code class="language-eca065fba51916821eb7274c786c67d9```">
-Hint: The hacker told me that "MD5 is kinda rekt". That sounds bad, right? I mean, how long would it take to brute force it…
-
-### Solution
-
-Solved by aqdajz.
-
-Enter the md5 hash into a random md5 decrytion website and you have the flag.
-</code></pre>
-<p>lmaoez</p>
-<pre><code>
-
-## It&#39;s In, If (20 pt)
-
-### Problem
-
-My older brother sent me [this](https://2018.pactf.com/static/ctfproblems/a187400b-032a-4ac8-9e79-ceb03d089b17/itsinif.8f2056d643d8.jpg) photo, but I don’t know what to make of it.
-
-Hint: What might big brother know?
-
-### Solution
-
-Solved by altareen.
-
-Just like the problem in round 1, the flag is also in the metadata, but this time you can&#39;t directly find it in ```Properties``` in Windows.
-</code></pre><p>big_brother_is_looking_at_your_photos</p>
-<pre><code>
-
-## Letter to a Machine (25 pt)
-
-### Problem
-
-You intercepted a [letter.rar](https://2018.pactf.com/static/ctfproblems/47708183-239f-4565-834b-b5550c5634a4/letter.c5e1ae35c726.rar)—but to read it, you have to prove that you are not a human. The password is ```NOT``` ```BAD``` + ```FACE```.
-
-Hint: I’m sure it’s just coincidence that ```BAD``` and ```FACE``` can be spelled with just the letters ```ABCDEF```…
-
-### Solution
-
-Solved by me.
-
-The hint is quite important, ```ABCDEF``` are all in the range of hexadecimal numbers. Find an online logical operation calculator, like [this](http://www.convertforfree.com/bitwise-calculator) one. The logical operation of ```NOT BAD``` gives the result ```-BAE```, then we simply add ```-BAE``` and ```FACE```, and the result is ```EF20```. Using this password, we can extract the rar file and the flag is inside a text file.
-</code></pre><p>lIZORZaOkWrIuNB<br>```</p>
-]]></content>
+<pre><code>eca065fba51916821eb7274c786c67d9
+</code></pre><p>Hint: The hacker told me that “MD5 is kinda rekt”. That sounds bad, right? I mean, how long would it take to brute force it…</p>
+<h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by aqdajz.</p>
+<p>Enter the md5 hash into a random md5 decrytion website and you have the flag.</p>
+<pre><code>lmaoez
+</code></pre><h2 id="It’s-In-If-20-pt"><a href="#It’s-In-If-20-pt" class="headerlink" title="It’s In, If (20 pt)"></a>It’s In, If (20 pt)</h2><h3 id="Problem-3"><a href="#Problem-3" class="headerlink" title="Problem"></a>Problem</h3><p>My older brother sent me <a href="https://2018.pactf.com/static/ctfproblems/a187400b-032a-4ac8-9e79-ceb03d089b17/itsinif.8f2056d643d8.jpg" target="_blank" rel="external">this</a> photo, but I don’t know what to make of it.</p>
+<p>Hint: What might big brother know?</p>
+<h3 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by altareen.</p>
+<p>Just like the problem in round 1, the flag is also in the metadata, but this time you can’t directly find it in <code>Properties</code> in Windows.</p>
+<pre><code>big_brother_is_looking_at_your_photos
+</code></pre><h2 id="Letter-to-a-Machine-25-pt"><a href="#Letter-to-a-Machine-25-pt" class="headerlink" title="Letter to a Machine (25 pt)"></a>Letter to a Machine (25 pt)</h2><h3 id="Problem-4"><a href="#Problem-4" class="headerlink" title="Problem"></a>Problem</h3><p>You intercepted a <a href="https://2018.pactf.com/static/ctfproblems/47708183-239f-4565-834b-b5550c5634a4/letter.c5e1ae35c726.rar" target="_blank" rel="external">letter.rar</a>—but to read it, you have to prove that you are not a human. The password is <code>NOT</code> <code>BAD</code> + <code>FACE</code>.</p>
+<p>Hint: I’m sure it’s just coincidence that <code>BAD</code> and <code>FACE</code> can be spelled with just the letters <code>ABCDEF</code>…</p>
+<h3 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
+<p>The hint is quite important, <code>ABCDEF</code> are all in the range of hexadecimal numbers. Find an online logical operation calculator, like <a href="http://www.convertforfree.com/bitwise-calculator" target="_blank" rel="external">this</a> one. The logical operation of <code>NOT BAD</code> gives the result <code>-BAE</code>, then we simply add <code>-BAE</code> and <code>FACE</code>, and the result is <code>EF20</code>. Using this password, we can extract the rar file and the flag is inside a text file.</p>
+<pre><code>lIZORZaOkWrIuNB
+</code></pre>]]></content>
       
         <categories>
             
@@ -2659,11 +2632,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
+            <tag> C++ </tag>
+            
             <tag> Data Structure </tag>
             
             <tag> Stack </tag>
-            
-            <tag> C++ </tag>
             
         </tags>
         
