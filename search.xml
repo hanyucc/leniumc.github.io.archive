@@ -9,7 +9,7 @@
 <p>Team members: <a href="https://github.com/leniumc" target="_blank" rel="external">me</a>, <a href="https://github.com/altareen" target="_blank" rel="external">altareen</a>, <a href="https://github.com/MarchingVoxels" target="_blank" rel="external">aqdajz</a>, <a href="https://github.com/Sky1213814284" target="_blank" rel="external">illuminati</a>.</p>
 <h2 id="Doppelganger-10-pt"><a href="#Doppelganger-10-pt" class="headerlink" title="Doppelgänger (10 pt)"></a>Doppelgänger (10 pt)</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>My friend Miles texted me today with this phrase “МОРЕ РОЕТ АТОМ”. I first thought that he went insane and has schizophasia. Apparently, it makes sense! Even though it doesn’t. So, what do you think is digging?</p>
 <p>Hint: Consider the case and UTF-8 values of the characters…</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by illuminati and me.</p>
 <p>We spent quite a lot of time on this problem, because we were typing the phrase ourselves (instead of directly copying it, which is the correct way of solving it). After doing that, we found from the UTF-8 values of the characters that they weren’t English characters. Directly copying the phrase into Google translate, the second translation is “SEA digs ATOM”. Combining that with the question in the problem “what do you think is digging?” reveals the flag.</p>
 <pre><code>SEA
 </code></pre><h2 id="Redacted-10-pt"><a href="#Redacted-10-pt" class="headerlink" title="Redacted (10 pt)"></a>Redacted (10 pt)</h2><h3 id="Problem-1"><a href="#Problem-1" class="headerlink" title="Problem"></a>Problem</h3><p>ANDOVER, MA— Phillips Academy Capture the Flag releases an institution-wide memorandum on the security of PDF documents. For privacy, parts of the memo are redacted.</p>
@@ -24,7 +24,7 @@
 <pre><code>eca065fba51916821eb7274c786c67d9
 </code></pre><p>Hint: The hacker told me that “MD5 is kinda rekt”. That sounds bad, right? I mean, how long would it take to brute force it…</p>
 <h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by aqdajz.</p>
-<p>Enter the md5 hash into a random md5 decrytion website and you have the flag.</p>
+<p>Enter the md5 hash into a random md5 decryption website and you have the flag.</p>
 <pre><code>lmaoez
 </code></pre><h2 id="It’s-In-If-20-pt"><a href="#It’s-In-If-20-pt" class="headerlink" title="It’s In, If (20 pt)"></a>It’s In, If (20 pt)</h2><h3 id="Problem-3"><a href="#Problem-3" class="headerlink" title="Problem"></a>Problem</h3><p>My older brother sent me <a href="https://2018.pactf.com/static/ctfproblems/a187400b-032a-4ac8-9e79-ceb03d089b17/itsinif.8f2056d643d8.jpg" target="_blank" rel="external">this</a> photo, but I don’t know what to make of it.</p>
 <p>Hint: What might big brother know?</p>
@@ -2548,9 +2548,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <tag> Supervised Learning </tag>
             
-            <tag> Unsupervised Learning </tag>
-            
             <tag> Regression </tag>
+            
+            <tag> Unsupervised Learning </tag>
             
         </tags>
         
@@ -2632,11 +2632,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
-            <tag> C++ </tag>
-            
             <tag> Data Structure </tag>
             
             <tag> Stack </tag>
+            
+            <tag> C++ </tag>
             
         </tags>
         
