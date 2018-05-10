@@ -3,10 +3,94 @@
   
     
     <entry>
+      <title><![CDATA[PACTF 2018 Write-Ups (Round 2 Part 1)]]></title>
+      <url>/2018/05/08/pactf_2018_round_2_part_1/</url>
+      <content type="html"><![CDATA[<p>Second round of <a href="https://2018.pactf.com" target="_blank" rel="external">PACTF</a>.</p>
+<p>Team members: <a href="https://github.com/leniumc" target="_blank" rel="external">me</a>, <a href="https://github.com/altareen" target="_blank" rel="external">altareen</a>, <a href="https://github.com/MarchingVoxels" target="_blank" rel="external">aqdajz</a>, <a href="https://github.com/Sky1213814284" target="_blank" rel="external">illuminati</a>.</p>
+<h2 id="Doppelganger-10-pt"><a href="#Doppelganger-10-pt" class="headerlink" title="Doppelgänger (10 pt)"></a>Doppelgänger (10 pt)</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>My friend Miles texted me today with this phrase “МОРЕ РОЕТ АТОМ”. I first thought that he went insane and has schizophasia. Apparently, it makes sense! Even though it doesn’t. So, what do you think is digging?</p>
+<p>Hint: Consider the case and UTF-8 values of the characters…</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
+<p>We spent quite a lot of time on this problem, because we were typing the phrase ourselves (instead of directly copying it, which is the correct way of solving it). After doing that, we found from the UTF-8 values of the characters that they weren’t English characters. Directly copying the phrase into Google translate, the second translation is “SEA digs ATOM”. Combining that with the question in the problem “what do you think is digging?” reveals the flag.</p>
+<pre><code>SEA
+</code></pre><h2 id="Redacted-10-pt"><a href="#Redacted-10-pt" class="headerlink" title="Redacted (10 pt)"></a>Redacted (10 pt)</h2><h3 id="Problem-1"><a href="#Problem-1" class="headerlink" title="Problem"></a>Problem</h3><p>ANDOVER, MA— Phillips Academy Capture the Flag releases an institution-wide memorandum on the security of PDF documents. For privacy, parts of the memo are redacted.</p>
+<p>View the memo: <a href="https://2018.pactf.com/static/ctfproblems/52af75d8-b1d4-450b-8262-d2f91de09d09/SECURE_REDACTED_COPY.42ce971cad34.pdf" target="_blank" rel="external">SECURE REDACTED MEMORANDUM</a>.</p>
+<p>Hint: Redaction, huh?</p>
+<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
+<p>Open up the PDF, <code>ctrl+A</code> <code>ctrl+C</code>, open up a text editor, <code>ctrl+V</code>, and you have the flag.</p>
+<pre><code>b3_car3ful_0r_y0ur_l3ak_m1ght_l3ak
+</code></pre><h2 id="Am-I-Pwned-15-pt"><a href="#Am-I-Pwned-15-pt" class="headerlink" title="Am I Pwned? (15 pt)"></a>Am I Pwned? (15 pt)</h2><h3 id="Problem-2"><a href="#Problem-2" class="headerlink" title="Problem"></a>Problem</h3><p>I was talking on IRC with a guy who tricked me into giving him a hash of my password and then said he could hack me! He said I might be “pwned”! I know the hashing algorithm is MD5; that’s still secure, right?</p>
+<p>… Oh, you want to know whether my password is secure or not?</p>
+<p>It doesn’t have any uppercase letters or numbers or punctuation, but isn’t six characters still a lot? what he meant by that one. Would you be able to hack my password? Here’s the hash:</p>
+<pre class=" language-eca065fba51916821eb7274c786c67d9```"><code class="language-eca065fba51916821eb7274c786c67d9```">
+Hint: The hacker told me that "MD5 is kinda rekt". That sounds bad, right? I mean, how long would it take to brute force it…
+
+### Solution
+
+Solved by aqdajz.
+
+Enter the md5 hash into a random md5 decrytion website and you have the flag.
+</code></pre>
+<p>lmaoez</p>
+<pre><code>
+
+## It&#39;s In, If (20 pt)
+
+### Problem
+
+My older brother sent me [this](https://2018.pactf.com/static/ctfproblems/a187400b-032a-4ac8-9e79-ceb03d089b17/itsinif.8f2056d643d8.jpg) photo, but I don’t know what to make of it.
+
+Hint: What might big brother know?
+
+### Solution
+
+Solved by altareen.
+
+Just like the problem in round 1, the flag is also in the metadata, but this time you can&#39;t directly find it in ```Properties``` in Windows.
+</code></pre><p>big_brother_is_looking_at_your_photos</p>
+<pre><code>
+
+## Letter to a Machine (25 pt)
+
+### Problem
+
+You intercepted a [letter.rar](https://2018.pactf.com/static/ctfproblems/47708183-239f-4565-834b-b5550c5634a4/letter.c5e1ae35c726.rar)—but to read it, you have to prove that you are not a human. The password is ```NOT``` ```BAD``` + ```FACE```.
+
+Hint: I’m sure it’s just coincidence that ```BAD``` and ```FACE``` can be spelled with just the letters ```ABCDEF```…
+
+### Solution
+
+Solved by me.
+
+The hint is quite important, ```ABCDEF``` are all in the range of hexadecimal numbers. Find an online logical operation calculator, like [this](http://www.convertforfree.com/bitwise-calculator) one. The logical operation of ```NOT BAD``` gives the result ```-BAE```, then we simply add ```-BAE``` and ```FACE```, and the result is ```EF20```. Using this password, we can extract the rar file and the flag is inside a text file.
+</code></pre><p>lIZORZaOkWrIuNB<br>```</p>
+]]></content>
+      
+        <categories>
+            
+            <category> CTF </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> CTF </tag>
+            
+            <tag> PACTF </tag>
+            
+            <tag> Forensics </tag>
+            
+            <tag> Cryptography </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[PACTF 2018 Write-Ups (Round 1 Part 2)]]></title>
       <url>/2018/05/05/pactf_2018_round_1_part_2/</url>
       <content type="html"><![CDATA[<p>Problems can be found on <a href="https://2018.pactf.com" target="_blank" rel="external">PACTF</a>.</p>
-<p><a href="https://github.com/MarchingVoxels" target="_blank" rel="external">aqdajz</a>, <a href="https://github.com/Sky1213814284" target="_blank" rel="external">illuminati</a>, <a href="https://github.com/altareen" target="_blank" rel="external">altareen</a>.</p>
+<p>Team members: <a href="https://github.com/leniumc" target="_blank" rel="external">me</a>, <a href="https://github.com/altareen" target="_blank" rel="external">altareen</a>, <a href="https://github.com/MarchingVoxels" target="_blank" rel="external">aqdajz</a>, <a href="https://github.com/Sky1213814284" target="_blank" rel="external">illuminati</a>.</p>
 <h2 id="Open-Sourcery-2018-30-pt"><a href="#Open-Sourcery-2018-30-pt" class="headerlink" title="Open Sourcery 2018 (30 pt)"></a>Open Sourcery 2018 (30 pt)</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>The solution to this problem lies within the Chromium source code. Literally. There is some string in there that mentions a flag and PACTF…</p>
 <p>Hint: This problem builds off of a similarly named problem in PACTF 2017.</p>
 <h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
@@ -2491,9 +2575,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <tag> Supervised Learning </tag>
             
-            <tag> Regression </tag>
-            
             <tag> Unsupervised Learning </tag>
+            
+            <tag> Regression </tag>
             
         </tags>
         
@@ -2575,11 +2659,11 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
         
         <tags>
             
+            <tag> C++ </tag>
+            
             <tag> Data Structure </tag>
             
             <tag> Stack </tag>
-            
-            <tag> C++ </tag>
             
         </tags>
         

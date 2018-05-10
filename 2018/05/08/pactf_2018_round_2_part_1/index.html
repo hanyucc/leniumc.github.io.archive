@@ -37,7 +37,7 @@
     
     <title>
         
-            AP CompSci A: ArrayList Basics | 
+            PACTF 2018 Write-Ups (Round 2 Part 1) | 
         
         leniumC&#39;s Blog
     </title>
@@ -49,7 +49,7 @@
     <meta name="theme-color" content="#4caf50">
     <meta name="author" content="leniumC">
     <meta name="description" itemprop="description" content="Just a personal blog.">
-    <meta name="keywords" content="null,AP CompSci A,Java">
+    <meta name="keywords" content="null,CTF,PACTF,Forensics,Cryptography">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -245,18 +245,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="AP CompSci A: ArrayList Basics | leniumC&#39;s Blog">
+    <meta property="og:title" content="PACTF 2018 Write-Ups (Round 2 Part 1) | leniumC&#39;s Blog">
     <meta property="og:image" content="http://yoursite.com/img/favicon.png" />
     <meta property="og:description" content="Just a personal blog.">
-    <meta property="og:article:tag" content="AP CompSci A"> <meta property="og:article:tag" content="Java"> 
+    <meta property="og:article:tag" content="CTF"> <meta property="og:article:tag" content="PACTF"> <meta property="og:article:tag" content="Forensics"> <meta property="og:article:tag" content="Cryptography"> 
 
     
-        <meta property="article:published_time" content="Mon Dec 04 2017 00:00:00 GMT+0800" />
-        <meta property="article:modified_time" content="Wed Dec 06 2017 13:25:18 GMT+0800" />
+        <meta property="article:published_time" content="Tue May 08 2018 00:00:00 GMT+0800" />
+        <meta property="article:modified_time" content="Thu May 10 2018 10:18:38 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="AP CompSci A: ArrayList Basics | leniumC&#39;s Blog">
+    <meta name="twitter:title" content="PACTF 2018 Write-Ups (Round 2 Part 1) | leniumC&#39;s Blog">
     <meta name="twitter:description" content="Just a personal blog.">
     <meta name="twitter:image" content="http://yoursite.com/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -264,7 +264,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2017/12/04/ap_comp_sci_a_22/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/05/08/pactf_2018_round_2_part_1/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -276,10 +276,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2017/12/04/ap_comp_sci_a_22/index.html",
-    "headline": "AP CompSci A: ArrayList Basics",
-    "datePublished": "Mon Dec 04 2017 00:00:00 GMT+0800",
-    "dateModified": "Wed Dec 06 2017 13:25:18 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/05/08/pactf_2018_round_2_part_1/index.html",
+    "headline": "PACTF 2018 Write-Ups (Round 2 Part 1)",
+    "datePublished": "Tue May 08 2018 00:00:00 GMT+0800",
+    "dateModified": "Thu May 10 2018 10:18:38 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "leniumC",
@@ -297,7 +297,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",AP CompSci A,Javanull",
+    "keywords": ",CTF,PACTF,Forensics,Cryptographynull",
     "description": "Just a personal blog.",
 }
 </script>
@@ -363,7 +363,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ArrayList"><span class="post-toc-number">1.</span> <span class="post-toc-text">ArrayList</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Declaring-and-Instantiating-an-ArrayList"><span class="post-toc-number">2.</span> <span class="post-toc-text">Declaring and Instantiating an ArrayList</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Doppelganger-10-pt"><span class="post-toc-number">1.</span> <span class="post-toc-text">Doppelgänger (10 pt)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Problem"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Problem</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Solution"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Solution</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Redacted-10-pt"><span class="post-toc-number">2.</span> <span class="post-toc-text">Redacted (10 pt)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Problem-1"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Problem</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Solution-1"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Solution</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Am-I-Pwned-15-pt"><span class="post-toc-number">3.</span> <span class="post-toc-text">Am I Pwned? (15 pt)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Problem-2"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Problem</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -395,7 +395,7 @@
         
     
             <p class="article-headline-p">
-                AP CompSci A: ArrayList Basics
+                PACTF 2018 Write-Ups (Round 2 Part 1)
             </p>
         </div>
 
@@ -414,7 +414,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>leniumC</strong>
-        <span>Dec 04, 2017</span>
+        <span>May 08, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -438,7 +438,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/AP-CompSci-A/">AP CompSci A</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Java/">Java</a>
+        <a class="post_tag-link" href="/tags/CTF/">CTF</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Cryptography/">Cryptography</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Forensics/">Forensics</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/PACTF/">PACTF</a>
     </ul>
     
 
@@ -454,7 +454,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=AP CompSci A: ArrayList Basics&url=http://yoursite.com/2017/12/04/ap_comp_sci_a_22/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=PACTF 2018 Write-Ups (Round 2 Part 1)&url=http://yoursite.com/2018/05/08/pactf_2018_round_2_part_1/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 Share to Weibo
             </li>
@@ -463,7 +463,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=AP CompSci A: ArrayList Basics&url=http://yoursite.com/2017/12/04/ap_comp_sci_a_22/index.html&via=leniumC" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=PACTF 2018 Write-Ups (Round 2 Part 1)&url=http://yoursite.com/2018/05/08/pactf_2018_round_2_part_1/index.html&via=leniumC" target="_blank">
             <li class="mdl-menu__item">
                 Share to Twitter
             </li>
@@ -472,7 +472,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/12/04/ap_comp_sci_a_22/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/05/08/pactf_2018_round_2_part_1/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to Facebook
             </li>
@@ -481,7 +481,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2017/12/04/ap_comp_sci_a_22/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/08/pactf_2018_round_2_part_1/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to Google+
             </li>
@@ -493,7 +493,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=leniumC&#39;s Blog&title=AP CompSci A: ArrayList Basics&summary=Just a personal blog.&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2017/12/04/ap_comp_sci_a_22/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=leniumC&#39;s Blog&title=PACTF 2018 Write-Ups (Round 2 Part 1)&summary=Just a personal blog.&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/05/08/pactf_2018_round_2_part_1/index.html" target="_blank">
             <li class="mdl-menu__item">
                 Share to QQ
             </li>
@@ -511,19 +511,64 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h2><p>As we have seen, the array is a very powerful data structure that has many uses.</p>
-<p>However, arrays are assigned a fixed size when they are created, and this size cannot be changed.</p>
-<p>Java provides a data structure called an ArrayList that is very similar to an array, except that it can be easily resized while your program is running.</p>
-<p>Since an ArrayList can grow and shrink while your program runs, it is a more efficient use of memory, and it is also simpler to use.</p>
-<p>Note that a programmer must use methods (add, get, etc.) rather than the square bracket notation [] to manipulate elements in an ArrayList.</p>
-<h2 id="Declaring-and-Instantiating-an-ArrayList"><a href="#Declaring-and-Instantiating-an-ArrayList" class="headerlink" title="Declaring and Instantiating an ArrayList"></a>Declaring and Instantiating an ArrayList</h2><p>The ArrayList is part of a separate Java library, so you must provide the following import statement at the beginning of your program:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>*<span class="token punctuation">;</span>
+        <p>Second round of <a href="https://2018.pactf.com" target="_blank" rel="external">PACTF</a>.</p>
+<p>Team members: <a href="https://github.com/leniumc" target="_blank" rel="external">me</a>, <a href="https://github.com/altareen" target="_blank" rel="external">altareen</a>, <a href="https://github.com/MarchingVoxels" target="_blank" rel="external">aqdajz</a>, <a href="https://github.com/Sky1213814284" target="_blank" rel="external">illuminati</a>.</p>
+<h2 id="Doppelganger-10-pt"><a href="#Doppelganger-10-pt" class="headerlink" title="Doppelgänger (10 pt)"></a>Doppelgänger (10 pt)</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>My friend Miles texted me today with this phrase “МОРЕ РОЕТ АТОМ”. I first thought that he went insane and has schizophasia. Apparently, it makes sense! Even though it doesn’t. So, what do you think is digging?</p>
+<p>Hint: Consider the case and UTF-8 values of the characters…</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
+<p>We spent quite a lot of time on this problem, because we were typing the phrase ourselves (instead of directly copying it, which is the correct way of solving it). After doing that, we found from the UTF-8 values of the characters that they weren’t English characters. Directly copying the phrase into Google translate, the second translation is “SEA digs ATOM”. Combining that with the question in the problem “what do you think is digging?” reveals the flag.</p>
+<pre><code>SEA
+</code></pre><h2 id="Redacted-10-pt"><a href="#Redacted-10-pt" class="headerlink" title="Redacted (10 pt)"></a>Redacted (10 pt)</h2><h3 id="Problem-1"><a href="#Problem-1" class="headerlink" title="Problem"></a>Problem</h3><p>ANDOVER, MA— Phillips Academy Capture the Flag releases an institution-wide memorandum on the security of PDF documents. For privacy, parts of the memo are redacted.</p>
+<p>View the memo: <a href="https://2018.pactf.com/static/ctfproblems/52af75d8-b1d4-450b-8262-d2f91de09d09/SECURE_REDACTED_COPY.42ce971cad34.pdf" target="_blank" rel="external">SECURE REDACTED MEMORANDUM</a>.</p>
+<p>Hint: Redaction, huh?</p>
+<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
+<p>Open up the PDF, <code>ctrl+A</code> <code>ctrl+C</code>, open up a text editor, <code>ctrl+V</code>, and you have the flag.</p>
+<pre><code>b3_car3ful_0r_y0ur_l3ak_m1ght_l3ak
+</code></pre><h2 id="Am-I-Pwned-15-pt"><a href="#Am-I-Pwned-15-pt" class="headerlink" title="Am I Pwned? (15 pt)"></a>Am I Pwned? (15 pt)</h2><h3 id="Problem-2"><a href="#Problem-2" class="headerlink" title="Problem"></a>Problem</h3><p>I was talking on IRC with a guy who tricked me into giving him a hash of my password and then said he could hack me! He said I might be “pwned”! I know the hashing algorithm is MD5; that’s still secure, right?</p>
+<p>… Oh, you want to know whether my password is secure or not?</p>
+<p>It doesn’t have any uppercase letters or numbers or punctuation, but isn’t six characters still a lot? what he meant by that one. Would you be able to hack my password? Here’s the hash:</p>
+<pre class=" language-eca065fba51916821eb7274c786c67d9```"><code class="language-eca065fba51916821eb7274c786c67d9```">
+Hint: The hacker told me that "MD5 is kinda rekt". That sounds bad, right? I mean, how long would it take to brute force it…
+
+### Solution
+
+Solved by aqdajz.
+
+Enter the md5 hash into a random md5 decrytion website and you have the flag.
 </code></pre>
-<p>To declare an ArrayList:</p>
-<pre class=" language-java"><code class="language-java">ArrayList<span class="token operator">&lt;</span>String<span class="token operator">></span> words <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span>String<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<p>Since ArrayList is a class, you must use the <code>new</code> operator, followed by a constructor call to instantiate an ArrayList object.</p>
-<p>Note the use of the angle brackets in <code>&lt;String&gt;</code>. This is called generics in Java, and they are used to specify the data type.</p>
+<p>lmaoez</p>
+<pre><code>
+
+## It&#39;s In, If (20 pt)
+
+### Problem
+
+My older brother sent me [this](https://2018.pactf.com/static/ctfproblems/a187400b-032a-4ac8-9e79-ceb03d089b17/itsinif.8f2056d643d8.jpg) photo, but I don’t know what to make of it.
+
+Hint: What might big brother know?
+
+### Solution
+
+Solved by altareen.
+
+Just like the problem in round 1, the flag is also in the metadata, but this time you can&#39;t directly find it in ```Properties``` in Windows.
+</code></pre><p>big_brother_is_looking_at_your_photos</p>
+<pre><code>
+
+## Letter to a Machine (25 pt)
+
+### Problem
+
+You intercepted a [letter.rar](https://2018.pactf.com/static/ctfproblems/47708183-239f-4565-834b-b5550c5634a4/letter.c5e1ae35c726.rar)—but to read it, you have to prove that you are not a human. The password is ```NOT``` ```BAD``` + ```FACE```.
+
+Hint: I’m sure it’s just coincidence that ```BAD``` and ```FACE``` can be spelled with just the letters ```ABCDEF```…
+
+### Solution
+
+Solved by me.
+
+The hint is quite important, ```ABCDEF``` are all in the range of hexadecimal numbers. Find an online logical operation calculator, like [this](http://www.convertforfree.com/bitwise-calculator) one. The logical operation of ```NOT BAD``` gives the result ```-BAE```, then we simply add ```-BAE``` and ```FACE```, and the result is ```EF20```. Using this password, we can extract the rar file and the flag is inside a text file.
+</code></pre><p>lIZORZaOkWrIuNB<br>```</p>
 
         
     
@@ -544,21 +589,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/12/05/ap_comp_sci_a_23/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Newer
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/11/24/ap_comp_sci_a_21/" id="post_nav-older" class="next-content">
+        <a href="/2018/05/05/pactf_2018_round_1_part_2/" id="post_nav-older" class="next-content">
             Older
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
