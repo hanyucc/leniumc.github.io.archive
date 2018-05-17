@@ -37,7 +37,7 @@
     
     <title>
         
-            Archives: 2016/4 | 
+            PACTF 2018 Write-Ups (Round 2 Part 2) | 
         
         leniumC&#39;s Blog
     </title>
@@ -49,7 +49,7 @@
     <meta name="theme-color" content="#4caf50">
     <meta name="author" content="leniumC">
     <meta name="description" itemprop="description" content="Just a personal blog.">
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="null,CTF,PACTF,Forensics,Cryptography">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -261,15 +261,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Archives: 2016/4 | leniumC&#39;s Blog">
+    <meta property="og:title" content="PACTF 2018 Write-Ups (Round 2 Part 2) | leniumC&#39;s Blog">
     <meta property="og:image" content="http://yoursite.com/img/favicon.png" />
     <meta property="og:description" content="Just a personal blog.">
-    
+    <meta property="og:article:tag" content="CTF"> <meta property="og:article:tag" content="PACTF"> <meta property="og:article:tag" content="Forensics"> <meta property="og:article:tag" content="Cryptography"> 
 
+    
+        <meta property="article:published_time" content="Wed May 16 2018 00:00:00 GMT+0800" />
+        <meta property="article:modified_time" content="Thu May 17 2018 11:19:57 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="Archives: 2016/4 | leniumC&#39;s Blog">
+    <meta name="twitter:title" content="PACTF 2018 Write-Ups (Round 2 Part 2) | leniumC&#39;s Blog">
     <meta name="twitter:description" content="Just a personal blog.">
     <meta name="twitter:image" content="http://yoursite.com/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -277,13 +280,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/archives/2016/04/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/05/16/pactf_2018_round_2_part_2/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/05/16/pactf_2018_round_2_part_2/index.html",
+    "headline": "PACTF 2018 Write-Ups (Round 2 Part 2)",
+    "datePublished": "Wed May 16 2018 00:00:00 GMT+0800",
+    "dateModified": "Thu May 17 2018 11:19:57 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "leniumC",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.jpg"
+        },
+        "description": "Hi People!"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "leniumC&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",CTF,PACTF,Forensics,Cryptographynull",
+    "description": "Just a personal blog.",
+}
+</script>
 
 
     
@@ -325,98 +358,275 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#The-Signal-and-the-Noise-35-pts"><span class="post-toc-number">1.</span> <span class="post-toc-text">The Signal and the Noise (35 pts)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Problem"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Problem</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Solution"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Solution</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Zip-Zap-Zop-45-pts"><span class="post-toc-number">2.</span> <span class="post-toc-text">Zip Zap Zop (45 pts)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Problem-1"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Problem</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Solution-1"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Solution</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Wakanda-problem-is-this-60-pts"><span class="post-toc-number">3.</span> <span class="post-toc-text">Wakanda problem is this? (60 pts)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Problem-2"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Problem</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Solution-2"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Solution</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Library-of-Babel-75-pts"><span class="post-toc-number">4.</span> <span class="post-toc-text">Library of Babel (75 pts)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Problem-3"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">Problem</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Solution-3"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">Solution</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2016/04/12/introduction/">Introduction</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/04/12/introduction/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.jpg" width="44px" height="44px" alt="leniumC's avatar">
-            </div>
-            <div>
-                <strong>leniumC</strong>
-                <span>Apr 12, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Others/">Others</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                PACTF 2018 Write-Ups (Round 2 Part 2)
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>leniumC</strong>
+        <span>May 16, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/CTF/">CTF</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Cryptography/">Cryptography</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Forensics/">Forensics</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/PACTF/">PACTF</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=PACTF 2018 Write-Ups (Round 2 Part 2)&url=http://yoursite.com/2018/05/16/pactf_2018_round_2_part_2/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=PACTF 2018 Write-Ups (Round 2 Part 2)&url=http://yoursite.com/2018/05/16/pactf_2018_round_2_part_2/index.html&via=leniumC" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/05/16/pactf_2018_round_2_part_2/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/16/pactf_2018_round_2_part_2/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=leniumC&#39;s Blog&title=PACTF 2018 Write-Ups (Round 2 Part 2)&summary=Just a personal blog.&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2018/05/16/pactf_2018_round_2_part_2/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>Second round of <a href="https://2018.pactf.com" target="_blank" rel="external">PACTF</a>.</p>
+<p>Team members: <a href="https://github.com/leniumc" target="_blank" rel="external">me</a>, <a href="https://github.com/altareen" target="_blank" rel="external">altareen</a>, <a href="https://github.com/MarchingVoxels" target="_blank" rel="external">aqdajz</a>, <a href="https://github.com/Sky1213814284" target="_blank" rel="external">illuminati</a>.</p>
+<h2 id="The-Signal-and-the-Noise-35-pts"><a href="#The-Signal-and-the-Noise-35-pts" class="headerlink" title="The Signal and the Noise (35 pts)"></a>The Signal and the Noise (35 pts)</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>There’s a message in here somewhere! You’ll have to find it yourself.</p>
+<p><a href="https://2018.pactf.com/static/ctfproblems/9829bbb5-dd77-48b7-b508-b2b7f598d882/haystack.ef77fe451087.txt" target="_blank" rel="external">Find the needle in the haystack!</a></p>
+<p>Hint: There must be something that distinguishes the signal from the noise. How could you mark something in a plain text file? All you have are Unicode characters…</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
+<p>Using python to extract characters that are not within the range of <code>a</code> to <code>z</code>, we noticed that each of these characters was within a word. Thus, extracting the words that surround the characters, we can obtain the flag.</p>
+<pre><code>the flag is in plain sight
+</code></pre><h2 id="Zip-Zap-Zop-45-pts"><a href="#Zip-Zap-Zop-45-pts" class="headerlink" title="Zip Zap Zop (45 pts)"></a>Zip Zap Zop (45 pts)</h2><h3 id="Problem-1"><a href="#Problem-1" class="headerlink" title="Problem"></a>Problem</h3><p>My friend gave me <a href="data:application/zip;base64,eJwByAM3/HicAb0DQvx4nAGyA038eJwBpwNY/HicAZwDY/x4nKuYw9jJXPanYg5jHXMjiCpm7gFRGczTQVQs8yIQFcS8FkS5M+8AUTbMh0GUIfM5EKXGfBNESTM/AVECzO9BFCvzLxD1i4n1L5B6zyQAop4wSYOom0xqIOockyGIOsxkA6J2MLmDqLVMQUBK9GimTxAjA0NC5elTJ0JnufuYh62b4XE6J/LWEV/dra3GXslyKU7ad5NmdSUduPRwxiWbRUb6s9Jdj53orDw4RzjN78YaHdcKSy+OnA6uH08Yf+6zj09lXyW7YKe2dYAvA3Mn+4YJEQz8nYwmihcbylS4LvS7MC3x8DzAcknVodWFQWyCH5PVEoEDLSUSN5ycGOVU2E+d3zydtbRGv/B1SWrustlWwstkhGKOzur/JvDjdJbwquqPd/7d2m7jyLmNI7hiVv4++dZTX8RvbHzfGlRiZDvryexM4QXC+bImIontkaeuTmAWLVA2vCTwR+XVuSk3rk5e+urusStL5/BuOJtssersgj83JR4dfzN3x8I02bmBj4Nry79s38Cn33mBr3656PWISbuCfHZLpUVfa47RTl+20yWlcVffvtsrzicsmfxg4+3EbUxTmaIEdt549eYBS6FfRv1Mb6W4ORMkn017Gnddk33yJp1W039Vu7M/C5qvszjw1uiF4qbP7unST0qb7u+5k673TCr24bnPfYf2X9EWW3VV93vY+sw1Wq1RTMGpXOcWJU5aynh3mta3HZzfGtafkVu97Y7ftwPWr48Jtqu7KRZahS8NW75PUebKztR+2a7GbH3jSx4LXrXOzvxp/pIl+Jq+tezFj73ue14ctJdXODNh4uRjN3UfZqkXT3l2UWLZxc2y/hmLBU7qVrxY/VrdVCz+1e6tSx702c6J/rTsuSnfFM3jO5VTdvpJ5HgkNK+81qV/qrZq9cb/Vls/yPltU1Lmu2U2x3Fu+qajaxfxWLadXb3J6e38GRutdH3ZztuZhwQ/jz98YcusJHbLB7f4/kWsLJj2//sEs0PHD7izP+t7fG/BMk7dWwc+Wyz+kZS7xP/PKg0TQ72z+jOFP1pufe90und56JnZO3SLwuL51dgfmYu0fL92ebmMelfhnLy2d151le/q9bdU3vq9JzBolkbY/ty06JVlugmTN39ItdG0zZp88V4+56aAEufj6yv5BWvrFPpEmuLt5rZ9VYnribP/NeHuJIdp02ScZy+/tW5B9MVrSz8yOaxxzFDa0MzUtTUYANGEufpcMO3tSaPzZm9z+L7M9P5pZcUEsg==" target="_blank" rel="external">this file</a>, but I have no idea what to do with it?</p>
+<p>Hint: I tried to make this file really, really small.</p>
+<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
+<p>If we run the linux <code>file</code> command on the file, we can find that the file was <code>zlib compressed data</code>. Then, we used the Python zlib package to decompress the file. However, the content of the file made no sense.</p>
+<p>Looking at the hint and the format of the decompressed file, we found that the file had been compressed more than one time. Thus, we decompressed the file until it can not be decompressed further, and the final file contains the flag.</p>
+<p>(The <code>xxxxxxxxxx</code> part for each team is different)</p>
+<pre><code>Gotza_Makes_1T_V_small_xxxxxxxxxx
+</code></pre><h2 id="Wakanda-problem-is-this-60-pts"><a href="#Wakanda-problem-is-this-60-pts" class="headerlink" title="Wakanda problem is this? (60 pts)"></a>Wakanda problem is this? (60 pts)</h2><h3 id="Problem-2"><a href="#Problem-2" class="headerlink" title="Problem"></a>Problem</h3><p>You’ve arrived at Wakanda’s border. Only the flag will allow you to enter. <a href="https://2018.pactf.com/static/ctfproblems/800b0ae9-fbc7-47bb-87d0-03e91e9bbc40/gate.5ae2b2e0aa79.jpg" target="_blank" rel="external">This is all you have</a>.</p>
+<p>Hint: Use the bytes in the second image.</p>
+<h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by illuminati and me.</p>
+<p>The problem mentions a second image. Using the linux <code>binwalk</code> command, we can actually extract a second image from the given image. Then, looking at the bytes of the second image using the linux <code>xxd</code> command, we can obtain the flag.</p>
+<pre><code>wakanda4eva
+</code></pre><h2 id="Library-of-Babel-75-pts"><a href="#Library-of-Babel-75-pts" class="headerlink" title="Library of Babel (75 pts)"></a>Library of Babel (75 pts)</h2><h3 id="Problem-3"><a href="#Problem-3" class="headerlink" title="Problem"></a>Problem</h3><p>Is <a href="https://2018.pactf.com/static/ctfproblems/f5f28b96-a37e-4094-a529-ae43ba8ecfc8/video.f3db89aeb9f4.mp4" target="_blank" rel="external">this</a> what passes through fiber optic cables? Must be…</p>
+<p>Hint: It is much faster to extract frames from the video and write a script!</p>
+<h3 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
+<p>We can extract frames from the video using Python and OpenCV and use the zbar package to scan the QR codes. Looking at the texts read from the QR codes, we can find one section that contains this.</p>
+<pre><code>=== YOUR ANSWER IS HERE ===
+&quot;eqvzb&quot; w-3, s-5, v-25, p-248
+22syz7u9dogitfxlezobhobeuno6pnec20n6bqfg22cqihe41hbbi8aut4t618oj4wee4to32mdfmmsykl76r002hfbsurum4rr6tprxi4yinrzlqee17y5sfw11k5ybxsie6icu2x6fx
+vbq2wskzjtmng31ejzfikwj9ql0nxutriwr6p6vqzpdl1thkgt0o4is7znam9xub632v5mi39t8oae98kv5faatt11zitxmuka8qdrhbyw02i89fx9desufb6giwvgsvgrd18925zrgrq
+ai31l92i6qplb9embayx8gmhqczl4gi9mb112plzs78w38hhbqmximi718hte6tw6b2m42xfwh3nnby2jemn0sz80hevqccfpyqd674swckdyaaptdp482x25uanhh5q8r0xqtokgwb8l
+bn41vl4mhhfvoeippvnl1t3ojshstgwumk48q8l3m937sou6b1838u7pie8da6gh8d8q5e09vazbdpsbtwyu35we0vu1r9cxfsaeisivqa01nrols0xculnijghh4goztt2ymrt2h54hf
+bg8o5w03ai9ghobywjxxd8erazpyjisdnrehi3xvh6yz6gnynrsgbzek9uv2poyrdld0quk3cxj1cf8z2a4jbzucqcivwvkoh9uaecnlgqpzwy6bmraynt9rl7mbpob449swf3nf3010o
+0uvweo0ty0jqshf4xzvxtmuhq5uutoyijqrra4lehasyeokf0wrdhcysxj8xyt8uc6uywmya3i8ipx9g2dha1lax1l3vzorv99qkqugxixa17pi1xua3o7z5qehlvctz6cdgef2zwleaa
+eyvlqn0m3hdczmgw26irn6bi0oy03k0it3hmekyxrrbmr73kokpitl1lpndke593dw5kdmp0ahjpcd191asr9ametpiks1a1rwnool8raisalbvwu0k04mjywmdwmcpn7m5nsrw505tgf
+v9k2708uc6syeur2f9zgqp9z35c6eu55bh4leal9ow95dpy77dtu6wu9cybq58bhdkthl0m85ekoeh8xvckpa7l6uz5vgyl0nbt3ole1hc4l4wtplgddtkulbds7egyp8nk2tf26t6kg7
+lunqwxm83b8m6mynhjdfxgnns8l3j2v2nku5z1auibmmc2x83013aqvor4teasklqkywhxdjjxrz2jbwwkqu6jed9gn83mxsg5ppzz9w0kschteeukmoic28wqq1pldsjlzmfptu3aod1
+7o7gbeteenilm4pplg6yr0m0he7odgmq9pb17v9bekfllcbu8djj5e3e0uklethkcrmqr7q35avf1xpsvy5fod6ub2ra1awtoqbo26u2ydmkbotp4wuuwx3201so0gfhjs37bss341078
+0rqbke58loyad0xlldz4eunjezj769hm9jn1f6ne1lmrokw4l36v6w2tyf8z5f2mp2vqbhtkspnfeukopw3q3mnpk4gxsekj3wv2gl85yhu37og2qhu027fz1c4xq3jvc2q8szqi2b3rw
+dykfq50ii8nct0rh8apgpdin6w674khok0551tr6v1wrevoje3v823263in5atvkwn9gbcfjr3yy64ncyuo5q48rghc73uiak27e3od8ipzs2k2ojxl6a1exvdcyv3y2fu3j0wmnqbdxc
+wrvysyz43a1lhzm6t4mzkeciqg4j81w3q9i7vch81nc6c663r20iwek4cd3dk2qyizivbk3yfcrcsyy17p30jmwp2u1ogjpbw6ckjrzd5z8qab61vjq98hwhiua5qb8kvkp1datpqoxxh
+286k3mu6uhauv95nhajs5sf3j3f7xyvgz0d2omk4ro1umbqzjs5i4lyhns35sqm1u6sycfkeu2po70dgsoy5abl7csfvwjovz05pp338pnkx7dfvz952utwpiyxx261rolsm1eqc8mvmh
+w3e2o6adxdwdnjn1vxorfgm65rx20ztnc80nwmfcgbql87bz805xvb4lfq3lsnguvw4a13jqroa6xjhvnnb514qp9jgeytmduc95t5eqbuu3yqtps6bhn0nhsr2qmbtrjf609yx2n5a8k
+8hns6gox0tjq26wtn9arjsrige2is9e6v56fa62x3nynnnsbri6gbf3e2pituvua6i9z6kc4brf9f671e2zoa6t9f1ix1akwl5jp51tcadyswwot7g7125hct72h5hnctytcen6gc0qcs
+gl31xpb5bs5qw59v9wzu7eba6sr3trwstiioj7og6y2h69x3vy502ei1gnjchmfhl65jd02mhdinzzv55rl2w8u1uxoiofzt89lbqre1pq8kwyo28cg6296llkfpmlaak16httutriqn9
+bitfrh2p1vr6htuzjxiif4ss5m601kris67x04ni7g5eb6dpdiqmwb6yx0mtaj8pccww27bom5lwnxpuow6kg7e7wag7w0pfp50349pm9qdr550a9wc0dbfr2v3ezmrvbdwjvu7tu59i8
+odas8i29rmimjj7h3ga5ox0d50n1vwaq06c5o5pm2emokprk3xi7x25af8nayygnwvynl3863vxo6w0qke1yywr2fk42xcecymirqzfxhl967hbw89v44pschg8bw0cod5fx0s7cmi3vi
+hlelu0b0pmselqozqz2g23285gec4zqfq86b7ut3aqr8ofi1m1f2u193fxixirtco0hhstcla8rkhgcl04mpjfefyti9ka86scfpb74stomed4maim6b329d91x1oonkkbqm9kjd6xl57
+v1zhesz3or8nofup3esvux980b3zwstulip20ug3hrh18pc3sgfnnjt65x697t1n22jef31s9rulfk9ad6qmd12ytyybxkikq98frkg434q4quvzvte9z6376hgt880zh0ly4gtopdc8j
+g3c7w534oezei8ytlj8qfliccuv1h2profbor9rbn78tp3jw5ww4xzc2rq8hg14wkss2tlr6xve62u256ohwfv8xd6i9wwn3jztv7cit60m2ui0d2xnj7k5btza5upm81efq4ymwewuzv
+ru6qsavg1w50n0joic98sejzdo3kieunrzxm9wku7i4011z21mgfydsc4h4vfhjf73tnv3obko3irds88mwyu5yr77qy1urkvnoet03nv6oso9s7gyn0fz0t9600niaa46cf9wmp7yaj8
+4r8s1tp35im
+=== YOUR ANSWER IS HERE ===
+</code></pre><p>Then, we go to the website <a href="https://libraryofbabel.info/" target="_blank" rel="external">https://libraryofbabel.info/</a>, select browse, and enter the huge string into the <code>Hex Name</code> field. Select the correct wall (3), shelf (5), volume (25), and page (248). The flag will be on that page.</p>
+<pre><code>averyunobviouskey
+</code></pre>
+        
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/05/08/pactf_2018_round_2_part_1/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     

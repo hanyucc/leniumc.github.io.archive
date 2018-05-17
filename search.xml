@@ -3,22 +3,101 @@
   
     
     <entry>
+      <title><![CDATA[PACTF 2018 Write-Ups (Round 2 Part 2)]]></title>
+      <url>/2018/05/16/pactf_2018_round_2_part_2/</url>
+      <content type="html"><![CDATA[<p>Second round of <a href="https://2018.pactf.com" target="_blank" rel="external">PACTF</a>.</p>
+<p>Team members: <a href="https://github.com/leniumc" target="_blank" rel="external">me</a>, <a href="https://github.com/altareen" target="_blank" rel="external">altareen</a>, <a href="https://github.com/MarchingVoxels" target="_blank" rel="external">aqdajz</a>, <a href="https://github.com/Sky1213814284" target="_blank" rel="external">illuminati</a>.</p>
+<h2 id="The-Signal-and-the-Noise-35-pts"><a href="#The-Signal-and-the-Noise-35-pts" class="headerlink" title="The Signal and the Noise (35 pts)"></a>The Signal and the Noise (35 pts)</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>There’s a message in here somewhere! You’ll have to find it yourself.</p>
+<p><a href="https://2018.pactf.com/static/ctfproblems/9829bbb5-dd77-48b7-b508-b2b7f598d882/haystack.ef77fe451087.txt" target="_blank" rel="external">Find the needle in the haystack!</a></p>
+<p>Hint: There must be something that distinguishes the signal from the noise. How could you mark something in a plain text file? All you have are Unicode characters…</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
+<p>Using python to extract characters that are not within the range of <code>a</code> to <code>z</code>, we noticed that each of these characters was within a word. Thus, extracting the words that surround the characters, we can obtain the flag.</p>
+<pre><code>the flag is in plain sight
+</code></pre><h2 id="Zip-Zap-Zop-45-pts"><a href="#Zip-Zap-Zop-45-pts" class="headerlink" title="Zip Zap Zop (45 pts)"></a>Zip Zap Zop (45 pts)</h2><h3 id="Problem-1"><a href="#Problem-1" class="headerlink" title="Problem"></a>Problem</h3><p>My friend gave me <a href="data:application/zip;base64,eJwByAM3/HicAb0DQvx4nAGyA038eJwBpwNY/HicAZwDY/x4nKuYw9jJXPanYg5jHXMjiCpm7gFRGczTQVQs8yIQFcS8FkS5M+8AUTbMh0GUIfM5EKXGfBNESTM/AVECzO9BFCvzLxD1i4n1L5B6zyQAop4wSYOom0xqIOockyGIOsxkA6J2MLmDqLVMQUBK9GimTxAjA0NC5elTJ0JnufuYh62b4XE6J/LWEV/dra3GXslyKU7ad5NmdSUduPRwxiWbRUb6s9Jdj53orDw4RzjN78YaHdcKSy+OnA6uH08Yf+6zj09lXyW7YKe2dYAvA3Mn+4YJEQz8nYwmihcbylS4LvS7MC3x8DzAcknVodWFQWyCH5PVEoEDLSUSN5ycGOVU2E+d3zydtbRGv/B1SWrustlWwstkhGKOzur/JvDjdJbwquqPd/7d2m7jyLmNI7hiVv4++dZTX8RvbHzfGlRiZDvryexM4QXC+bImIontkaeuTmAWLVA2vCTwR+XVuSk3rk5e+urusStL5/BuOJtssersgj83JR4dfzN3x8I02bmBj4Nry79s38Cn33mBr3656PWISbuCfHZLpUVfa47RTl+20yWlcVffvtsrzicsmfxg4+3EbUxTmaIEdt549eYBS6FfRv1Mb6W4ORMkn017Gnddk33yJp1W039Vu7M/C5qvszjw1uiF4qbP7unST0qb7u+5k673TCr24bnPfYf2X9EWW3VV93vY+sw1Wq1RTMGpXOcWJU5aynh3mta3HZzfGtafkVu97Y7ftwPWr48Jtqu7KRZahS8NW75PUebKztR+2a7GbH3jSx4LXrXOzvxp/pIl+Jq+tezFj73ue14ctJdXODNh4uRjN3UfZqkXT3l2UWLZxc2y/hmLBU7qVrxY/VrdVCz+1e6tSx702c6J/rTsuSnfFM3jO5VTdvpJ5HgkNK+81qV/qrZq9cb/Vls/yPltU1Lmu2U2x3Fu+qajaxfxWLadXb3J6e38GRutdH3ZztuZhwQ/jz98YcusJHbLB7f4/kWsLJj2//sEs0PHD7izP+t7fG/BMk7dWwc+Wyz+kZS7xP/PKg0TQ72z+jOFP1pufe90und56JnZO3SLwuL51dgfmYu0fL92ebmMelfhnLy2d151le/q9bdU3vq9JzBolkbY/ty06JVlugmTN39ItdG0zZp88V4+56aAEufj6yv5BWvrFPpEmuLt5rZ9VYnribP/NeHuJIdp02ScZy+/tW5B9MVrSz8yOaxxzFDa0MzUtTUYANGEufpcMO3tSaPzZm9z+L7M9P5pZcUEsg==" target="_blank" rel="external">this file</a>, but I have no idea what to do with it?</p>
+<p>Hint: I tried to make this file really, really small.</p>
+<h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
+<p>If we run the linux <code>file</code> command on the file, we can find that the file was <code>zlib compressed data</code>. Then, we used the Python zlib package to decompress the file. However, the content of the file made no sense.</p>
+<p>Looking at the hint and the format of the decompressed file, we found that the file had been compressed more than one time. Thus, we decompressed the file until it can not be decompressed further, and the final file contains the flag.</p>
+<p>(The <code>xxxxxxxxxx</code> part for each team is different)</p>
+<pre><code>Gotza_Makes_1T_V_small_xxxxxxxxxx
+</code></pre><h2 id="Wakanda-problem-is-this-60-pts"><a href="#Wakanda-problem-is-this-60-pts" class="headerlink" title="Wakanda problem is this? (60 pts)"></a>Wakanda problem is this? (60 pts)</h2><h3 id="Problem-2"><a href="#Problem-2" class="headerlink" title="Problem"></a>Problem</h3><p>You’ve arrived at Wakanda’s border. Only the flag will allow you to enter. <a href="https://2018.pactf.com/static/ctfproblems/800b0ae9-fbc7-47bb-87d0-03e91e9bbc40/gate.5ae2b2e0aa79.jpg" target="_blank" rel="external">This is all you have</a>.</p>
+<p>Hint: Use the bytes in the second image.</p>
+<h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by illuminati and me.</p>
+<p>The problem mentions a second image. Using the linux <code>binwalk</code> command, we can actually extract a second image from the given image. Then, looking at the bytes of the second image using the linux <code>xxd</code> command, we can obtain the flag.</p>
+<pre><code>wakanda4eva
+</code></pre><h2 id="Library-of-Babel-75-pts"><a href="#Library-of-Babel-75-pts" class="headerlink" title="Library of Babel (75 pts)"></a>Library of Babel (75 pts)</h2><h3 id="Problem-3"><a href="#Problem-3" class="headerlink" title="Problem"></a>Problem</h3><p>Is <a href="https://2018.pactf.com/static/ctfproblems/f5f28b96-a37e-4094-a529-ae43ba8ecfc8/video.f3db89aeb9f4.mp4" target="_blank" rel="external">this</a> what passes through fiber optic cables? Must be…</p>
+<p>Hint: It is much faster to extract frames from the video and write a script!</p>
+<h3 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
+<p>We can extract frames from the video using Python and OpenCV and use the zbar package to scan the QR codes. Looking at the texts read from the QR codes, we can find one section that contains this.</p>
+<pre><code>=== YOUR ANSWER IS HERE ===
+&quot;eqvzb&quot; w-3, s-5, v-25, p-248
+22syz7u9dogitfxlezobhobeuno6pnec20n6bqfg22cqihe41hbbi8aut4t618oj4wee4to32mdfmmsykl76r002hfbsurum4rr6tprxi4yinrzlqee17y5sfw11k5ybxsie6icu2x6fx
+vbq2wskzjtmng31ejzfikwj9ql0nxutriwr6p6vqzpdl1thkgt0o4is7znam9xub632v5mi39t8oae98kv5faatt11zitxmuka8qdrhbyw02i89fx9desufb6giwvgsvgrd18925zrgrq
+ai31l92i6qplb9embayx8gmhqczl4gi9mb112plzs78w38hhbqmximi718hte6tw6b2m42xfwh3nnby2jemn0sz80hevqccfpyqd674swckdyaaptdp482x25uanhh5q8r0xqtokgwb8l
+bn41vl4mhhfvoeippvnl1t3ojshstgwumk48q8l3m937sou6b1838u7pie8da6gh8d8q5e09vazbdpsbtwyu35we0vu1r9cxfsaeisivqa01nrols0xculnijghh4goztt2ymrt2h54hf
+bg8o5w03ai9ghobywjxxd8erazpyjisdnrehi3xvh6yz6gnynrsgbzek9uv2poyrdld0quk3cxj1cf8z2a4jbzucqcivwvkoh9uaecnlgqpzwy6bmraynt9rl7mbpob449swf3nf3010o
+0uvweo0ty0jqshf4xzvxtmuhq5uutoyijqrra4lehasyeokf0wrdhcysxj8xyt8uc6uywmya3i8ipx9g2dha1lax1l3vzorv99qkqugxixa17pi1xua3o7z5qehlvctz6cdgef2zwleaa
+eyvlqn0m3hdczmgw26irn6bi0oy03k0it3hmekyxrrbmr73kokpitl1lpndke593dw5kdmp0ahjpcd191asr9ametpiks1a1rwnool8raisalbvwu0k04mjywmdwmcpn7m5nsrw505tgf
+v9k2708uc6syeur2f9zgqp9z35c6eu55bh4leal9ow95dpy77dtu6wu9cybq58bhdkthl0m85ekoeh8xvckpa7l6uz5vgyl0nbt3ole1hc4l4wtplgddtkulbds7egyp8nk2tf26t6kg7
+lunqwxm83b8m6mynhjdfxgnns8l3j2v2nku5z1auibmmc2x83013aqvor4teasklqkywhxdjjxrz2jbwwkqu6jed9gn83mxsg5ppzz9w0kschteeukmoic28wqq1pldsjlzmfptu3aod1
+7o7gbeteenilm4pplg6yr0m0he7odgmq9pb17v9bekfllcbu8djj5e3e0uklethkcrmqr7q35avf1xpsvy5fod6ub2ra1awtoqbo26u2ydmkbotp4wuuwx3201so0gfhjs37bss341078
+0rqbke58loyad0xlldz4eunjezj769hm9jn1f6ne1lmrokw4l36v6w2tyf8z5f2mp2vqbhtkspnfeukopw3q3mnpk4gxsekj3wv2gl85yhu37og2qhu027fz1c4xq3jvc2q8szqi2b3rw
+dykfq50ii8nct0rh8apgpdin6w674khok0551tr6v1wrevoje3v823263in5atvkwn9gbcfjr3yy64ncyuo5q48rghc73uiak27e3od8ipzs2k2ojxl6a1exvdcyv3y2fu3j0wmnqbdxc
+wrvysyz43a1lhzm6t4mzkeciqg4j81w3q9i7vch81nc6c663r20iwek4cd3dk2qyizivbk3yfcrcsyy17p30jmwp2u1ogjpbw6ckjrzd5z8qab61vjq98hwhiua5qb8kvkp1datpqoxxh
+286k3mu6uhauv95nhajs5sf3j3f7xyvgz0d2omk4ro1umbqzjs5i4lyhns35sqm1u6sycfkeu2po70dgsoy5abl7csfvwjovz05pp338pnkx7dfvz952utwpiyxx261rolsm1eqc8mvmh
+w3e2o6adxdwdnjn1vxorfgm65rx20ztnc80nwmfcgbql87bz805xvb4lfq3lsnguvw4a13jqroa6xjhvnnb514qp9jgeytmduc95t5eqbuu3yqtps6bhn0nhsr2qmbtrjf609yx2n5a8k
+8hns6gox0tjq26wtn9arjsrige2is9e6v56fa62x3nynnnsbri6gbf3e2pituvua6i9z6kc4brf9f671e2zoa6t9f1ix1akwl5jp51tcadyswwot7g7125hct72h5hnctytcen6gc0qcs
+gl31xpb5bs5qw59v9wzu7eba6sr3trwstiioj7og6y2h69x3vy502ei1gnjchmfhl65jd02mhdinzzv55rl2w8u1uxoiofzt89lbqre1pq8kwyo28cg6296llkfpmlaak16httutriqn9
+bitfrh2p1vr6htuzjxiif4ss5m601kris67x04ni7g5eb6dpdiqmwb6yx0mtaj8pccww27bom5lwnxpuow6kg7e7wag7w0pfp50349pm9qdr550a9wc0dbfr2v3ezmrvbdwjvu7tu59i8
+odas8i29rmimjj7h3ga5ox0d50n1vwaq06c5o5pm2emokprk3xi7x25af8nayygnwvynl3863vxo6w0qke1yywr2fk42xcecymirqzfxhl967hbw89v44pschg8bw0cod5fx0s7cmi3vi
+hlelu0b0pmselqozqz2g23285gec4zqfq86b7ut3aqr8ofi1m1f2u193fxixirtco0hhstcla8rkhgcl04mpjfefyti9ka86scfpb74stomed4maim6b329d91x1oonkkbqm9kjd6xl57
+v1zhesz3or8nofup3esvux980b3zwstulip20ug3hrh18pc3sgfnnjt65x697t1n22jef31s9rulfk9ad6qmd12ytyybxkikq98frkg434q4quvzvte9z6376hgt880zh0ly4gtopdc8j
+g3c7w534oezei8ytlj8qfliccuv1h2profbor9rbn78tp3jw5ww4xzc2rq8hg14wkss2tlr6xve62u256ohwfv8xd6i9wwn3jztv7cit60m2ui0d2xnj7k5btza5upm81efq4ymwewuzv
+ru6qsavg1w50n0joic98sejzdo3kieunrzxm9wku7i4011z21mgfydsc4h4vfhjf73tnv3obko3irds88mwyu5yr77qy1urkvnoet03nv6oso9s7gyn0fz0t9600niaa46cf9wmp7yaj8
+4r8s1tp35im
+=== YOUR ANSWER IS HERE ===
+</code></pre><p>Then, we go to the website <a href="https://libraryofbabel.info/" target="_blank" rel="external">https://libraryofbabel.info/</a>, select browse, and enter the huge string into the <code>Hex Name</code> field. Select the correct wall (3), shelf (5), volume (25), and page (248). The flag will be on that page.</p>
+<pre><code>averyunobviouskey
+</code></pre>]]></content>
+      
+        <categories>
+            
+            <category> CTF </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> CTF </tag>
+            
+            <tag> PACTF </tag>
+            
+            <tag> Forensics </tag>
+            
+            <tag> Cryptography </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[PACTF 2018 Write-Ups (Round 2 Part 1)]]></title>
       <url>/2018/05/08/pactf_2018_round_2_part_1/</url>
       <content type="html"><![CDATA[<p>Second round of <a href="https://2018.pactf.com" target="_blank" rel="external">PACTF</a>.</p>
 <p>Team members: <a href="https://github.com/leniumc" target="_blank" rel="external">me</a>, <a href="https://github.com/altareen" target="_blank" rel="external">altareen</a>, <a href="https://github.com/MarchingVoxels" target="_blank" rel="external">aqdajz</a>, <a href="https://github.com/Sky1213814284" target="_blank" rel="external">illuminati</a>.</p>
-<h2 id="Doppelganger-10-pt"><a href="#Doppelganger-10-pt" class="headerlink" title="Doppelgänger (10 pt)"></a>Doppelgänger (10 pt)</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>My friend Miles texted me today with this phrase “МОРЕ РОЕТ АТОМ”. I first thought that he went insane and has schizophasia. Apparently, it makes sense! Even though it doesn’t. So, what do you think is digging?</p>
+<h2 id="Doppelganger-10-pts"><a href="#Doppelganger-10-pts" class="headerlink" title="Doppelgänger (10 pts)"></a>Doppelgänger (10 pts)</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>My friend Miles texted me today with this phrase “МОРЕ РОЕТ АТОМ”. I first thought that he went insane and has schizophasia. Apparently, it makes sense! Even though it doesn’t. So, what do you think is digging?</p>
 <p>Hint: Consider the case and UTF-8 values of the characters…</p>
 <h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by illuminati and me.</p>
 <p>We spent quite a lot of time on this problem, because we were typing the phrase ourselves (instead of directly copying it, which is the correct way of solving it). After doing that, we found from the UTF-8 values of the characters that they weren’t English characters. Directly copying the phrase into Google translate, the second translation is “SEA digs ATOM”. Combining that with the question in the problem “what do you think is digging?” reveals the flag.</p>
 <pre><code>SEA
-</code></pre><h2 id="Redacted-10-pt"><a href="#Redacted-10-pt" class="headerlink" title="Redacted (10 pt)"></a>Redacted (10 pt)</h2><h3 id="Problem-1"><a href="#Problem-1" class="headerlink" title="Problem"></a>Problem</h3><p>ANDOVER, MA— Phillips Academy Capture the Flag releases an institution-wide memorandum on the security of PDF documents. For privacy, parts of the memo are redacted.</p>
+</code></pre><h2 id="Redacted-10-pts"><a href="#Redacted-10-pts" class="headerlink" title="Redacted (10 pts)"></a>Redacted (10 pts)</h2><h3 id="Problem-1"><a href="#Problem-1" class="headerlink" title="Problem"></a>Problem</h3><p>ANDOVER, MA— Phillips Academy Capture the Flag releases an institution-wide memorandum on the security of PDF documents. For privacy, parts of the memo are redacted.</p>
 <p>View the memo: <a href="https://2018.pactf.com/static/ctfproblems/52af75d8-b1d4-450b-8262-d2f91de09d09/SECURE_REDACTED_COPY.42ce971cad34.pdf" target="_blank" rel="external">SECURE REDACTED MEMORANDUM</a>.</p>
 <p>Hint: Redaction, huh?</p>
 <h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
 <p>Open up the PDF, <code>ctrl+A</code> <code>ctrl+C</code>, open up a text editor, <code>ctrl+V</code>, and you have the flag.</p>
 <pre><code>b3_car3ful_0r_y0ur_l3ak_m1ght_l3ak
-</code></pre><h2 id="Am-I-Pwned-15-pt"><a href="#Am-I-Pwned-15-pt" class="headerlink" title="Am I Pwned? (15 pt)"></a>Am I Pwned? (15 pt)</h2><h3 id="Problem-2"><a href="#Problem-2" class="headerlink" title="Problem"></a>Problem</h3><p>I was talking on IRC with a guy who tricked me into giving him a hash of my password and then said he could hack me! He said I might be “pwned”! I know the hashing algorithm is MD5; that’s still secure, right?</p>
+</code></pre><h2 id="Am-I-Pwned-15-pts"><a href="#Am-I-Pwned-15-pts" class="headerlink" title="Am I Pwned? (15 pts)"></a>Am I Pwned? (15 pts)</h2><h3 id="Problem-2"><a href="#Problem-2" class="headerlink" title="Problem"></a>Problem</h3><p>I was talking on IRC with a guy who tricked me into giving him a hash of my password and then said he could hack me! He said I might be “pwned”! I know the hashing algorithm is MD5; that’s still secure, right?</p>
 <p>… Oh, you want to know whether my password is secure or not?</p>
 <p>It doesn’t have any uppercase letters or numbers or punctuation, but isn’t six characters still a lot? what he meant by that one. Would you be able to hack my password? Here’s the hash:</p>
 <pre><code>eca065fba51916821eb7274c786c67d9
@@ -26,12 +105,12 @@
 <h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by aqdajz.</p>
 <p>Enter the md5 hash into a random md5 decryption website and you have the flag.</p>
 <pre><code>lmaoez
-</code></pre><h2 id="It’s-In-If-20-pt"><a href="#It’s-In-If-20-pt" class="headerlink" title="It’s In, If (20 pt)"></a>It’s In, If (20 pt)</h2><h3 id="Problem-3"><a href="#Problem-3" class="headerlink" title="Problem"></a>Problem</h3><p>My older brother sent me <a href="https://2018.pactf.com/static/ctfproblems/a187400b-032a-4ac8-9e79-ceb03d089b17/itsinif.8f2056d643d8.jpg" target="_blank" rel="external">this</a> photo, but I don’t know what to make of it.</p>
+</code></pre><h2 id="It’s-In-If-20-pts"><a href="#It’s-In-If-20-pts" class="headerlink" title="It’s In, If (20 pts)"></a>It’s In, If (20 pts)</h2><h3 id="Problem-3"><a href="#Problem-3" class="headerlink" title="Problem"></a>Problem</h3><p>My older brother sent me <a href="https://2018.pactf.com/static/ctfproblems/a187400b-032a-4ac8-9e79-ceb03d089b17/itsinif.8f2056d643d8.jpg" target="_blank" rel="external">this</a> photo, but I don’t know what to make of it.</p>
 <p>Hint: What might big brother know?</p>
 <h3 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by altareen.</p>
 <p>Just like the problem in round 1, the flag is also in the metadata, but this time you can’t directly find it in <code>Properties</code> in Windows.</p>
 <pre><code>big_brother_is_looking_at_your_photos
-</code></pre><h2 id="Letter-to-a-Machine-25-pt"><a href="#Letter-to-a-Machine-25-pt" class="headerlink" title="Letter to a Machine (25 pt)"></a>Letter to a Machine (25 pt)</h2><h3 id="Problem-4"><a href="#Problem-4" class="headerlink" title="Problem"></a>Problem</h3><p>You intercepted a <a href="https://2018.pactf.com/static/ctfproblems/47708183-239f-4565-834b-b5550c5634a4/letter.c5e1ae35c726.rar" target="_blank" rel="external">letter.rar</a>—but to read it, you have to prove that you are not a human. The password is <code>NOT</code> <code>BAD</code> + <code>FACE</code>.</p>
+</code></pre><h2 id="Letter-to-a-Machine-25-pts"><a href="#Letter-to-a-Machine-25-pts" class="headerlink" title="Letter to a Machine (25 pts)"></a>Letter to a Machine (25 pts)</h2><h3 id="Problem-4"><a href="#Problem-4" class="headerlink" title="Problem"></a>Problem</h3><p>You intercepted a <a href="https://2018.pactf.com/static/ctfproblems/47708183-239f-4565-834b-b5550c5634a4/letter.c5e1ae35c726.rar" target="_blank" rel="external">letter.rar</a>—but to read it, you have to prove that you are not a human. The password is <code>NOT</code> <code>BAD</code> + <code>FACE</code>.</p>
 <p>Hint: I’m sure it’s just coincidence that <code>BAD</code> and <code>FACE</code> can be spelled with just the letters <code>ABCDEF</code>…</p>
 <h3 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
 <p>The hint is quite important, <code>ABCDEF</code> are all in the range of hexadecimal numbers. Find an online logical operation calculator, like <a href="http://www.convertforfree.com/bitwise-calculator" target="_blank" rel="external">this</a> one. The logical operation of <code>NOT BAD</code> gives the result <code>-BAE</code>, then we simply add <code>-BAE</code> and <code>FACE</code>, and the result is <code>EF20</code>. Using this password, we can extract the rar file and the flag is inside a text file.</p>
@@ -64,20 +143,20 @@
       <url>/2018/05/05/pactf_2018_round_1_part_2/</url>
       <content type="html"><![CDATA[<p>Problems can be found on <a href="https://2018.pactf.com" target="_blank" rel="external">PACTF</a>.</p>
 <p>Team members: <a href="https://github.com/leniumc" target="_blank" rel="external">me</a>, <a href="https://github.com/altareen" target="_blank" rel="external">altareen</a>, <a href="https://github.com/MarchingVoxels" target="_blank" rel="external">aqdajz</a>, <a href="https://github.com/Sky1213814284" target="_blank" rel="external">illuminati</a>.</p>
-<h2 id="Open-Sourcery-2018-30-pt"><a href="#Open-Sourcery-2018-30-pt" class="headerlink" title="Open Sourcery 2018 (30 pt)"></a>Open Sourcery 2018 (30 pt)</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>The solution to this problem lies within the Chromium source code. Literally. There is some string in there that mentions a flag and PACTF…</p>
+<h2 id="Open-Sourcery-2018-30-pts"><a href="#Open-Sourcery-2018-30-pts" class="headerlink" title="Open Sourcery 2018 (30 pts)"></a>Open Sourcery 2018 (30 pts)</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>The solution to this problem lies within the Chromium source code. Literally. There is some string in there that mentions a flag and PACTF…</p>
 <p>Hint: This problem builds off of a similarly named problem in PACTF 2017.</p>
 <h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
 <p>I actually looked through the problems and <a href="https://github.com/LFlare/ctf-writeups/tree/master/2017/pactf_2017/boole/open-sourcery-2_40" target="_blank" rel="external">write-ups</a> from PACTF 2017 and found a <a href="https://cs.chromium.org/codesearch/f/chromium/src/net/http/transport_security_state_static.json?cl=a3e1c143da13a37a641839334df9cfad6bba89b2" target="_blank" rel="external">website</a> related to Chromium.</p>
 <p>Searching for <code>pactf</code> in the file reveals the flag.</p>
 <pre><code>pactf-flag-4boxdpa21ogonzkcrs9p.com
-</code></pre><h2 id="Credit-Card-Leak-35-pt"><a href="#Credit-Card-Leak-35-pt" class="headerlink" title="Credit Card Leak (35 pt)"></a>Credit Card Leak (35 pt)</h2><h3 id="Problem-1"><a href="#Problem-1" class="headerlink" title="Problem"></a>Problem</h3><p>ShoeShop was hacked, and all of their customer records were released online—including credit card numbers. One credit card in the leak is invalid, however. What is the invalid credit card number?</p>
+</code></pre><h2 id="Credit-Card-Leak-35-pts"><a href="#Credit-Card-Leak-35-pts" class="headerlink" title="Credit Card Leak (35 pts)"></a>Credit Card Leak (35 pts)</h2><h3 id="Problem-1"><a href="#Problem-1" class="headerlink" title="Problem"></a>Problem</h3><p>ShoeShop was hacked, and all of their customer records were released online—including credit card numbers. One credit card in the leak is invalid, however. What is the invalid credit card number?</p>
 <p>Here’s the leak: <a href="https://2018.pactf.com/static/ctfproblems/97042e12-5f99-4e79-a703-5593d531e4a2/cc_leak.txt.eecc6f896436.bz2" target="_blank" rel="external">cc_leak.txt.bz2</a></p>
 <p>Hint: The credit card numbers in the leak are obviously all invalid, but most would pass a certain credit card validity test. All credit card numbers except one, that is.</p>
 <h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by altareen.</p>
 <p>There was something called the Luhn Algorithm that could be used to solve this. The credit card numbers are clearly too much to paste onto an online validity check, so we used a simple Python script instead.</p>
 <p>The flag was the invalid credit card number.</p>
 <pre><code>8692015931457397
-</code></pre><h2 id="Third-Eye-40-pt"><a href="#Third-Eye-40-pt" class="headerlink" title="Third Eye (40 pt)"></a>Third Eye (40 pt)</h2><h3 id="Problem-2"><a href="#Problem-2" class="headerlink" title="Problem"></a>Problem</h3><p>Sometimes​‌‌‌​‌‌‌​‌‌​ there‌​​​​‌‌​​​​‌ is ​‌‌‌​‌​​​‌​‌‌‌more ‌‌​‌‌​​‌​‌​‌‌​‌‌​​​‌‌‌​​‌‌​‌‌​​‌​‌​‌​‌‌‌‌‌​‌‌​‌‌​​​‌‌‌​‌​‌​‌‌‌​​‌​​‌‌​‌​‌‌​‌‌‌​​‌‌​‌​‌‌‌‌‌​‌‌​​​‌than ​​‌‌​​‌​‌​‌‌​‌‌meets ‌​​‌‌​​‌​‌​‌‌​​​the ​‌​‌‌‌​‌​​​‌‌​‌​​​​‌​‌‌‌‌‌​‌‌‌eye​‌​​​‌‌​‌​​​​‌‌​​‌​‌​‌​‌‌‌‌‌​‌‌​​‌​‌​‌‌‌‌​​‌​‌‌​​‌​‌.</p>
+</code></pre><h2 id="Third-Eye-40-pts"><a href="#Third-Eye-40-pts" class="headerlink" title="Third Eye (40 pts)"></a>Third Eye (40 pts)</h2><h3 id="Problem-2"><a href="#Problem-2" class="headerlink" title="Problem"></a>Problem</h3><p>Sometimes​‌‌‌​‌‌‌​‌‌​ there‌​​​​‌‌​​​​‌ is ​‌‌‌​‌​​​‌​‌‌‌more ‌‌​‌‌​​‌​‌​‌‌​‌‌​​​‌‌‌​​‌‌​‌‌​​‌​‌​‌​‌‌‌‌‌​‌‌​‌‌​​​‌‌‌​‌​‌​‌‌‌​​‌​​‌‌​‌​‌‌​‌‌‌​​‌‌​‌​‌‌‌‌‌​‌‌​​​‌than ​​‌‌​​‌​‌​‌‌​‌‌meets ‌​​‌‌​​‌​‌​‌‌​​​the ​‌​‌‌‌​‌​​​‌‌​‌​​​​‌​‌‌‌‌‌​‌‌‌eye​‌​​​‌‌​‌​​​​‌‌​​‌​‌​‌​‌‌‌‌‌​‌‌​​‌​‌​‌‌‌‌​​‌​‌‌​​‌​‌.</p>
 <p>Hint: Maybe if you just squint harder…</p>
 <h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by altareen and me.</p>
 <p>You’ll have to go to the original webpage to solve this.</p>
@@ -138,7 +217,7 @@ is <span class="token entity" title="&#8203;">&amp;#8203;</span><span class="tok
 01100101
 </code></pre><p>Treating each group as a binary ascii value, and converting them to letters reveal the flag.</p>
 <pre><code>what_else_lurks_beneath_the_eye
-</code></pre><h2 id="Security-Through-Obscurity-50-pt"><a href="#Security-Through-Obscurity-50-pt" class="headerlink" title="Security Through Obscurity? (50 pt)"></a>Security Through Obscurity? (50 pt)</h2><h3 id="Problem-3"><a href="#Problem-3" class="headerlink" title="Problem"></a>Problem</h3><p>We intercepted this message, but we can’t make heads or tails of it. It was rattled off so fast, too… How could anyone be that good at using a cipher?</p>
+</code></pre><h2 id="Security-Through-Obscurity-50-pts"><a href="#Security-Through-Obscurity-50-pts" class="headerlink" title="Security Through Obscurity? (50 pts)"></a>Security Through Obscurity? (50 pts)</h2><h3 id="Problem-3"><a href="#Problem-3" class="headerlink" title="Problem"></a>Problem</h3><p>We intercepted this message, but we can’t make heads or tails of it. It was rattled off so fast, too… How could anyone be that good at using a cipher?</p>
 <p>Anyway, here’s the message. Good luck!</p>
 <p><code>Tązhii, Łį́į́ʼ, Dzeeh Mąʼii, Dibé yázhí, Wóláchííʼ, Tłʼízí Tin, Dibé Mósí, Łį́į́ʼ, Dzeeh, Dibé, Tązhii, Dzeeh, Gah, Neeshchʼííʼ, Dzeeh, Béésh dootłʼizh</code></p>
 <p>Hint: This definitely doesn’t look like English. What else could it be? Perhaps looking through the history books might help…</p>
@@ -146,7 +225,7 @@ is <span class="token entity" title="&#8203;">&amp;#8203;</span><span class="tok
 <p>After some Googling, we found that the message was written in a language called Navajo, and taking the first letter of the English translation of each word, we could obtain the flag.</p>
 <p>Fortunately, we found a <a href="https://gist.github.com/TheZ3ro/572ef81c0f20bf9c4c435b32a62a7056" target="_blank" rel="external">script</a> that could do it for us. We end up with the sentence “THE FLAG IS CHESTERNEZ”.</p>
 <pre><code>CHESTERNEZ
-</code></pre><h2 id="Beats-by-Dr-K-Problem-55-pt"><a href="#Beats-by-Dr-K-Problem-55-pt" class="headerlink" title="Beats by Dr. K Problem (55 pt)"></a>Beats by Dr. K Problem (55 pt)</h2><h3 id="Problem-4"><a href="#Problem-4" class="headerlink" title="Problem"></a>Problem</h3><p>Dr. K just released her new EP — download her <a href="https://2018.pactf.com/static/ctfproblems/1b2c440a-37e0-4500-bd85-c88e2ebba3a5/bits.675c46a10049.wav" target="_blank" rel="external">track</a> now!</p>
+</code></pre><h2 id="Beats-by-Dr-K-Problem-55-pts"><a href="#Beats-by-Dr-K-Problem-55-pts" class="headerlink" title="Beats by Dr. K Problem (55 pts)"></a>Beats by Dr. K Problem (55 pts)</h2><h3 id="Problem-4"><a href="#Problem-4" class="headerlink" title="Problem"></a>Problem</h3><p>Dr. K just released her new EP — download her <a href="https://2018.pactf.com/static/ctfproblems/1b2c440a-37e0-4500-bd85-c88e2ebba3a5/bits.675c46a10049.wav" target="_blank" rel="external">track</a> now!</p>
 <p>Hint: Listen to each bit…</p>
 <h3 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by altareen.</p>
 <p>Opening the wav file in an audio editor and looking at the high frequency part of the spectrogram of the audio, we could find a pattern. Each beat can be intepreted as a 0 or 1 based on its pattern in the spectrogram. Using the same technique as the one used in <code>Third Eye</code>, we can obtain the flag.</p>
@@ -195,17 +274,17 @@ is <span class="token entity" title="&#8203;">&amp;#8203;</span><span class="tok
       <url>/2018/05/01/pactf_2018_round_1_part_1/</url>
       <content type="html"><![CDATA[<p>My first CTF game. Problems can be found on <a href="https://2018.pactf.com" target="_blank" rel="external">PACTF</a>.</p>
 <p>Teamed up with two classmates (<a href="https://github.com/MarchingVoxels" target="_blank" rel="external">aqdajz</a> and <a href="https://github.com/Sky1213814284" target="_blank" rel="external">illuminati</a>) and my computer science teacher (<a href="https://github.com/altareen" target="_blank" rel="external">altareen</a>).</p>
-<h2 id="A-Picture-is-a-Thousand-Words-10-pt"><a href="#A-Picture-is-a-Thousand-Words-10-pt" class="headerlink" title="A Picture is a Thousand Words (10 pt)"></a>A Picture is a Thousand Words (10 pt)</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Apparently there is something hidden in this <a href="https://2018.pactf.com/static/ctfproblems/e3c7fb33-b5e4-4b99-ac78-b0ae420ba413/image.d25eefefc427.jpg" target="_blank" rel="external">image</a>…</p>
+<h2 id="A-Picture-is-a-Thousand-Words-10-pts"><a href="#A-Picture-is-a-Thousand-Words-10-pts" class="headerlink" title="A Picture is a Thousand Words (10 pts)"></a>A Picture is a Thousand Words (10 pts)</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Apparently there is something hidden in this <a href="https://2018.pactf.com/static/ctfproblems/e3c7fb33-b5e4-4b99-ac78-b0ae420ba413/image.d25eefefc427.jpg" target="_blank" rel="external">image</a>…</p>
 <p>Hint: You’re looking for text—how might you look at the text of the image?</p>
 <h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by altareen.</p>
 <p>Solving this was quite easy. Just looking at the image metadata in <code>Properties</code> reveals the flag.</p>
 <pre><code>flag_is_DjKVIXXQRZZrrAd
-</code></pre><h2 id="Straight-From-The-Emperor-10-pt"><a href="#Straight-From-The-Emperor-10-pt" class="headerlink" title="Straight From The Emperor (10 pt)"></a>Straight From The Emperor (10 pt)</h2><h3 id="Problem-1"><a href="#Problem-1" class="headerlink" title="Problem"></a>Problem</h3><p>The Emperor says <code>ny_nx_tsq3_zumnqq_kwtr_mjwj_68999cae77</code>–what could it possibly mean? I hear that he ‘encrypts’ numbers now too, something about appending them to the alphabet…</p>
+</code></pre><h2 id="Straight-From-The-Emperor-10-pts"><a href="#Straight-From-The-Emperor-10-pts" class="headerlink" title="Straight From The Emperor (10 pts)"></a>Straight From The Emperor (10 pts)</h2><h3 id="Problem-1"><a href="#Problem-1" class="headerlink" title="Problem"></a>Problem</h3><p>The Emperor says <code>ny_nx_tsq3_zumnqq_kwtr_mjwj_68999cae77</code>–what could it possibly mean? I hear that he ‘encrypts’ numbers now too, something about appending them to the alphabet…</p>
 <p>Hint: Some say he’s an emperor, I say he’s a salad.</p>
 <h3 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
 <p>Looking at the hint, we know directly that this is a Caesar cipher problem. After appending numbers to the alphabet, as hinted in the problem, and running a Caesar cipher solver, we obtain the flag.</p>
 <pre><code>IT_IS_ONLY_UPHILL_FROM_HERE_1344475922
-</code></pre><h2 id="Caesar-Cipher-20-pt"><a href="#Caesar-Cipher-20-pt" class="headerlink" title="Caesar Cipher? (20 pt)"></a>Caesar Cipher? (20 pt)</h2><h3 id="Problem-2"><a href="#Problem-2" class="headerlink" title="Problem"></a>Problem</h3><p>“Cowards die many times before their deaths; the valiant only taste of death but once.” (1007, 1008) Are you valiant enough to figure this out?</p>
+</code></pre><h2 id="Caesar-Cipher-20-pts"><a href="#Caesar-Cipher-20-pts" class="headerlink" title="Caesar Cipher? (20 pts)"></a>Caesar Cipher? (20 pts)</h2><h3 id="Problem-2"><a href="#Problem-2" class="headerlink" title="Problem"></a>Problem</h3><p>“Cowards die many times before their deaths; the valiant only taste of death but once.” (1007, 1008) Are you valiant enough to figure this out?</p>
 <p><code>5:6 1139:4 1620:3 172:4</code></p>
 <p>Hint: There’s a lot of text on the Internet and in print. What if you could send messages using all of that data? But you’d have to pick something pretty famous…</p>
 <h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
@@ -213,13 +292,13 @@ is <span class="token entity" title="&#8203;">&amp;#8203;</span><span class="tok
 <p>Further Googling leads us to <a href="https://www.opensourceshakespeare.org/views/plays/play_view.php?WorkID=juliuscaesar&amp;Scope=entire&amp;pleasewait=1&amp;msg=pl" target="_blank" rel="external">this</a> page. Looking at line 1007 and 1008, we can verify that it is the correct source.</p>
 <p>Taking the 6th word of line 5, 4th word of line 1139, 3rd word of line 1620, and 4th word of line 172, we obtain the sentence <code>the answer is Cassius</code>. Thus, the flag is just what the sentence means.</p>
 <pre><code>Cassius
-</code></pre><h2 id="Let-Me-In-20-pt"><a href="#Let-Me-In-20-pt" class="headerlink" title="Let Me In (20 pt)"></a>Let Me In (20 pt)</h2><h3 id="Problem-3"><a href="#Problem-3" class="headerlink" title="Problem"></a>Problem</h3><p>You received this <a href="https://2018.pactf.com/static/ctfproblems/ff3f0519-665a-4b0d-810a-65b1d0425fb6/account.5a52b336da78.rar" target="_blank" rel="external">account.rar</a> file, but it is ‘protected’ under a password. Can you break in?</p>
+</code></pre><h2 id="Let-Me-In-20-pts"><a href="#Let-Me-In-20-pts" class="headerlink" title="Let Me In (20 pts)"></a>Let Me In (20 pts)</h2><h3 id="Problem-3"><a href="#Problem-3" class="headerlink" title="Problem"></a>Problem</h3><p>You received this <a href="https://2018.pactf.com/static/ctfproblems/ff3f0519-665a-4b0d-810a-65b1d0425fb6/account.5a52b336da78.rar" target="_blank" rel="external">account.rar</a> file, but it is ‘protected’ under a password. Can you break in?</p>
 <p>Hint: Something tells me the user might not be using complex passwords…</p>
 <h3 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
 <p>This problem was solved more easily than it intended to be. I simply tried the password <code>123456</code> and got in. XD</p>
 <p>The flag is just inside a plain text file inside the rar.</p>
 <pre><code>rgSueiMYehWJSZPZr
-</code></pre><h2 id="Bad-Melody-30-pt"><a href="#Bad-Melody-30-pt" class="headerlink" title="Bad Melody (30 pt)"></a>Bad Melody (30 pt)</h2><h3 id="Problem-4"><a href="#Problem-4" class="headerlink" title="Problem"></a>Problem</h3><p>Our musician friend Martin recently bought a melody pack containing different melodies recorded in MIDI format. He hoped to use them in his electronic music tracks and then pretend that he was the person who actually wrote them. He spent a solid hundred dollars, but the website selling sample packs fooled him! Instead of 10 wonderful melodies, he only received one MIDI file. It sounded awful, and Martin quickly noticed why!</p>
+</code></pre><h2 id="Bad-Melody-30-pts"><a href="#Bad-Melody-30-pts" class="headerlink" title="Bad Melody (30 pts)"></a>Bad Melody (30 pts)</h2><h3 id="Problem-4"><a href="#Problem-4" class="headerlink" title="Problem"></a>Problem</h3><p>Our musician friend Martin recently bought a melody pack containing different melodies recorded in MIDI format. He hoped to use them in his electronic music tracks and then pretend that he was the person who actually wrote them. He spent a solid hundred dollars, but the website selling sample packs fooled him! Instead of 10 wonderful melodies, he only received one MIDI file. It sounded awful, and Martin quickly noticed why!</p>
 <p>Can you notice why?</p>
 <p>See for yourself: <a href="https://2018.pactf.com/static/ctfproblems/74f8a213-9531-405a-b425-02b38ea80972/melody.4f1964921e6a.mid" target="_blank" rel="external">melody.mid</a></p>
 <p>Hint: How would you edit MIDI?</p>
@@ -2548,9 +2627,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
             
             <tag> Supervised Learning </tag>
             
-            <tag> Regression </tag>
-            
             <tag> Unsupervised Learning </tag>
+            
+            <tag> Regression </tag>
             
         </tags>
         
