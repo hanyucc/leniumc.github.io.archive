@@ -11,7 +11,7 @@
 <p><a href="https://2018.pactf.com/static/ctfproblems/9829bbb5-dd77-48b7-b508-b2b7f598d882/haystack.ef77fe451087.txt" target="_blank" rel="external">Find the needle in the haystack!</a></p>
 <p>Hint: There must be something that distinguishes the signal from the noise. How could you mark something in a plain text file? All you have are Unicode characters…</p>
 <h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
-<p>Using python to extract characters that are not within the range of <code>a</code> to <code>z</code>, we noticed that each of these characters was within a word. Thus, extracting the words that surround the characters, we can obtain the flag.</p>
+<p>Using python to extract characters that are not within the range of <code>a</code> to <code>z</code>, we noticed that each of these characters was within a word. Thus, extracting the words that surround the characters, we obtained the flag.</p>
 <pre><code>the flag is in plain sight
 </code></pre><h2 id="Zip-Zap-Zop-45-pts"><a href="#Zip-Zap-Zop-45-pts" class="headerlink" title="Zip Zap Zop (45 pts)"></a>Zip Zap Zop (45 pts)</h2><h3 id="Problem-1"><a href="#Problem-1" class="headerlink" title="Problem"></a>Problem</h3><p>My friend gave me <a href="data:application/zip;base64,eJwByAM3/HicAb0DQvx4nAGyA038eJwBpwNY/HicAZwDY/x4nKuYw9jJXPanYg5jHXMjiCpm7gFRGczTQVQs8yIQFcS8FkS5M+8AUTbMh0GUIfM5EKXGfBNESTM/AVECzO9BFCvzLxD1i4n1L5B6zyQAop4wSYOom0xqIOockyGIOsxkA6J2MLmDqLVMQUBK9GimTxAjA0NC5elTJ0JnufuYh62b4XE6J/LWEV/dra3GXslyKU7ad5NmdSUduPRwxiWbRUb6s9Jdj53orDw4RzjN78YaHdcKSy+OnA6uH08Yf+6zj09lXyW7YKe2dYAvA3Mn+4YJEQz8nYwmihcbylS4LvS7MC3x8DzAcknVodWFQWyCH5PVEoEDLSUSN5ycGOVU2E+d3zydtbRGv/B1SWrustlWwstkhGKOzur/JvDjdJbwquqPd/7d2m7jyLmNI7hiVv4++dZTX8RvbHzfGlRiZDvryexM4QXC+bImIontkaeuTmAWLVA2vCTwR+XVuSk3rk5e+urusStL5/BuOJtssersgj83JR4dfzN3x8I02bmBj4Nry79s38Cn33mBr3656PWISbuCfHZLpUVfa47RTl+20yWlcVffvtsrzicsmfxg4+3EbUxTmaIEdt549eYBS6FfRv1Mb6W4ORMkn017Gnddk33yJp1W039Vu7M/C5qvszjw1uiF4qbP7unST0qb7u+5k673TCr24bnPfYf2X9EWW3VV93vY+sw1Wq1RTMGpXOcWJU5aynh3mta3HZzfGtafkVu97Y7ftwPWr48Jtqu7KRZahS8NW75PUebKztR+2a7GbH3jSx4LXrXOzvxp/pIl+Jq+tezFj73ue14ctJdXODNh4uRjN3UfZqkXT3l2UWLZxc2y/hmLBU7qVrxY/VrdVCz+1e6tSx702c6J/rTsuSnfFM3jO5VTdvpJ5HgkNK+81qV/qrZq9cb/Vls/yPltU1Lmu2U2x3Fu+qajaxfxWLadXb3J6e38GRutdH3ZztuZhwQ/jz98YcusJHbLB7f4/kWsLJj2//sEs0PHD7izP+t7fG/BMk7dWwc+Wyz+kZS7xP/PKg0TQ72z+jOFP1pufe90und56JnZO3SLwuL51dgfmYu0fL92ebmMelfhnLy2d151le/q9bdU3vq9JzBolkbY/ty06JVlugmTN39ItdG0zZp88V4+56aAEufj6yv5BWvrFPpEmuLt5rZ9VYnribP/NeHuJIdp02ScZy+/tW5B9MVrSz8yOaxxzFDa0MzUtTUYANGEufpcMO3tSaPzZm9z+L7M9P5pZcUEsg==" target="_blank" rel="external">this file</a>, but I have no idea what to do with it?</p>
 <p>Hint: I tried to make this file really, really small.</p>
@@ -23,12 +23,12 @@
 </code></pre><h2 id="Wakanda-problem-is-this-60-pts"><a href="#Wakanda-problem-is-this-60-pts" class="headerlink" title="Wakanda problem is this? (60 pts)"></a>Wakanda problem is this? (60 pts)</h2><h3 id="Problem-2"><a href="#Problem-2" class="headerlink" title="Problem"></a>Problem</h3><p>You’ve arrived at Wakanda’s border. Only the flag will allow you to enter. <a href="https://2018.pactf.com/static/ctfproblems/800b0ae9-fbc7-47bb-87d0-03e91e9bbc40/gate.5ae2b2e0aa79.jpg" target="_blank" rel="external">This is all you have</a>.</p>
 <p>Hint: Use the bytes in the second image.</p>
 <h3 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by illuminati and me.</p>
-<p>The problem mentions a second image. Using the linux <code>binwalk</code> command, we can actually extract a second image from the given image. Then, looking at the bytes of the second image using the linux <code>xxd</code> command, we can obtain the flag.</p>
+<p>The problem mentions a second image. Using the linux <code>binwalk</code> command, we can actually extract a second image from the given image. Then, looking at the bytes of the second image using the linux <code>xxd</code> command, we obtained the flag.</p>
 <pre><code>wakanda4eva
 </code></pre><h2 id="Library-of-Babel-75-pts"><a href="#Library-of-Babel-75-pts" class="headerlink" title="Library of Babel (75 pts)"></a>Library of Babel (75 pts)</h2><h3 id="Problem-3"><a href="#Problem-3" class="headerlink" title="Problem"></a>Problem</h3><p>Is <a href="https://2018.pactf.com/static/ctfproblems/f5f28b96-a37e-4094-a529-ae43ba8ecfc8/video.f3db89aeb9f4.mp4" target="_blank" rel="external">this</a> what passes through fiber optic cables? Must be…</p>
 <p>Hint: It is much faster to extract frames from the video and write a script!</p>
 <h3 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by me.</p>
-<p>We can extract frames from the video using Python and OpenCV and use the zbar package to scan the QR codes. Looking at the texts read from the QR codes, we can find one section that contains this.</p>
+<p>We can extract frames from the video using Python and OpenCV and use the zbar package to scan the QR codes. Looking at the texts read from the QR codes, we found one section that contains this.</p>
 <pre><code>=== YOUR ANSWER IS HERE ===
 &quot;eqvzb&quot; w-3, s-5, v-25, p-248
 22syz7u9dogitfxlezobhobeuno6pnec20n6bqfg22cqihe41hbbi8aut4t618oj4wee4to32mdfmmsykl76r002hfbsurum4rr6tprxi4yinrzlqee17y5sfw11k5ybxsie6icu2x6fx
@@ -56,8 +56,75 @@ g3c7w534oezei8ytlj8qfliccuv1h2profbor9rbn78tp3jw5ww4xzc2rq8hg14wkss2tlr6xve62u25
 ru6qsavg1w50n0joic98sejzdo3kieunrzxm9wku7i4011z21mgfydsc4h4vfhjf73tnv3obko3irds88mwyu5yr77qy1urkvnoet03nv6oso9s7gyn0fz0t9600niaa46cf9wmp7yaj8
 4r8s1tp35im
 === YOUR ANSWER IS HERE ===
-</code></pre><p>Then, we go to the website <a href="https://libraryofbabel.info/" target="_blank" rel="external">https://libraryofbabel.info/</a>, select browse, and enter the huge string into the <code>Hex Name</code> field. Select the correct wall (3), shelf (5), volume (25), and page (248). The flag will be on that page.</p>
+</code></pre><p>Then, we went to the website <a href="https://libraryofbabel.info/" target="_blank" rel="external">https://libraryofbabel.info/</a>, selected browse, entered the huge string into the <code>Hex Name</code> field, and selected the correct wall (3), shelf (5), volume (25), and page (248). The flag was on that page.</p>
 <pre><code>averyunobviouskey
+</code></pre><h2 id="AI-80-pts"><a href="#AI-80-pts" class="headerlink" title="AI (80 pts)"></a>AI (80 pts)</h2><h3 id="Problem-4"><a href="#Problem-4" class="headerlink" title="Problem"></a>Problem</h3><p>Our artificial intelligence engineer made a groundbreaking discovery, but left the company unexpectedly… all we have is the obfuscated <a href="https://2018.pactf.com/static/ctfproblems/f82018ea-eaea-49df-aa72-d16bb90904a3/source.dc0369d6de19.txt" target="_blank" rel="external">source.txt</a>…</p>
+<p>Hint: What language thinks 3 + ‘3’ == “33”?</p>
+<h3 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h3><p>Solved by aqdajz and me.</p>
+<p>We figured that the text file was in a language called JSFuck. Using an online decoder, we got this message.</p>
+<pre><code>Congrats! You&#39;ve uncovered the truth. Now go here: ibarakaiev.shpp.me/pactf_s7fj43/ai.zip
+</code></pre><p>From the given URL, we obtained <a href="ibarakaiev.shpp.me/pactf_s7fj43/ai.zip">this</a> file. We looked through all of the files in the zip and found one named <code>script.js</code> that caught our attention.</p>
+<p>There was this line of code.</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token function">append_ai</span><span class="token punctuation">(</span><span class="token string">'The key is now stored securely in ("http://ibarakaiev.shpp.me/pactf_s7fj43/key_%d.txt", get_key_number(6, [16, 23, 16, 15, 42, 8])).'</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>And this function.</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// this function returns the number needed to access key_%d.txt</span>
+<span class="token keyword">function</span> <span class="token function">get_key_number</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// TODO: implement solution to the following problem</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * You are given a sequence _s_ consisting of _N_ integers. You can divide it to 
+     * two sequences _p_ and _q_ such that every element of your sequence belongs exactly
+     * to one of these sequences. 
+     *
+     * Let _B_ be the sum of elements belonging to _p_, and _C_ be the sum of elements
+     * belonging to _C_. Note: if some of the sequences is empty then its sum is 0).
+     * What is the maximum possible value of _B_ - _C_ 
+     */</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>So we figured that the integer in the file name must be the sum of <code>[16, 23, 16, 15, 42, 8]</code> which is 120. Going to that website, we obtained another text file.</p>
+<pre><code>But you&#39;ll have to decrypt it first! The following text is displayed using byfes (it&#39;s like bytes but only 5 bits).
+
+mrxwozAp
+
+PACTFSCII is as follows (it&#39;s like ASCII but for PACTF). PACTF system only accepts ASCII characters, however.
+0  - a
+1  - b
+2  - c
+3  - d
+4  - e
+5  - f
+6  - g
+7  - h 
+8  - i 
+9  - j
+10 - k
+11 - l
+12 - m
+13 - n
+14 - o
+15 - p
+16 - q
+17 - r
+18 - s
+19 - t
+20 - u
+21 - v
+22 - w
+23 - x
+24 - y
+25 - z
+26 - P
+27 - A
+28 - C
+29 - T
+30 - F
+31 - \0
+</code></pre><p>We tried representing the given text in <code>byfes</code> in binary form, and that gave this result.</p>
+<pre><code>01100 10001 10111 10110 01110 11001 11011 01111
+</code></pre><p>Recombining these binary numbers in groups of 8 and converting each group to an ascii character reveals the flag.</p>
+<pre><code>doggo
 </code></pre>]]></content>
       
         <categories>
